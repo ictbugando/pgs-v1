@@ -1,0 +1,70 @@
+CRITICAL - 2023-06-06 07:02:26 --> Undefined property: CodeIgniter\View\View::$Engine
+in APPPATH\Views\billing\newprod_form.php on line 4.
+ 1 APPPATH\Views\billing\newprod_form.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$Engine', 'APPPATH\\Views\\billing\\newprod_form.php', 4, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\newprod_form.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/newprod_form', [], true)
+ 5 APPPATH\Controllers\Billing.php(41): view('billing/newprod_form')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newprodform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 07:46:28 --> Undefined variable: typeId
+in APPPATH\Controllers\Billing.php on line 52.
+ 1 APPPATH\Controllers\Billing.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: typeId', 'APPPATH\\Controllers\\Billing.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newprodprocess()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 07:50:26 --> Call to undefined function App\Controllers\isExistingUserId()
+in APPPATH\Controllers\Billing.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newprodprocess()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 08:29:24 --> Trying to get property 'prod_name' of non-object
+in APPPATH\Views\billing\bill_products.php on line 22.
+ 1 APPPATH\Views\billing\bill_products.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'prod_name\' of non-object', 'APPPATH\\Views\\billing\\bill_products.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\bill_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/bill_products', [], true)
+ 5 APPPATH\Controllers\Billing.php(35): view('billing/bill_products')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->products()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 08:38:29 --> Trying to get property 'prod_name' of non-object
+in APPPATH\Views\billing\bill_products.php on line 27.
+ 1 APPPATH\Views\billing\bill_products.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'prod_name\' of non-object', 'APPPATH\\Views\\billing\\bill_products.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\bill_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/bill_products', [], true)
+ 5 APPPATH\Controllers\Billing.php(35): view('billing/bill_products')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->products()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-06 09:18:26 --> Unknown column 'tb1.prod' in 'order clause'
+CRITICAL - 2023-06-06 09:18:26 --> Unknown column 'tb1.prod' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.*   FROM bmc_bill_product tb1
+								INNER JOIN bmc_bill_product_cost tb2 ON tb2.prod_id = tb1.prod_id
+								ORDER BY tb1.prod-id DESC LIMIT 0, 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.*   FROM bmc_bill_product tb1
+								INNER JOIN bmc_bill_product_cost tb2 ON tb2.prod_id = tb1.prod_id
+								ORDER BY tb1.prod-id DESC LIMIT 0, 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.*   FROM bmc_bill_product tb1
+								INNER JOIN bmc_bill_product_cost tb2 ON tb2.prod_id = tb1.prod_id
+								ORDER BY tb1.prod-id DESC LIMIT 0, 50')
+ 4 APPPATH\Models\Engine.php(864): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.*   FROM bmc_bill_product tb1
+								INNER JOIN bmc_bill_product_cost tb2 ON tb2.prod_id = tb1.prod_id
+								ORDER BY tb1.prod-id DESC LIMIT 0, 50')
+ 5 APPPATH\Views\billing\bill_products.php(10): App\Models\Engine->fetchBillProducts(0)
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\bill_products.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/bill_products', [], true)
+ 9 APPPATH\Controllers\Billing.php(35): view('billing/bill_products')
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->products()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

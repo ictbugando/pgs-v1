@@ -1,0 +1,216 @@
+CRITICAL - 2024-10-23 07:16:02 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 07:16:08 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 08:15:00 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 08:19:36 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 08:50:06 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 08:50:24 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 09:10:47 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 09:22:23 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 10:09:17 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 10:09:17 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 10:22:50 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 10:50:56 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:31:23 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:34:17 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:34:31 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:48:58 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 11:57:52 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:37:23 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 13:56:09 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 14:56:17 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 16:10:50 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 16:49:06 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 17:24:46 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 19:35:50 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 20:17:16 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 20:17:20 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-23 20:17:27 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

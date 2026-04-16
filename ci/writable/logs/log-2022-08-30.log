@@ -1,0 +1,183 @@
+CRITICAL - 2022-08-30 02:57:20 --> Call to undefined function App\Models\getMweziId()
+in APPPATH\Models\Engine.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:08:09 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(50): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:16:14 --> syntax error, unexpected '$myEngine' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Models\Engine.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Engine.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Engine')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Engine')
+ 4 APPPATH\Controllers\BaseController.php(51): spl_autoload_call('App\\Models\\Engine')
+ 5 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:21:52 --> syntax error, unexpected '$myEngine' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Models\Engine.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Engine.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Engine')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Engine')
+ 4 APPPATH\Controllers\BaseController.php(51): spl_autoload_call('App\\Models\\Engine')
+ 5 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:21:59 --> Compile Error: Constant expression contains invalid operations
+in APPPATH\Models\Engine.php on line 8.
+
+CRITICAL - 2022-08-30 03:23:09 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 93.
+ 1 APPPATH\Models\Engine.php(51): App\Models\Engine->getMweziId(8, '2022')
+ 2 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:28:00 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 93.
+ 1 APPPATH\Models\Engine.php(51): App\Models\Engine->getMweziId(8, '2022')
+ 2 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:28:04 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 93.
+ 1 APPPATH\Models\Engine.php(51): App\Models\Engine->getMweziId(8, '2022')
+ 2 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:29:04 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 95.
+ 1 APPPATH\Models\Engine.php(51): App\Models\Engine->getMweziId(8, '2022')
+ 2 APPPATH\Controllers\Dashboard.php(31): App\Models\Engine->getPaymentData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:35:51 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 40.
+ 1 APPPATH\Models\Engine.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 40, [...])
+ 2 APPPATH\Controllers\Dashboard.php(53): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:57:47 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:57:55 --> Undefined variable: start
+in APPPATH\Controllers\Dashboard.php on line 16.
+ 1 APPPATH\Controllers\Dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Controllers\\Dashboard.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:57:56 --> Undefined variable: start
+in APPPATH\Controllers\Dashboard.php on line 16.
+ 1 APPPATH\Controllers\Dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Controllers\\Dashboard.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:58:23 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:58:40 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:59:19 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 03:59:29 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 04:00:38 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 04:00:48 --> Trying to access array offset on value of type int
+in APPPATH\Models\Engine.php on line 39.
+ 1 APPPATH\Models\Engine.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'APPPATH\\Models\\Engine.php', 39, [...])
+ 2 APPPATH\Controllers\Dashboard.php(51): App\Models\Engine->getPaymentData(0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 05:03:41 --> Undefined variable: mRequest
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mRequest', 'APPPATH\\Controllers\\Dashboard.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 05:03:44 --> Undefined variable: mRequest
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mRequest', 'APPPATH\\Controllers\\Dashboard.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpayments()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 06:36:03 --> syntax error, unexpected 'return' (T_RETURN)
+in APPPATH\Controllers\Dashboard.php on line 27.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('dashboard')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('dashboard')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-30 07:15:01 --> Undefined property: stdClass::$wallet_name
+in APPPATH\Views\dispPaymentData.php on line 11.
+ 1 APPPATH\Views\dispPaymentData.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$wallet_name', 'APPPATH\\Views\\dispPaymentData.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispPaymentData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispPaymentData', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dispPaymentData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,148 @@
+CRITICAL - 2022-10-04 04:56:07 --> Resource 'App\Controllers\UserFactoryInterface' has not been registered with the container.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\di\src\Container.php on line 93.
+ 1 APPPATH\Controllers\Dashboard.php(69): Joomla\DI\Container->get('App\\Controllers\\UserFactoryInterface')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 04:56:07 --> Resource 'App\Controllers\UserFactoryInterface' has not been registered with the container.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\di\src\Container.php on line 93.
+ 1 APPPATH\Controllers\Dashboard.php(69): Joomla\DI\Container->get('App\\Controllers\\UserFactoryInterface')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 05:02:09 --> Resource 'App\Controllers\UserFactoryInterface' has not been registered with the container.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\di\src\Container.php on line 93.
+ 1 APPPATH\Controllers\Dashboard.php(69): Joomla\DI\Container->get('App\\Controllers\\UserFactoryInterface')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:48:43 --> Undefined variable: userMore
+in APPPATH\Views\settings.php on line 2.
+ 1 APPPATH\Views\settings.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userMore', 'APPPATH\\Views\\settings.php', 2, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:49:01 --> Undefined variable: userData
+in APPPATH\Views\settings.php on line 43.
+ 1 APPPATH\Views\settings.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userData', 'APPPATH\\Views\\settings.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:49:26 --> Undefined variable: userData
+in APPPATH\Views\settings.php on line 43.
+ 1 APPPATH\Views\settings.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userData', 'APPPATH\\Views\\settings.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:49:28 --> Undefined variable: userData
+in APPPATH\Views\settings.php on line 43.
+ 1 APPPATH\Views\settings.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userData', 'APPPATH\\Views\\settings.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:51:06 --> Undefined property: Joomla\CMS\User\User::$group_id
+in APPPATH\Views\settings.php on line 43.
+ 1 APPPATH\Views\settings.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: Joomla\\CMS\\User\\User::$group_id', 'APPPATH\\Views\\settings.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:54:35 --> Undefined property: CodeIgniter\View\View::$userInfo
+in APPPATH\Views\settings.php on line 71.
+ 1 APPPATH\Views\settings.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$userInfo', 'APPPATH\\Views\\settings.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:55:36 --> Undefined property: CodeIgniter\View\View::$userInfo
+in APPPATH\Views\settings.php on line 71.
+ 1 APPPATH\Views\settings.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$userInfo', 'APPPATH\\Views\\settings.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(79): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 06:55:38 --> Undefined property: CodeIgniter\View\View::$userInfo
+in APPPATH\Views\settings.php on line 71.
+ 1 APPPATH\Views\settings.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$userInfo', 'APPPATH\\Views\\settings.php', 71, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(79): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 07:17:11 --> syntax error, unexpected ')'
+in APPPATH\Controllers\Dashboard.php on line 333.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('dashboard/updateuserprofile')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('dashboard/updateuserprofile')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('dashboard/updateuserprofile')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 07:20:18 --> Undefined variable: groupsArr
+in APPPATH\Controllers\BaseController.php on line 65.
+ 1 APPPATH\Controllers\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: groupsArr', 'APPPATH\\Controllers\\BaseController.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 08:05:11 --> Undefined variable: s_user_id
+in APPPATH\Controllers\Dashboard.php on line 333.
+ 1 APPPATH\Controllers\Dashboard.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: s_user_id', 'APPPATH\\Controllers\\Dashboard.php', 333, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 09:24:11 --> Undefined variable: user_id
+in APPPATH\Models\Engine.php on line 438.
+ 1 APPPATH\Models\Engine.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Models\\Engine.php', 438, [...])
+ 2 APPPATH\Controllers\Dashboard.php(391): App\Models\Engine->updateUserProfile([], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 09:24:47 --> You must use the "set" method to update an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2089.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2025): CodeIgniter\Database\BaseBuilder->validateUpdate()
+ 2 APPPATH\Models\Engine.php(439): CodeIgniter\Database\BaseBuilder->update([])
+ 3 APPPATH\Controllers\Dashboard.php(391): App\Models\Engine->updateUserProfile([], [...], 967)
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

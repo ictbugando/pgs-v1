@@ -1,0 +1,100 @@
+CRITICAL - 2023-06-09 06:46:17 --> Could not connect to database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Controllers\BaseController.php(58): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 07:16:44 --> Could not connect to database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Controllers\BaseController.php(58): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 07:17:13 --> Could not connect to database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Controllers\BaseController.php(58): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 07:29:19 --> Could not connect to database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Controllers\BaseController.php(58): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 08:46:33 --> Undefined variable: prod_id
+in APPPATH\Helpers\html\total_input.php on line 2.
+ 1 APPPATH\Helpers\html\total_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: prod_id', 'APPPATH\\Helpers\\html\\total_input.php', 2, [...])
+ 2 APPPATH\Helpers\global_helper.php(371): require('APPPATH\\Helpers\\html\\total_input.php')
+ 3 APPPATH\Models\Engine.php(293): getTotalInput('50000')
+ 4 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct('C:\\xampp\\htdocs\\bmc\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 08:46:45 --> Undefined variable: prod_id
+in APPPATH\Helpers\html\total_input.php on line 2.
+ 1 APPPATH\Helpers\html\total_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: prod_id', 'APPPATH\\Helpers\\html\\total_input.php', 2, [...])
+ 2 APPPATH\Helpers\global_helper.php(371): require('APPPATH\\Helpers\\html\\total_input.php')
+ 3 APPPATH\Models\Engine.php(293): getTotalInput('50000')
+ 4 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct(null)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:47:52 --> Undefined variable: prod_id
+in APPPATH\Helpers\html\discount_input.php on line 2.
+ 1 APPPATH\Helpers\html\discount_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: prod_id', 'APPPATH\\Helpers\\html\\discount_input.php', 2, [])
+ 2 APPPATH\Helpers\global_helper.php(353): require('APPPATH\\Helpers\\html\\discount_input.php')
+ 3 APPPATH\Models\Engine.php(290): getDiscountInput()
+ 4 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct('C:\\xampp\\htdocs\\bmc\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:47:59 --> Undefined variable: prod_id
+in APPPATH\Helpers\html\discount_input.php on line 2.
+ 1 APPPATH\Helpers\html\discount_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: prod_id', 'APPPATH\\Helpers\\html\\discount_input.php', 2, [])
+ 2 APPPATH\Helpers\global_helper.php(353): require('APPPATH\\Helpers\\html\\discount_input.php')
+ 3 APPPATH\Models\Engine.php(290): getDiscountInput()
+ 4 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct(null)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

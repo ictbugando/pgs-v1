@@ -1,0 +1,40 @@
+CRITICAL - 2023-08-16 10:06:01 --> String could not be parsed as XML
+in APPPATH/Helpers/global_helper.php on line 327.
+ 1 APPPATH/Helpers/global_helper.php(327): SimpleXMLElement->__construct()
+ 2 APPPATH/Controllers/Malipo.php(99): doAipros3Query()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros3()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 10:06:42 --> String could not be parsed as XML
+in APPPATH/Helpers/global_helper.php on line 360.
+ 1 APPPATH/Helpers/global_helper.php(360): SimpleXMLElement->__construct()
+ 2 APPPATH/Controllers/Malipo.php(103): doAipros4Fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros4()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 12:30:32 --> String could not be parsed as XML
+in APPPATH/Helpers/global_helper.php on line 360.
+ 1 APPPATH/Helpers/global_helper.php(360): SimpleXMLElement->__construct()
+ 2 APPPATH/Controllers/Malipo.php(103): doAipros4Fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros4()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 12:30:32 --> String could not be parsed as XML
+in APPPATH/Helpers/global_helper.php on line 394.
+ 1 APPPATH/Helpers/global_helper.php(394): SimpleXMLElement->__construct()
+ 2 APPPATH/Controllers/Malipo.php(107): doAipros5Lookup()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros5()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 12:30:32 --> String could not be parsed as XML
+in APPPATH/Helpers/global_helper.php on line 327.
+ 1 APPPATH/Helpers/global_helper.php(327): SimpleXMLElement->__construct()
+ 2 APPPATH/Controllers/Malipo.php(99): doAipros3Query()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros3()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,157 @@
+CRITICAL - 2022-10-07 03:29:42 --> Trying to get property 'lang_code' of non-object
+in APPPATH\Controllers\BaseController.php on line 60.
+ 1 APPPATH\Controllers\BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'lang_code\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 60, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 03:41:49 --> Trying to get property 'lang_code' of non-object
+in APPPATH\Controllers\BaseController.php on line 61.
+ 1 APPPATH\Controllers\BaseController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'lang_code\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 03:42:16 --> Trying to get property 'lang_code' of non-object
+in APPPATH\Controllers\BaseController.php on line 61.
+ 1 APPPATH\Controllers\BaseController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'lang_code\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 03:42:31 --> Undefined offset: 1
+in APPPATH\Controllers\BaseController.php on line 65.
+ 1 APPPATH\Controllers\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH\\Controllers\\BaseController.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:13:13 --> Undefined variable: sesionLanguage
+in APPPATH\Views\login.php on line 19.
+ 1 APPPATH\Views\login.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sesionLanguage', 'APPPATH\\Views\\login.php', 19, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\Login.php(9): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:18:09 --> Undefined property: stdClass::$loginTermsLabels
+in APPPATH\Views\login.php on line 58.
+ 1 APPPATH\Views\login.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$loginTermsLabels', 'APPPATH\\Views\\login.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\Login.php(13): view('login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:18:48 --> Undefined property: stdClass::$loginTermsLabels
+in APPPATH\Views\login.php on line 58.
+ 1 APPPATH\Views\login.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$loginTermsLabels', 'APPPATH\\Views\\login.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\Login.php(13): view('login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:19:05 --> Undefined property: stdClass::$loginTermsLabels
+in APPPATH\Views\login.php on line 58.
+ 1 APPPATH\Views\login.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$loginTermsLabels', 'APPPATH\\Views\\login.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\Login.php(13): view('login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:43:19 --> Undefined variable: sesionLanguage
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sesionLanguage', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:43:44 --> Undefined variable: sesionLanguage
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sesionLanguage', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:44:42 --> Undefined variable: sesionLanguage
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sesionLanguage', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:45:10 --> Undefined variable: sesionLanguage
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sesionLanguage', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:57:07 --> Undefined variable: email
+in APPPATH\Controllers\Login.php on line 38.
+ 1 APPPATH\Controllers\Login.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: email', 'APPPATH\\Controllers\\Login.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 04:57:52 --> Undefined variable: email
+in APPPATH\Controllers\Login.php on line 38.
+ 1 APPPATH\Controllers\Login.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: email', 'APPPATH\\Controllers\\Login.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 07:20:02 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(535): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Dashboard.php(365): App\Models\Engine->updateUserGroup(977, '11', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 07:21:08 --> Call to undefined function saveActivityLogs()
+in APPPATH\Models\Engine.php on line 535.
+ 1 APPPATH\Controllers\Dashboard.php(365): App\Models\Engine->updateUserGroup(977, '11', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 07:29:07 --> Undefined variable: dataUpdate
+in APPPATH\Models\Engine.php on line 573.
+ 1 APPPATH\Models\Engine.php(573): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataUpdate', 'APPPATH\\Models\\Engine.php', 573, [...])
+ 2 APPPATH\Models\Engine.php(536): App\Models\Engine->saveActivityLogs([...])
+ 3 APPPATH\Controllers\Dashboard.php(365): App\Models\Engine->updateUserGroup(977, '11', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 07:34:25 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(538): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Dashboard.php(365): App\Models\Engine->updateUserGroup(977, '11', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 07:35:00 --> Call to undefined function App\Models\saveActivityLogs()
+in APPPATH\Models\Engine.php on line 538.
+ 1 APPPATH\Controllers\Dashboard.php(365): App\Models\Engine->updateUserGroup(977, '11', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserprofile()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

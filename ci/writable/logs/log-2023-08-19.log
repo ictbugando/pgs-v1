@@ -1,0 +1,55 @@
+CRITICAL - 2023-08-19 03:40:17 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 13:26:36 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 13:28:41 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 14:04:11 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-19 16:39:07 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

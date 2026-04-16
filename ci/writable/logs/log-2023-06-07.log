@@ -1,0 +1,60 @@
+CRITICAL - 2023-06-07 08:21:40 --> Undefined variable: word
+in APPPATH\Controllers\Billing.php on line 47.
+ 1 APPPATH\Controllers\Billing.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: word', 'APPPATH\\Controllers\\Billing.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 08:21:56 --> Undefined variable: word
+in APPPATH\Controllers\Billing.php on line 47.
+ 1 APPPATH\Controllers\Billing.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: word', 'APPPATH\\Controllers\\Billing.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-07 08:22:12 --> Unknown column 'tb1.type_name' in 'where clause'
+CRITICAL - 2023-06-07 08:22:12 --> Unknown column 'tb1.type_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM bmc_bill_product tb1
+									INNER JOIN bmc_bill_product_type tb2 ON tb2.prod_type_id = tb1.prod_type_id
+									INNER JOIN bmc_bill_product_cost tb3 ON tb3.prod_id = tb1.prod_id
+									WHERE (tb1.prod_name LIKE \'%%\') || (tb1.type_name LIKE \'%%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM bmc_bill_product tb1
+									INNER JOIN bmc_bill_product_type tb2 ON tb2.prod_type_id = tb1.prod_type_id
+									INNER JOIN bmc_bill_product_cost tb3 ON tb3.prod_id = tb1.prod_id
+									WHERE (tb1.prod_name LIKE \'%%\') || (tb1.type_name LIKE \'%%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM bmc_bill_product tb1
+									INNER JOIN bmc_bill_product_type tb2 ON tb2.prod_type_id = tb1.prod_type_id
+									INNER JOIN bmc_bill_product_cost tb3 ON tb3.prod_id = tb1.prod_id
+									WHERE (tb1.prod_name LIKE \'%%\') || (tb1.type_name LIKE \'%%\')')
+ 4 APPPATH\Models\Engine.php(278): CodeIgniter\Database\BaseConnection->query('SELECT * FROM bmc_bill_product tb1
+									INNER JOIN bmc_bill_product_type tb2 ON tb2.prod_type_id = tb1.prod_type_id
+									INNER JOIN bmc_bill_product_cost tb3 ON tb3.prod_id = tb1.prod_id
+									WHERE (tb1.prod_name LIKE \'%%\') || (tb1.type_name LIKE \'%%\')')
+ 5 APPPATH\Controllers\Billing.php(47): App\Models\Engine->getSearchProduct(null)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 09:28:52 --> Undefined variable: dataParams
+in APPPATH\Views\billing\srch_prod_disp.php on line 18.
+ 1 APPPATH\Views\billing\srch_prod_disp.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataParams', 'APPPATH\\Views\\billing\\srch_prod_disp.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\srch_prod_disp.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/srch_prod_disp', [], true)
+ 5 APPPATH\Controllers\Billing.php(49): view('billing/srch_prod_disp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 09:29:01 --> Undefined variable: dataParams
+in APPPATH\Views\billing\srch_prod_disp.php on line 18.
+ 1 APPPATH\Views\billing\srch_prod_disp.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataParams', 'APPPATH\\Views\\billing\\srch_prod_disp.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\srch_prod_disp.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/srch_prod_disp', [], true)
+ 5 APPPATH\Controllers\Billing.php(49): view('billing/srch_prod_disp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,34 @@
+ERROR - 2024-09-16 00:37:39 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-16 00:37:39 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-16 14:13:58 --> Error: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in /var/www/html/bmc/ci/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /var/www/html/bmc/ci/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+#1 /var/www/html/bmc/ci/system/API/ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format()
+#2 /var/www/html/bmc/ci/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format()
+#3 /var/www/html/bmc/ci/system/Debug/Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond()
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+
+CRITICAL - 2024-09-16 14:13:58 --> Error: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in /var/www/html/bmc/ci/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /var/www/html/bmc/ci/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+#1 /var/www/html/bmc/ci/system/API/ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format()
+#2 /var/www/html/bmc/ci/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format()
+#3 /var/www/html/bmc/ci/system/Debug/Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond()
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+

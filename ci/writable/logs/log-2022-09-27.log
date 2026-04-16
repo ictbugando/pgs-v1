@@ -1,0 +1,189 @@
+CRITICAL - 2022-09-27 03:33:11 --> Call to undefined function Joomla\CMS\User\UserFactory()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:33:34 --> Call to undefined method Joomla\CMS\User\UserFactory::getApplication()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:43:46 --> Call to undefined method Joomla\CMS\User\UserFactory::getApplication()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:44:37 --> Call to undefined method Joomla\CMS\Application\SiteApplication::loadUserByUsername()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:45:13 --> Call to undefined method Joomla\CMS\Application\SiteApplication::loadUserByUsername()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:46:03 --> Non-static method Joomla\CMS\User\UserFactory::loadUserByUsername() should not be called statically
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 APPPATH\Controllers\Dashboard.php(251): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Non-static method Joomla\\CMS\\User\\UserFactory::loadUserByUsername() should not be called statically', 'APPPATH\\Controllers\\Dashboard.php', 251, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:46:09 --> Non-static method Joomla\CMS\User\UserFactory::loadUserByUsername() should not be called statically
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 APPPATH\Controllers\Dashboard.php(251): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Non-static method Joomla\\CMS\\User\\UserFactory::loadUserByUsername() should not be called statically', 'APPPATH\\Controllers\\Dashboard.php', 251, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:55:33 --> Undefined variable: container
+in APPPATH\Controllers\BaseController.php on line 48.
+ 1 APPPATH\Controllers\BaseController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: container', 'APPPATH\\Controllers\\BaseController.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:57:27 --> Resource 'App\Controllers\UserFactory' has not been registered with the container.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\di\src\Container.php on line 93.
+ 1 APPPATH\Controllers\Dashboard.php(245): Joomla\DI\Container->get('App\\Controllers\\UserFactory')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:58:38 --> Class 'Joomla\CMS\UserFactory' not found
+in APPPATH\Controllers\Dashboard.php on line 244.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:59:06 --> Call to undefined method Joomla\CMS\User\UserFactory::getContainer()
+in APPPATH\Controllers\Dashboard.php on line 244.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 03:59:56 --> Non-static method Joomla\CMS\User\UserFactory::loadUserByUsername() should not be called statically
+in APPPATH\Controllers\Dashboard.php on line 244.
+ 1 APPPATH\Controllers\Dashboard.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Non-static method Joomla\\CMS\\User\\UserFactory::loadUserByUsername() should not be called statically', 'APPPATH\\Controllers\\Dashboard.php', 244, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 05:02:43 --> Call to undefined method Joomla\CMS\User\UserFactory::getApplication()
+in APPPATH\Controllers\Dashboard.php on line 244.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 06:00:51 --> Undefined property: App\Controllers\Dashboard::$db
+in APPPATH\Controllers\Dashboard.php on line 245.
+ 1 APPPATH\Controllers\Dashboard.php(245): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Dashboard::$db', 'APPPATH\\Controllers\\Dashboard.php', 245, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 06:05:50 --> Undefined variable: user_string
+in APPPATH\Controllers\Dashboard.php on line 245.
+ 1 APPPATH\Controllers\Dashboard.php(245): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_string', 'APPPATH\\Controllers\\Dashboard.php', 245, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 06:32:36 --> Undefined variable: password
+in APPPATH\Models\Engine.php on line 341.
+ 1 APPPATH\Models\Engine.php(341): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: password', 'APPPATH\\Models\\Engine.php', 341, [])
+ 2 APPPATH\Controllers\Dashboard.php(275): App\Models\Engine->isPassSecure('Napendajc@90')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 07:28:43 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+in APPPATH\Models\Engine.php on line 361.
+ 1 APPPATH\Controllers\Dashboard.php(292): App\Models\Engine->saveUserDetails('John Doe', 'jdoe', 'jdoe@gmail.com', 7, '0763855774', '$2y$10$JFWOVQB.cJveh1K1IGgPJedF8sNZ0Ci66sSW8D53wWBhLIbeqBaMW')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 07:50:51 --> Undefined variable: db
+in APPPATH\Models\Engine.php on line 356.
+ 1 APPPATH\Models\Engine.php(356): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: db', 'APPPATH\\Models\\Engine.php', 356, [...])
+ 2 APPPATH\Controllers\Dashboard.php(297): App\Models\Engine->saveUserDetails([...], [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 07:51:27 --> Undefined variable: user_id
+in APPPATH\Models\Engine.php on line 358.
+ 1 APPPATH\Models\Engine.php(358): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Models\\Engine.php', 358, [...])
+ 2 APPPATH\Controllers\Dashboard.php(297): App\Models\Engine->saveUserDetails([...], [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:14:08 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:14:49 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:16:59 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:17:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:18:03 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:22:19 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Login.php(32): CodeIgniter\Model->__call('fetchUserRawfetchUserName', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 10:23:51 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 344.
+ 1 APPPATH\Controllers\Login.php(32): App\Models\Engine->fetchUserName('jmsiox@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

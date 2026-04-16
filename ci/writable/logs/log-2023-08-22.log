@@ -1,0 +1,70 @@
+CRITICAL - 2023-08-22 12:16:41 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(104): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:20:33 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH/Controllers/Transactions.php on line 92.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Transactions.php(92): explode()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:21:05 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH/Controllers/Transactions.php on line 92.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Transactions.php(92): explode()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:22:56 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH/Controllers/Transactions.php on line 92.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Transactions.php(92): explode()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:26:27 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH/Controllers/Transactions.php on line 93.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Transactions.php(93): explode()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:26:56 --> Undefined property: stdClass::$trans_reference
+in APPPATH/Views/popPaymentDataItem.php on line 7.
+ 1 APPPATH/Views/popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popPaymentDataItem.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(105): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 12:30:42 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH/Controllers/Transactions.php on line 93.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Transactions.php(93): explode()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 13:45:16 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 273.
+ 1 APPPATH/Helpers/global_helper.php(307): doProcessAITransaction()
+ 2 APPPATH/Controllers/Malipo.php(102): doAipros2Process()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

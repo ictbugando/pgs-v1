@@ -1,0 +1,9 @@
+CRITICAL - 2025-01-29 10:59:51 --> syntax error, unexpected token "*"
+in APPPATH\Models\Engine.php on line 2083.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Engine.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Engine')
+ 3 APPPATH\Controllers\BaseController.php(58): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Engine')
+ 4 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,141 @@
+CRITICAL - 2025-09-04 01:32:10 --> No connection could be made because the target machine actively refused it
+in C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 269.
+ 1 C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php(269): mysqli->real_connect('127.0.0.1', 'root', 'Napendajc@90', null, 3307, null, 0)
+ 2 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\server\\htdocs\\bmc\\public', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 4 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 5 C:\server\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 8 C:\server\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 9 APPPATH\Filters\CheckPublic.php(13): Joomla\CMS\Session\Session->get('user')
+10 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckPublic->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 10:02:22 --> Call to undefined function App\Models\getPatienttBillsCustLimit()
+in APPPATH\Models\Engine.php on line 457.
+ 1 APPPATH\Views\Patients\record.php(12): App\Models\Engine->getPatienttBills('178798')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(51): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(178798)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 10:05:28 --> Call to undefined function App\Models\getPatienttBillsCustLimit()
+in APPPATH\Models\Engine.php on line 457.
+ 1 APPPATH\Views\Patients\record.php(12): App\Models\Engine->getPatienttBills('178798')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(51): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(178798)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 10:38:09 --> Undefined variable $trans_date
+in APPPATH\Controllers\Patients.php on line 65.
+ 1 APPPATH\Controllers\Patients.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $trans_date', 'APPPATH\\Controllers\\Patients.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 11:09:59 --> Undefined variable $patRecArray
+in APPPATH\Controllers\Patients.php on line 132.
+ 1 APPPATH\Controllers\Patients.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $patRecArray', 'APPPATH\\Controllers\\Patients.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 11:10:15 --> Undefined variable $patWalletArr
+in APPPATH\Controllers\Patients.php on line 146.
+ 1 APPPATH\Controllers\Patients.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $patWalletArr', 'APPPATH\\Controllers\\Patients.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 11:24:22 --> Undefined variable $walletMasterArr
+in APPPATH\Models\Engine.php on line 2004.
+ 1 APPPATH\Models\Engine.php(2004): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $walletMasterArr', 'APPPATH\\Models\\Engine.php', 2004)
+ 2 APPPATH\Views\Patients\record.php(15): App\Models\Engine->getGlobalMasterStatement(0, 0, '178798', 50)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 6 APPPATH\Controllers\Patients.php(51): view('Patients/record', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(178798)
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 11:24:41 --> Undefined variable $myType
+in APPPATH\Views\Patients\dispWalletStatement.php on line 113.
+ 1 APPPATH\Views\Patients\dispWalletStatement.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $myType', 'APPPATH\\Views\\Patients\\dispWalletStatement.php', 113)
+ 2 APPPATH\Views\Patients\record.php(65): require_once('APPPATH\\Views\\Patients\\dispWalletStatement.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 6 APPPATH\Controllers\Patients.php(51): view('Patients/record', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(178798)
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 11:55:41 --> Class "App\Controllers\Alignment" not found
+in APPPATH\Controllers\Patients.php on line 81.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:45:07 --> sizeof(): Argument #1 ($value) must be of type Countable|array, stdClass given
+in APPPATH\Controllers\Patients.php on line 86.
+ 1 APPPATH\Controllers\Patients.php(86): sizeof(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:52:54 --> Call to undefined method PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setValueExplicit()
+in APPPATH\Controllers\Patients.php on line 103.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:53:43 --> Call to undefined method PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setValueExplicit()
+in APPPATH\Controllers\Patients.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:56:21 --> Invalid datatype: 387628
+in APPPATH\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\Cell.php on line 302.
+ 1 APPPATH\Controllers\Patients.php(105): PhpOffice\PhpSpreadsheet\Cell\Cell->setValueExplicit('C3', '387628', 's')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:57:23 --> Invalid datatype: 387628
+in APPPATH\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\Cell.php on line 302.
+ 1 APPPATH\Controllers\Patients.php(105): PhpOffice\PhpSpreadsheet\Cell\Cell->setValueExplicit('C3', '387628', 's')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 12:58:25 --> Class "DataType" not found
+in APPPATH\Controllers\Patients.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 14:13:47 --> Undefined variable $filename
+in APPPATH\Controllers\Patients.php on line 304.
+ 1 APPPATH\Controllers\Patients.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filename', 'APPPATH\\Controllers\\Patients.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-04 14:14:13 --> Undefined variable $filename
+in APPPATH\Controllers\Patients.php on line 304.
+ 1 APPPATH\Controllers\Patients.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filename', 'APPPATH\\Controllers\\Patients.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->exportpatstatement()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()

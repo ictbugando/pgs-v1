@@ -1,0 +1,94 @@
+CRITICAL - 2023-05-24 03:27:25 --> Trying to get property 'groups' of non-object
+in APPPATH\Controllers\BaseController.php on line 52.
+ 1 APPPATH\Controllers\BaseController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'groups\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 03:29:14 --> Trying to get property 'loginErrorMsg001' of non-object
+in APPPATH\Controllers\Login.php on line 38.
+ 1 APPPATH\Controllers\Login.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg001\' of non-object', 'APPPATH\\Controllers\\Login.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 07:47:27 --> Invalid file: reception.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('reception.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:06:37 --> Invalid file: header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Patients.php(16): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:07:15 --> Invalid file: Headers/page_footer.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Headers/page_footer.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Headers/page_footer', [], true)
+ 3 APPPATH\Controllers\Patients.php(19): view('Headers/page_footer')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:07:37 --> Undefined variable: start
+in APPPATH\Views\Patients\newPatientForm.php on line 3.
+ 1 APPPATH\Views\Patients\newPatientForm.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Views\\Patients\\newPatientForm.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\newPatientForm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/newPatientForm', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/newPatientForm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->fetchpatform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:08:30 --> Invalid file: page_footer.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page_footer.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('page_footer', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(48): view('page_footer')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->transactions()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:09:42 --> Undefined variable: start
+in APPPATH\Views\Patients\newPatientForm.php on line 3.
+ 1 APPPATH\Views\Patients\newPatientForm.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Views\\Patients\\newPatientForm.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\newPatientForm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/newPatientForm', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/newPatientForm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->fetchpatform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:10:49 --> Undefined variable: start
+in APPPATH\Views\Patients\newPatientForm.php on line 3.
+ 1 APPPATH\Views\Patients\newPatientForm.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Views\\Patients\\newPatientForm.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\newPatientForm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/newPatientForm', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/newPatientForm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->fetchpatform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 08:58:40 --> Trying to get property 'pat_num' of non-object
+in APPPATH\Views\Patients\patients.php on line 23.
+ 1 APPPATH\Views\Patients\patients.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'pat_num\' of non-object', 'APPPATH\\Views\\Patients\\patients.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\patients.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/patients', [], true)
+ 5 APPPATH\Controllers\Patients.php(18): view('Patients/patients', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

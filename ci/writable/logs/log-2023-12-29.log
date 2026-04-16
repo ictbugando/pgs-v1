@@ -1,0 +1,30 @@
+CRITICAL - 2023-12-29 18:32:26 --> include_once(/var/www/html/bmc/ci/app/Controllers/Api.php): Failed to open stream: Permission denied
+in SYSTEMPATH/Router/AutoRouter.php on line 147.
+ 1 SYSTEMPATH/Router/AutoRouter.php(147): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/AutoRouter.php(147): include_once()
+ 3 SYSTEMPATH/Router/Router.php(499): CodeIgniter\Router\AutoRouter->getRoute()
+ 4 SYSTEMPATH/Router/Router.php(205): CodeIgniter\Router\Router->autoRoute()
+ 5 SYSTEMPATH/CodeIgniter.php(771): CodeIgniter\Router\Router->handle()
+ 6 SYSTEMPATH/CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 20:44:29 --> include_once(/var/www/html/bmc/ci/app/Controllers/Api.php): Failed to open stream: Permission denied
+in SYSTEMPATH/Router/AutoRouter.php on line 147.
+ 1 SYSTEMPATH/Router/AutoRouter.php(147): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/AutoRouter.php(147): include_once()
+ 3 SYSTEMPATH/Router/Router.php(499): CodeIgniter\Router\AutoRouter->getRoute()
+ 4 SYSTEMPATH/Router/Router.php(205): CodeIgniter\Router\Router->autoRoute()
+ 5 SYSTEMPATH/CodeIgniter.php(771): CodeIgniter\Router\Router->handle()
+ 6 SYSTEMPATH/CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 20:44:29 --> include_once(/var/www/html/bmc/ci/app/Controllers/Api.php): Failed to open stream: Permission denied
+in SYSTEMPATH/Router/AutoRouter.php on line 147.
+ 1 SYSTEMPATH/Router/AutoRouter.php(147): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Router/AutoRouter.php(147): include_once()
+ 3 SYSTEMPATH/Router/Router.php(499): CodeIgniter\Router\AutoRouter->getRoute()
+ 4 SYSTEMPATH/Router/Router.php(205): CodeIgniter\Router\Router->autoRoute()
+ 5 SYSTEMPATH/CodeIgniter.php(771): CodeIgniter\Router\Router->handle()
+ 6 SYSTEMPATH/CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

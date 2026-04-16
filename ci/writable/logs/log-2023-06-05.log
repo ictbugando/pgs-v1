@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-05 06:36:40 --> Undefined variable: patRecArray
+in APPPATH\Views\billing\bill_history.php on line 1.
+ 1 APPPATH\Views\billing\bill_history.php(1): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patRecArray', 'APPPATH\\Views\\billing\\bill_history.php', 1, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\bill_history.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/bill_history', [], true)
+ 5 APPPATH\Controllers\Billing.php(19): view('billing/bill_history')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->history()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 06:45:11 --> Undefined variable: patRecArray
+in APPPATH\Views\billing\bill_products.php on line 8.
+ 1 APPPATH\Views\billing\bill_products.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patRecArray', 'APPPATH\\Views\\billing\\bill_products.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\bill_products.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/bill_products', [], true)
+ 5 APPPATH\Controllers\Billing.php(35): view('billing/bill_products')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->products()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

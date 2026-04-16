@@ -1,0 +1,12 @@
+CRITICAL - 2023-11-07 05:53:28 --> trim(): Passing null to parameter #1 ($string) of type string is deprecated
+in SYSTEMPATH/Autoloader/Autoloader.php on line 312.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): trim()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(281): CodeIgniter\Autoloader\Autoloader->sanitizeFilename()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH/Autoloader/Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 SYSTEMPATH/CodeIgniter.php(846): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

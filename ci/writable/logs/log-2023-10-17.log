@@ -1,0 +1,82 @@
+CRITICAL - 2023-10-17 16:22:51 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:23:02 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:23:41 --> A non-numeric value encountered
+in APPPATH/Helpers/global_helper.php on line 786.
+ 1 APPPATH/Helpers/global_helper.php(786): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Helpers/global_helper.php(773): genBillNumber()
+ 3 APPPATH/Models/Engine.php(669): getBillNumber()
+ 4 APPPATH/Controllers/Billing.php(167): App\Models\Engine->saveBillDetails()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:26:27 --> A non-numeric value encountered
+in APPPATH/Helpers/global_helper.php on line 786.
+ 1 APPPATH/Helpers/global_helper.php(786): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Helpers/global_helper.php(773): genBillNumber()
+ 3 APPPATH/Models/Engine.php(669): getBillNumber()
+ 4 APPPATH/Controllers/Billing.php(167): App\Models\Engine->saveBillDetails()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:27:11 --> Unsupported operand types: string + int
+in APPPATH/Helpers/global_helper.php on line 786.
+ 1 APPPATH/Helpers/global_helper.php(773): genBillNumber()
+ 2 APPPATH/Models/Engine.php(669): getBillNumber()
+ 3 APPPATH/Controllers/Billing.php(167): App\Models\Engine->saveBillDetails()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:28:32 --> Unsupported operand types: string + int
+in APPPATH/Helpers/global_helper.php on line 786.
+ 1 APPPATH/Helpers/global_helper.php(773): genBillNumber()
+ 2 APPPATH/Models/Engine.php(669): getBillNumber()
+ 3 APPPATH/Controllers/Billing.php(167): App\Models\Engine->saveBillDetails()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:34:05 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:58:35 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

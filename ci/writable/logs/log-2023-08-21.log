@@ -1,0 +1,163 @@
+CRITICAL - 2023-08-21 09:01:26 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(118): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:11:10 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Patients.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Patients->record()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:11:30 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Patients.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Patients->record()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:11:35 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:18:52 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:18:54 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:19:50 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:21:10 --> Invalid file: Billing/billPreviewPop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:38:09 --> Invalid file: Billing/bill_preview_pop.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Billing.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:45:05 --> include(/var/www/html/bmc/ci/app/Views/billing/bill_preview_pop.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:45:11 --> include(/var/www/html/bmc/ci/app/Views/billing/bill_preview_pop.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:46:33 --> include(/var/www/html/bmc/ci/app/Views/billing/bill_preview_pop.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Patients.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Patients->record()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:48:50 --> include(/var/www/html/bmc/ci/app/Views/billing/billPreviewDetails.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(176): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:49:01 --> include(/var/www/html/bmc/ci/app/Views/billing/billPreviewDetails.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(176): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:50:22 --> include(/var/www/html/bmc/ci/app/Views/billing/billPreviewDetails.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(176): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 18:56:38 --> Too few arguments to function App\Controllers\Patients::record(), 0 passed in /var/www/html/bmc/ci/system/CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH/Controllers/Patients.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Patients->record()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 19:00:49 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 273.
+ 1 APPPATH/Helpers/global_helper.php(307): doProcessAITransaction()
+ 2 APPPATH/Controllers/Malipo.php(102): doAipros2Process()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

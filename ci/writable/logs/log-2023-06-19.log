@@ -1,0 +1,150 @@
+CRITICAL - 2023-06-19 06:13:29 --> Trying to get property 'loginErrorMsg001' of non-object
+in APPPATH\Controllers\Login.php on line 38.
+ 1 APPPATH\Controllers\Login.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg001\' of non-object', 'APPPATH\\Controllers\\Login.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:44:44 --> Too few arguments to function App\Controllers\Billing::test(), 0 passed in C:\xampp\htdocs\bmc\ci\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Billing.php on line 161.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:44:57 --> Call to undefined method App\Controllers\Billing::fetchPatLatestMalipo()
+in APPPATH\Models\Engine.php on line 1146.
+ 1 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:46:18 --> Undefined variable: do_full
+in APPPATH\Models\Engine.php on line 1146.
+ 1 APPPATH\Models\Engine.php(1146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: do_full', 'APPPATH\\Models\\Engine.php', 1146, [...])
+ 2 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 08:15:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tb1.pat_id = '1' ORDER BY tb1.log_id DESC LIMIT 1' at line 4
+CRITICAL - 2023-06-19 08:15:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tb1.pat_id = '1' ORDER BY tb1.log_id DESC LIMIT 1' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM bmc_profile_bal_log tb1 
+							  INNER JOIN bmc_patient_profile tb2 ON tb2.pat_id = tb1.pat_id
+							  INNER JOIN 
+							  WHERE tb1.pat_id = \'1\' ORDER BY tb1.log_id DESC LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM bmc_profile_bal_log tb1 
+							  INNER JOIN bmc_patient_profile tb2 ON tb2.pat_id = tb1.pat_id
+							  INNER JOIN 
+							  WHERE tb1.pat_id = \'1\' ORDER BY tb1.log_id DESC LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM bmc_profile_bal_log tb1 
+							  INNER JOIN bmc_patient_profile tb2 ON tb2.pat_id = tb1.pat_id
+							  INNER JOIN 
+							  WHERE tb1.pat_id = \'1\' ORDER BY tb1.log_id DESC LIMIT 1')
+ 4 APPPATH\Models\Engine.php(1178): CodeIgniter\Database\BaseConnection->query('SELECT * FROM bmc_profile_bal_log tb1 
+							  INNER JOIN bmc_patient_profile tb2 ON tb2.pat_id = tb1.pat_id
+							  INNER JOIN 
+							  WHERE tb1.pat_id = \'1\' ORDER BY tb1.log_id DESC LIMIT 1')
+ 5 APPPATH\Models\Engine.php(1137): App\Models\Engine->getPatientBalRecord('1')
+ 6 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 08:20:56 --> Undefined variable: timestamp
+in APPPATH\Models\Engine.php on line 1227.
+ 1 APPPATH\Models\Engine.php(1227): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: timestamp', 'APPPATH\\Models\\Engine.php', 1227, [...])
+ 2 APPPATH\Models\Engine.php(1154): App\Models\Engine->updatePatLatestMalipo('1', true, [...], [])
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 08:56:08 --> sizeof(): Parameter must be an array or an object that implements Countable
+in APPPATH\Models\Engine.php on line 1136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sizeof(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Models\\Engine.php', 1136, [...])
+ 2 APPPATH\Models\Engine.php(1136): sizeof(Object(stdClass))
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 08:58:48 --> sizeof(): Parameter must be an array or an object that implements Countable
+in APPPATH\Models\Engine.php on line 1143.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sizeof(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Models\\Engine.php', 1143, [...])
+ 2 APPPATH\Models\Engine.php(1143): sizeof(Object(stdClass))
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:00:12 --> Undefined variable: trans_id
+in APPPATH\Models\Engine.php on line 1180.
+ 1 APPPATH\Models\Engine.php(1180): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: trans_id', 'APPPATH\\Models\\Engine.php', 1180, [...])
+ 2 APPPATH\Models\Engine.php(1152): App\Models\Engine->fetchPatLatestMalipo('123456', false)
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:03:05 --> Undefined variable: do_full
+in APPPATH\Models\Engine.php on line 1152.
+ 1 APPPATH\Models\Engine.php(1152): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: do_full', 'APPPATH\\Models\\Engine.php', 1152, [...])
+ 2 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:03:44 --> sizeof(): Parameter must be an array or an object that implements Countable
+in APPPATH\Models\Engine.php on line 1202.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sizeof(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Models\\Engine.php', 1202, [...])
+ 2 APPPATH\Models\Engine.php(1202): sizeof(Object(stdClass))
+ 3 APPPATH\Models\Engine.php(1154): App\Models\Engine->updatePatLatestMalipo('1', true, [], Object(stdClass))
+ 4 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:04:57 --> Undefined variable: trans_id
+in APPPATH\Models\Engine.php on line 1222.
+ 1 APPPATH\Models\Engine.php(1222): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: trans_id', 'APPPATH\\Models\\Engine.php', 1222, [...])
+ 2 APPPATH\Models\Engine.php(1154): App\Models\Engine->updatePatLatestMalipo('1', true, [], Object(stdClass))
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:25:47 --> Undefined variable: pat_num
+in APPPATH\Models\Engine.php on line 1194.
+ 1 APPPATH\Models\Engine.php(1194): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pat_num', 'APPPATH\\Models\\Engine.php', 1194, [...])
+ 2 APPPATH\Models\Engine.php(1151): App\Models\Engine->updatePatLatestMalipo('1', Object(stdClass))
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:27:34 --> Undefined variable: lastId
+in APPPATH\Models\Engine.php on line 1194.
+ 1 APPPATH\Models\Engine.php(1194): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: lastId', 'APPPATH\\Models\\Engine.php', 1194, [...])
+ 2 APPPATH\Models\Engine.php(1150): App\Models\Engine->updatePatLatestMalipo('1', Object(stdClass), Object(stdClass))
+ 3 APPPATH\Controllers\Billing.php(162): App\Models\Engine->calcPatientBalance('1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:04:45 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 1237.
+ 1 APPPATH\Helpers\global_helper.php(218): App\Models\Engine->retPatIdFromPatref('123456')
+ 2 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 3 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:07:02 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 1237.
+ 1 APPPATH\Controllers\Billing.php(164): App\Models\Engine->retPatIdFromPatref('123456')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->test('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

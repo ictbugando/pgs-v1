@@ -1,0 +1,310 @@
+CRITICAL - 2023-05-26 03:24:05 --> Could not connect to database: No connection could be made because the target machine actively refused it.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Filters\CheckLogin.php(15): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 03:24:42 --> Could not connect to database: No connection could be made because the target machine actively refused it.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Filters\CheckLogin.php(15): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 03:30:09 --> Could not connect to database: No connection could be made because the target machine actively refused it.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Filters\CheckLogin.php(15): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 03:41:43 --> Could not connect to database: No connection could be made because the target machine actively refused it.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Filters\CheckLogin.php(15): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 04:46:20 --> Could not connect to database: No connection could be made because the target machine actively refused it.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Filters\CheckLogin.php(15): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+10 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 04:53:13 --> Trying to get property 'groups' of non-object
+in APPPATH\Controllers\BaseController.php on line 53.
+ 1 APPPATH\Controllers\BaseController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'groups\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:02:37 --> Undefined property: App\Controllers\Patients::$groupsArr
+in APPPATH\Controllers\BaseController.php on line 50.
+ 1 APPPATH\Controllers\BaseController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Patients::$groupsArr', 'APPPATH\\Controllers\\BaseController.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:05:26 --> Class 'App\Controllers\stdClass' not found
+in APPPATH\Controllers\BaseController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:06:25 --> Undefined property: App\Controllers\Patients::$lang_code
+in APPPATH\Controllers\BaseController.php on line 74.
+ 1 APPPATH\Controllers\BaseController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Patients::$lang_code', 'APPPATH\\Controllers\\BaseController.php', 74, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:07:18 --> in_array() expects parameter 2 to be array, object given
+in APPPATH\Controllers\BaseController.php on line 80.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'in_array() expects parameter 2 to be array, object given', 'APPPATH\\Controllers\\BaseController.php', 80, [...])
+ 2 APPPATH\Controllers\BaseController.php(80): in_array(10, Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:08:19 --> Invalid file: header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Login.php(12): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:32:58 --> Trying to get property 'other_names' of non-object
+in APPPATH\Views\Patients\record.php on line 12.
+ 1 APPPATH\Views\Patients\record.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'other_names\' of non-object', 'APPPATH\\Views\\Patients\\record.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 05:35:56 --> Undefined variable: patAr
+in APPPATH\Views\Patients\record.php on line 12.
+ 1 APPPATH\Views\Patients\record.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patAr', 'APPPATH\\Views\\Patients\\record.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 06:13:38 --> Invalid file: header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Login.php(12): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 06:13:53 --> Invalid file: header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Login.php(12): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-26 06:47:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+CRITICAL - 2023-05-26 06:47:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(784): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 5 APPPATH\Controllers\Patients.php(24): App\Models\Engine->fetchPatientRecord(1)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-26 07:54:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+CRITICAL - 2023-05-26 07:54:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(784): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 5 APPPATH\Controllers\Patients.php(24): App\Models\Engine->fetchPatientRecord(1)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-26 07:59:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+CRITICAL - 2023-05-26 07:59:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(784): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 5 APPPATH\Controllers\Patients.php(24): App\Models\Engine->fetchPatientRecord(1)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-26 07:59:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+CRITICAL - 2023-05-26 07:59:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet ' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(784): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.* , tb3.kata_name, tb4.wilaya_name. tb5.mkoa_name  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'1\' LIMIT 1')
+ 5 APPPATH\Controllers\Patients.php(24): App\Models\Engine->fetchPatientRecord(1)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-26 13:25:25 --> Could not connect to database: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 280.
+ 1 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 2 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\xampp\\tmp', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 5 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 6 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 7 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 8 APPPATH\Controllers\BaseController.php(54): Joomla\CMS\Session\Session->get('user')
+ 9 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,276 @@
+CRITICAL - 2022-07-21 06:06:21 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 06:07:01 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 06:21:20 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 06:22:22 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 06:24:35 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 06:38:46 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\Login.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 07:27:11 --> Class 'App\Controllers\JFactory' not found
+in APPPATH\Controllers\BaseController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:05:20 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:23:28 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:23:45 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:24:37 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:30:42 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:31:55 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\public\joom.php:53)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\public\\joom.php:53)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:32:50 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(9): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:43:17 --> Undefined variable: userInfo
+in APPPATH\Controllers\Login.php on line 13.
+ 1 APPPATH\Controllers\Login.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userInfo', 'APPPATH\\Controllers\\Login.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:43:19 --> Undefined variable: userInfo
+in APPPATH\Controllers\Login.php on line 13.
+ 1 APPPATH\Controllers\Login.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userInfo', 'APPPATH\\Controllers\\Login.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:43:33 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:44:07 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:50:18 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:50:53 --> Undefined variable: userInfo
+in APPPATH\Controllers\Login.php on line 13.
+ 1 APPPATH\Controllers\Login.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userInfo', 'APPPATH\\Controllers\\Login.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:53:45 --> Undefined variable: userInfo
+in APPPATH\Controllers\Login.php on line 13.
+ 1 APPPATH\Controllers\Login.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userInfo', 'APPPATH\\Controllers\\Login.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:54:02 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:54:24 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:58:01 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:58:40 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:58:41 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 08:58:54 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 09:00:14 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 09:03:41 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 09:46:49 --> Failed to start the session because headers have already been sent by "C:\xampp\htdocs\bmc\ci\app\Config\Events.php" at line 32.
+in C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php on line 473.
+ 1 C:\xampp\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(305): Joomla\Session\Storage\NativeStorage->start()
+ 2 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 3 C:\xampp\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 4 C:\xampp\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 5 APPPATH\Controllers\Login.php(10): Joomla\CMS\Session\Session->get('user')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 10:06:07 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 10:06:12 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-21 10:08:12 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\bmc\ci\app\Config\Events.php:32)
+in SYSTEMPATH\Debug\Toolbar.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\bmc\\ci\\app\\Config\\Events.php:32)', 'SYSTEMPATH\\Debug\\Toolbar.php', 447, [...])
+ 2 SYSTEMPATH\Debug\Toolbar.php(447): header('Content-Type: application/javascript')
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

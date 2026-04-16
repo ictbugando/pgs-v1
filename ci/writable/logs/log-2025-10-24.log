@@ -1,0 +1,7 @@
+CRITICAL - 2025-10-24 11:39:40 --> Undefined array key "data"
+in APPPATH\Controllers\Malipo.php on line 598.
+ 1 APPPATH\Controllers\Malipo.php(598): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'APPPATH\\Controllers\\Malipo.php', 598)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbprocesscontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()

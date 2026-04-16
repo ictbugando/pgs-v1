@@ -1,0 +1,78 @@
+CRITICAL - 2023-10-20 10:21:32 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 10:21:35 --> include(/var/www/html/bmc/ci/app/Views/report.php): Failed to open stream: Permission denied
+in SYSTEMPATH/View/View.php on line 213.
+ 1 SYSTEMPATH/View/View.php(213): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include()
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 11:48:10 --> Object of class stdClass could not be converted to string
+in APPPATH/Models/Engine.php on line 1101.
+ 1 APPPATH/Models/Engine.php(1064): App\Models\Engine->getBillDetailsForMalipoValidation()
+ 2 APPPATH/Helpers/global_helper.php(468): App\Models\Engine->doValidateReference()
+ 3 APPPATH/Helpers/global_helper.php(455): doProcessGlobalTransaction()
+ 4 APPPATH/Controllers/Malipo.php(356): doProcessNMBTransaction()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbprocesscallback()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 11:59:25 --> Object of class stdClass could not be converted to string
+in APPPATH/Models/Engine.php on line 1101.
+ 1 APPPATH/Controllers/Malipo.php(10): App\Models\Engine->getBillDetailsForMalipoValidation()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->index()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 12:09:05 --> Unclosed '{' on line 1224
+in APPPATH/Models/Engine.php on line 1255.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/BaseController.php(58): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 12:13:20 --> Unclosed '('
+in APPPATH/Models/Engine.php on line 919.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/BaseController.php(58): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-20 12:31:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0') LIMIT 1' at line 7
+CRITICAL - 2023-10-20 12:31:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0') LIMIT 1' at line 7
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(1082): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Malipo.php(10): App\Models\Engine->getBillDetailsForMalipoValidation()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 12:35:55 --> Unclosed '('
+in APPPATH/Models/Engine.php on line 1076.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/BaseController.php(58): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

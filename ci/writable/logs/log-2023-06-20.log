@@ -1,0 +1,11 @@
+CRITICAL - 2023-06-20 04:19:22 --> Undefined property: stdClass::$trans_reference
+in APPPATH\Views\popPaymentDataItem.php on line 7.
+ 1 APPPATH\Views\popPaymentDataItem.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$trans_reference', 'APPPATH\\Views\\popPaymentDataItem.php', 7, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popPaymentDataItem.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popPaymentDataItem', [], true)
+ 5 APPPATH\Controllers\Transactions.php(104): view('popPaymentDataItem', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Transactions->fetchpopitems()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transactions))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

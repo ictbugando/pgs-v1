@@ -1,0 +1,55 @@
+CRITICAL - 2025-04-24 14:21:24 --> Class "Factory" not found
+in APPPATH\Helpers\global_cache.php on line 2.
+ 1 APPPATH\Filters\CheckPublic.php(16): require()
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckPublic->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 14:28:06 --> Undefined property: Joomla\CMS\User\User::$sesKey
+in APPPATH\Helpers\global_cache.php on line 5.
+ 1 APPPATH\Helpers\global_cache.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Joomla\\CMS\\User\\User::$sesKey', 'APPPATH\\Helpers\\global_cache.php', 5)
+ 2 APPPATH\Filters\CheckPublic.php(16): require('APPPATH\\Helpers\\global_cache.php')
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckPublic->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 14:34:45 --> require(C:\server\htdocs\bmc\ci\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory
+in APPPATH\Filters\CheckLogin.php on line 17.
+ 1 APPPATH\Filters\CheckLogin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\server\\htdocs\\bmc\\ci\\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory', 'APPPATH\\Filters\\CheckLogin.php', 17)
+ 2 APPPATH\Filters\CheckLogin.php(17): require()
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login/process', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 14:35:09 --> require(C:\server\htdocs\bmc\ci\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory
+in APPPATH\Filters\CheckLogin.php on line 17.
+ 1 APPPATH\Filters\CheckLogin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\server\\htdocs\\bmc\\ci\\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory', 'APPPATH\\Filters\\CheckLogin.php', 17)
+ 2 APPPATH\Filters\CheckLogin.php(17): require()
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login/process', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 14:35:54 --> require(C:\server\htdocs\bmc\ci\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory
+in APPPATH\Filters\CheckLogin.php on line 17.
+ 1 APPPATH\Filters\CheckLogin.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\server\\htdocs\\bmc\\ci\\app/helpers/core/global_cache.php): Failed to open stream: No such file or directory', 'APPPATH\\Filters\\CheckLogin.php', 17)
+ 2 APPPATH\Filters\CheckLogin.php(17): require()
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckLogin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 23:29:35 --> Undefined array key "data"
+in APPPATH\Helpers\global_helper.php on line 154.
+ 1 APPPATH\Helpers\global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'APPPATH\\Helpers\\global_helper.php', 154)
+ 2 APPPATH\Controllers\Malipo.php(318): dispResponseCRDBValidate([...], '2')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 23:35:25 --> Undefined array key "data"
+in APPPATH\Helpers\global_helper.php on line 154.
+ 1 APPPATH\Helpers\global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'APPPATH\\Helpers\\global_helper.php', 154)
+ 2 APPPATH\Controllers\Malipo.php(318): dispResponseCRDBValidate([...], '2')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

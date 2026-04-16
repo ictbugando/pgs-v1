@@ -1,0 +1,738 @@
+CRITICAL - 2023-06-01 03:28:51 --> Class 'App\Controllers\SimpleXMLElement' not found
+in APPPATH\Controllers\Malipo.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:29:10 --> Class 'App\Controllers\SimpleXMLElement' not found
+in APPPATH\Controllers\Malipo.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:29:50 --> syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Controllers\Malipo.php on line 36.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('malipo')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('malipo')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('malipo')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:38:47 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 270.
+ 1 APPPATH\Helpers\global_helper.php(270): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 270, [...])
+ 2 APPPATH\Controllers\Malipo.php(63): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:39:10 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 270.
+ 1 APPPATH\Helpers\global_helper.php(270): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 270, [...])
+ 2 APPPATH\Controllers\Malipo.php(63): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:40:25 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 270.
+ 1 APPPATH\Helpers\global_helper.php(270): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 270, [...])
+ 2 APPPATH\Controllers\Malipo.php(65): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:41:35 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 270.
+ 1 APPPATH\Helpers\global_helper.php(270): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 270, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:51:28 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 270.
+ 1 APPPATH\Helpers\global_helper.php(270): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 270, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:52:04 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 272.
+ 1 APPPATH\Helpers\global_helper.php(272): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 272, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 03:52:52 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 273.
+ 1 APPPATH\Helpers\global_helper.php(273): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 273, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:02:28 --> syntax error, unexpected 'else' (T_ELSE)
+in APPPATH\Helpers\global_helper.php on line 232.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:04:12 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 273.
+ 1 APPPATH\Helpers\global_helper.php(273): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 273, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:04:30 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 275.
+ 1 APPPATH\Helpers\global_helper.php(275): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 275, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:04:57 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 275.
+ 1 APPPATH\Helpers\global_helper.php(275): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 275, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:05:08 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 275.
+ 1 APPPATH\Helpers\global_helper.php(275): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 275, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:05:52 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 276.
+ 1 APPPATH\Helpers\global_helper.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 276, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:08:02 --> Undefined variable: reqDataArr
+in APPPATH\Helpers\global_helper.php on line 276.
+ 1 APPPATH\Helpers\global_helper.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: reqDataArr', 'APPPATH\\Helpers\\global_helper.php', 276, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:14:08 --> syntax error, unexpected '}'
+in APPPATH\Helpers\global_helper.php on line 294.
+ 1 SYSTEMPATH\Controller.php(85): helper([...])
+ 2 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:20:15 --> Trying to get property 'REFERENCE1' of non-object
+in APPPATH\Helpers\global_helper.php on line 155.
+ 1 APPPATH\Helpers\global_helper.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'REFERENCE1\' of non-object', 'APPPATH\\Helpers\\global_helper.php', 155, [...])
+ 2 APPPATH\Helpers\global_helper.php(210): getAiDataArr('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+                                <TYPE>C2B</TYPE>
+                                <CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+                                <MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+                                <CUSTOMERNAME></CUSTOMERNAME>
+                                <AMOUNT>110</AMOUNT>
+                                <PIN></PIN>
+                                <REFERENCE>8123403687148339</REFERENCE>
+                                <USERNAME></USERNAME>
+                                <PASSWORD></PASSWORD>
+                                <REFERENCE1>12345671</REFERENCE1>
+                                <REFERENCE2>111511119</REFERENCE2>                               
+                            </COMMAND>')
+ 3 APPPATH\Helpers\global_helper.php(280): doProcessAITransaction('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+                                <TYPE>C2B</TYPE>
+                                <CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+                                <MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+                                <CUSTOMERNAME></CUSTOMERNAME>
+                                <AMOUNT>110</AMOUNT>
+                                <PIN></PIN>
+                                <REFERENCE>8123403687148339</REFERENCE>
+                                <USERNAME></USERNAME>
+                                <PASSWORD></PASSWORD>
+                                <REFERENCE1>12345671</REFERENCE1>
+                                <REFERENCE2>111511119</REFERENCE2>                               
+                            </COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:44:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:45:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:46:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:47:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:48:05 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:48:39 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(890): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:48:50 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(892): CodeIgniter\Model->__get('ipAddress')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 04:50:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(893): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:06:46 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(897): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:09:41 --> Undefined variable: dataPatient
+in APPPATH\Models\Engine.php on line 910.
+ 1 APPPATH\Models\Engine.php(910): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataPatient', 'APPPATH\\Models\\Engine.php', 910, [...])
+ 2 APPPATH\Helpers\global_helper.php(222): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(274): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:52:53 --> Undefined variable: CI
+in APPPATH\Models\Engine.php on line 804.
+ 1 APPPATH\Models\Engine.php(804): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: CI', 'APPPATH\\Models\\Engine.php', 804, [...])
+ 2 APPPATH\Helpers\global_helper.php(99): App\Models\Engine->retMweziID('2023-06-01')
+ 3 APPPATH\Models\Engine.php(896): getMweziId('2023-06-01')
+ 4 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:53:16 --> Undefined variable: CI
+in APPPATH\Models\Engine.php on line 804.
+ 1 APPPATH\Models\Engine.php(804): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: CI', 'APPPATH\\Models\\Engine.php', 804, [...])
+ 2 APPPATH\Helpers\global_helper.php(99): App\Models\Engine->retMweziID('2023-06-01')
+ 3 APPPATH\Models\Engine.php(896): getMweziId('2023-06-01')
+ 4 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 5 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 6 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:54:27 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 899 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(899): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:54:51 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 899 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(899): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:55:30 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 900 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(900): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:56:59 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 904 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(904): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:57:29 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 905 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(905): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:57:50 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 905 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(905): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:58:11 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 905 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(905): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 05:58:51 --> Too few arguments to function getMweziId(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Models\Engine.php on line 905 and exactly 1 expected
+in APPPATH\Helpers\global_helper.php on line 98.
+ 1 APPPATH\Models\Engine.php(905): getMweziId()
+ 2 APPPATH\Helpers\global_helper.php(230): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345671","REFERENCE2":"111511119"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(282): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 06:09:00 --> Undefined variable: mwezi
+in APPPATH\Models\Engine.php on line 804.
+ 1 APPPATH\Models\Engine.php(804): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mwezi', 'APPPATH\\Models\\Engine.php', 804, [...])
+ 2 APPPATH\Helpers\global_helper.php(99): App\Models\Engine->retMweziID('2023-06-01')
+ 3 APPPATH\Controllers\Malipo.php(11): getMweziId('2023-06-01')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-01 06:12:02 --> Unknown column 'mwaka' in 'field list'
+CRITICAL - 2023-06-01 06:12:02 --> Unknown column 'mwaka' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_malipo` (`mwaka`, `mwezi`, `siku_made`) VALUES (2023, 6, \'2023-06-01 06:12:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_malipo` (`mwaka`, `mwezi`, `siku_made`) VALUES (2023, 6, \'2023-06-01 06:12:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_malipo` (`mwaka`, `mwezi`, `siku_made`) VALUES (2023, 6, \'2023-06-01 06:12:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_malipo` (`mwaka`, `mwezi`, `siku_made`) VALUES (:mwaka:, :mwezi:, :siku_made:)', [...], false)
+ 5 APPPATH\Models\Engine.php(826): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(811): App\Models\Engine->genMweziID('2023-06-01')
+ 7 APPPATH\Helpers\global_helper.php(99): App\Models\Engine->retMweziID('2023-06-01')
+ 8 APPPATH\Controllers\Malipo.php(11): getMweziId('2023-06-01')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 06:58:52 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(903): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 06:59:27 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(903): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:00:12 --> Undefined variable: dataValues
+in APPPATH\Helpers\global_helper.php on line 285.
+ 1 APPPATH\Helpers\global_helper.php(285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataValues', 'APPPATH\\Helpers\\global_helper.php', 285, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:00:14 --> Undefined variable: dataValues
+in APPPATH\Helpers\global_helper.php on line 285.
+ 1 APPPATH\Helpers\global_helper.php(285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataValues', 'APPPATH\\Helpers\\global_helper.php', 285, [...])
+ 2 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:02:08 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(903): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:02:10 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(903): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:02:31 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(903): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(227): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(279): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:04:31 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(905): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:05:16 --> syntax error, unexpected 'return' (T_RETURN), expecting ';' or ','
+in APPPATH\Models\Engine.php on line 861.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Engine.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Engine')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Engine')
+ 4 APPPATH\Controllers\BaseController.php(56): spl_autoload_call('App\\Models\\Engine')
+ 5 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:05:28 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 884.
+ 1 APPPATH\Models\Engine.php(908): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:06:00 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 884.
+ 1 APPPATH\Models\Engine.php(908): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:06:27 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 884.
+ 1 APPPATH\Models\Engine.php(908): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-01 07:08:38 --> Unknown column 'tb1.trans_date' in 'field list'
+CRITICAL - 2023-06-01 07:08:38 --> Unknown column 'tb1.trans_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.amount , tb1.trans_date FROM bmc_malipo tb1 
+							  INNER JOIN bmc_malipo_details tb2 ON tb2.trans_id = tb1.trans_id
+							  WHERE tb1.reference = \'123456\' ORDER BY tb1.trans_id DESC LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.amount , tb1.trans_date FROM bmc_malipo tb1 
+							  INNER JOIN bmc_malipo_details tb2 ON tb2.trans_id = tb1.trans_id
+							  WHERE tb1.reference = \'123456\' ORDER BY tb1.trans_id DESC LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.amount , tb1.trans_date FROM bmc_malipo tb1 
+							  INNER JOIN bmc_malipo_details tb2 ON tb2.trans_id = tb1.trans_id
+							  WHERE tb1.reference = \'123456\' ORDER BY tb1.trans_id DESC LIMIT 1')
+ 4 APPPATH\Models\Engine.php(876): CodeIgniter\Database\BaseConnection->query('SELECT tb1.amount , tb1.trans_date FROM bmc_malipo tb1 
+							  INNER JOIN bmc_malipo_details tb2 ON tb2.trans_id = tb1.trans_id
+							  WHERE tb1.reference = \'123456\' ORDER BY tb1.trans_id DESC LIMIT 1')
+ 5 APPPATH\Models\Engine.php(908): App\Models\Engine->isDoublePay([...])
+ 6 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 7 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 8 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:09:48 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 880.
+ 1 APPPATH\Models\Engine.php(904): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:10:11 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 880.
+ 1 APPPATH\Models\Engine.php(906): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 07:10:53 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 881.
+ 1 APPPATH\Models\Engine.php(908): App\Models\Engine->isDoublePay([...])
+ 2 APPPATH\Helpers\global_helper.php(225): App\Models\Engine->saveTransData('3', '{"TYPE":"C2B","CUSTOMERMSISDN":"786670758","MERCHANTMSISDN":"780800125","CUSTOMERNAME":{},"AMOUNT":"1000","PIN":{},"REFERENCE":"123456","USERNAME":{},"PASSWORD":{},"REFERENCE1":"12345672","REFERENCE2":"111511120"}', [...])
+ 3 APPPATH\Helpers\global_helper.php(277): doProcessAITransaction(Object(SimpleXMLElement))
+ 4 APPPATH\Controllers\Malipo.php(68): doAipros2Process()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-01 08:14:37 --> Table 'bmc_1.bmc_malipo_trans_details' doesn't exist
+CRITICAL - 2023-06-01 08:14:37 --> Table 'bmc_1.bmc_malipo_trans_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 4 APPPATH\Models\Engine.php(156): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 5 APPPATH\Controllers\Dashboard.php(36): App\Models\Engine->getPaymentData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->transactions()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-01 08:45:56 --> Unknown column 'tb1.trans_reference' in 'field list'
+CRITICAL - 2023-06-01 08:45:56 --> Unknown column 'tb1.trans_reference' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 4 APPPATH\Models\Engine.php(156): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					 WHERE mwezi_id = \'1\'  ORDER BY tb1.trans_id DESC LIMIT 0 , 30 ')
+ 5 APPPATH\Controllers\Dashboard.php(36): App\Models\Engine->getPaymentData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->transactions()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 08:46:21 --> Undefined property: stdClass::$trans_reference
+in APPPATH\Views\dispPaymentData.php on line 16.
+ 1 APPPATH\Views\dispPaymentData.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$trans_reference', 'APPPATH\\Views\\dispPaymentData.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispPaymentData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispPaymentData', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(37): view('dispPaymentData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->transactions()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:00:04 --> Call to undefined method App\Controllers\Patients::getPatinetPayments()
+in APPPATH\Views\Patients\record.php on line 5.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 4 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:09:26 --> Undefined variable: patPayArra
+in APPPATH\Views\Patients\record.php on line 30.
+ 1 APPPATH\Views\Patients\record.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patPayArra', 'APPPATH\\Views\\Patients\\record.php', 30, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:09:46 --> Trying to get property 'receipt' of non-object
+in APPPATH\Views\Patients\record.php on line 33.
+ 1 APPPATH\Views\Patients\record.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'receipt\' of non-object', 'APPPATH\\Views\\Patients\\record.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:10:44 --> Undefined variable: queryRows
+in APPPATH\Models\Engine.php on line 251.
+ 1 APPPATH\Models\Engine.php(251): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: queryRows', 'APPPATH\\Models\\Engine.php', 251, [...])
+ 2 APPPATH\Views\Patients\record.php(5): App\Models\Engine->getPatinetPayments('123456')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 6 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:16:13 --> Undefined property: stdClass::$wallet_name
+in APPPATH\Views\Patients\record.php on line 35.
+ 1 APPPATH\Views\Patients\record.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$wallet_name', 'APPPATH\\Views\\Patients\\record.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-01 09:17:50 --> Undefined property: stdClass::$wallet_name
+in APPPATH\Views\Patients\record.php on line 35.
+ 1 APPPATH\Views\Patients\record.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$wallet_name', 'APPPATH\\Views\\Patients\\record.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(28): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

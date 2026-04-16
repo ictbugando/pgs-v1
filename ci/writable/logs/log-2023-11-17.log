@@ -1,0 +1,12 @@
+CRITICAL - 2023-11-17 10:59:50 --> require(/var/www/html/bmc/ci/app/Views/dispSearchUser.php): Failed to open stream: Permission denied
+in APPPATH/Views/administrator.php on line 52.
+ 1 APPPATH/Views/administrator.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Views/administrator.php(52): require()
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/administrator.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Dashboard.php(63): view()
+ 7 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 8 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

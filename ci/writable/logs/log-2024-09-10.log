@@ -1,0 +1,153 @@
+CRITICAL - 2024-09-10 08:23:04 --> No route to host
+in /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php on line 269.
+ 1 /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php(269): mysqli->real_connect()
+ 2 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Handler/DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open()
+ 4 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Storage/NativeStorage.php(481): session_start()
+ 5 /var/www/html/bmc1/libraries/src/Session/Storage/JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(333): Joomla\Session\Session->start()
+ 8 /var/www/html/bmc1/libraries/src/Session/Session.php(198): Joomla\Session\Session->has()
+ 9 APPPATH/Controllers/BaseController.php(60): Joomla\CMS\Session\Session->get()
+10 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-10 08:23:04 --> No route to host
+in /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php on line 269.
+ 1 /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php(269): mysqli->real_connect()
+ 2 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Handler/DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open()
+ 4 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Storage/NativeStorage.php(481): session_start()
+ 5 /var/www/html/bmc1/libraries/src/Session/Storage/JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(333): Joomla\Session\Session->start()
+ 8 /var/www/html/bmc1/libraries/src/Session/Session.php(198): Joomla\Session\Session->has()
+ 9 APPPATH/Controllers/BaseController.php(60): Joomla\CMS\Session\Session->get()
+10 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 08:23:09 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+ERROR - 2024-09-10 08:23:09 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 08:23:09 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-10 08:23:09 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 13:32:06 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 13:32:06 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 13:32:08 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 13:32:08 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 21:10:01 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 21:10:01 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 21:10:02 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 21:10:02 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-10 21:15:54 --> No route to host
+in /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php on line 269.
+ 1 /var/www/html/bmc1/libraries/vendor/joomla/database/src/Mysqli/MysqliDriver.php(269): mysqli->real_connect()
+ 2 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Handler/DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open()
+ 4 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Storage/NativeStorage.php(481): session_start()
+ 5 /var/www/html/bmc1/libraries/src/Session/Storage/JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 /var/www/html/bmc1/libraries/vendor/joomla/session/src/Session.php(333): Joomla\Session\Session->start()
+ 8 /var/www/html/bmc1/libraries/src/Session/Session.php(198): Joomla\Session\Session->has()
+ 9 APPPATH/Controllers/BaseController.php(60): Joomla\CMS\Session\Session->get()
+10 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 21:16:23 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 21:16:23 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 21:52:05 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 21:52:05 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-09-10 21:52:24 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+CRITICAL - 2024-09-10 21:52:24 --> Got error 4009 'Cluster Failure' from NDBCLUSTER
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(554): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/BaseController.php(77): App\Models\Engine->getLanguages()
+ 6 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

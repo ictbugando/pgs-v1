@@ -1,0 +1,18 @@
+CRITICAL - 2023-06-08 07:32:17 --> Undefined property: stdClass::$cost_am
+in APPPATH\Models\Engine.php on line 289.
+ 1 APPPATH\Models\Engine.php(289): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$cost_am', 'APPPATH\\Models\\Engine.php', 289, [...])
+ 2 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 08:38:40 --> Undefined variable: cost_amt
+in APPPATH\Helpers\html\total_input.php on line 2.
+ 1 APPPATH\Helpers\html\total_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cost_amt', 'APPPATH\\Helpers\\html\\total_input.php', 2, [])
+ 2 APPPATH\Helpers\global_helper.php(371): require('APPPATH\\Helpers\\html\\total_input.php')
+ 3 APPPATH\Models\Engine.php(291): getTotalInput()
+ 4 APPPATH\Controllers\Billing.php(46): App\Models\Engine->getSearchProduct(null)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,139 @@
+CRITICAL - 2025-10-22 13:18:42 --> Class "App\Controllers\MkcbAesGcm" not found
+in APPPATH\Controllers\Test.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:05:47 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:08:48 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:18:39 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:19:38 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:20:49 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:21:23 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:22:40 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:24:17 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:25:06 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:26:03 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:26:44 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Controllers\Malipo.php(544): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbfetchcontrol()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 14:27:24 --> Array to string conversion
+in APPPATH\Controllers\Test.php on line 17.
+ 1 APPPATH\Controllers\Test.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Test.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 15:37:09 --> Call to undefined function App\Controllers\doMKCBEncrypt()
+in APPPATH\Controllers\Malipo.php on line 595.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbprocesscontrol()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 15:37:29 --> Call to undefined function App\Controllers\doMKCBEncrypt()
+in APPPATH\Controllers\Malipo.php on line 595.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbprocesscontrol()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-10-22 16:07:31 --> Duplicate entry '275908' for key 'bmc_malipo_details.PRIMARY'
+CRITICAL - 2025-10-22 16:07:31 --> Duplicate entry '275908' for key 'bmc_malipo_details.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_malipo_details` (`trans_id`, `trans_sp`, `trans_ip`, `fullXml`, `trans_date`) VALUES (275908, \'6\', \'127.0.0.1\', \'\\"\\"\', 1761138450)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_malipo_details` (`trans_id`, `trans_sp`, `trans_ip`, `fullXml`, `trans_date`) VALUES (275908, \'6\', \'127.0.0.1\', \'\\"\\"\', 1761138450)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_malipo_details` (`trans_id`, `trans_sp`, `trans_ip`, `fullXml`, `trans_date`) VALUES (275908, \'6\', \'127.0.0.1\', \'\\"\\"\', 1761138450)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_malipo_details` (`trans_id`, `trans_sp`, `trans_ip`, `fullXml`, `trans_date`) VALUES (:trans_id:, :trans_sp:, :trans_ip:, :fullXml:, :trans_date:)', [...], false)
+ 5 APPPATH\Models\Engine.php(1930): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Helpers\global_helper.php(573): App\Models\Engine->saveTransData('1', '6', 'FCPATH\\.', [...])
+ 7 APPPATH\Controllers\Malipo.php(601): doProcessGlobalTransaction('6', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbprocesscontrol()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 16:26:37 --> Undefined variable $jsonString
+in APPPATH\Controllers\Malipo.php on line 621.
+ 1 APPPATH\Controllers\Malipo.php(621): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jsonString', 'APPPATH\\Controllers\\Malipo.php', 621)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbrecon()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 16:39:59 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Models\Engine.php(116): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 APPPATH\Controllers\Malipo.php(625): App\Models\Engine->doMKCBDecrypt('C:\\server\\htdocs\\bmc\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbrecon()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-10-22 16:45:51 --> Invalid data format
+in APPPATH\Libraries\MkcbAesGcm.php on line 57.
+ 1 APPPATH\Models\Engine.php(116): App\Libraries\MkcbAesGcm->decrypt('C:\\server\\htdocs\\bmc\\public')
+ 2 APPPATH\Controllers\Malipo.php(631): App\Models\Engine->doMKCBDecrypt('C:\\server\\htdocs\\bmc\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->mkcbrecon()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(60): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,101 @@
+CRITICAL - 2024-01-29 00:05:39 --> fopen(/var/www/html/bmc/public/downloads/1706475939bmcreportfile.xlsx): Failed to open stream: Permission denied
+in APPPATH/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/BaseWriter.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/BaseWriter.php(128): fopen()
+ 3 APPPATH/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xlsx.php(546): PhpOffice\PhpSpreadsheet\Writer\BaseWriter->openFileHandle()
+ 4 APPPATH/Controllers/Dashboard.php(77): PhpOffice\PhpSpreadsheet\Writer\Xlsx->save()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->exportreport()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 09:48:00 --> Undefined array key "itemId"
+in APPPATH/Models/Engine.php on line 839.
+ 1 APPPATH/Models/Engine.php(839): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Billing.php(166): App\Models\Engine->saveBillDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 09:50:32 --> Undefined array key "itemId"
+in APPPATH/Models/Engine.php on line 839.
+ 1 APPPATH/Models/Engine.php(839): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Billing.php(166): App\Models\Engine->saveBillDetails()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 11:42:16 --> Undefined array key "detArr"
+in APPPATH/Views/Reports/txn_report_display.php on line 3.
+ 1 APPPATH/Views/Reports/txn_report_display.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Reports/txn_report_display.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(201): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 11:42:29 --> Undefined array key "detArr"
+in APPPATH/Views/Reports/txn_report_display.php on line 3.
+ 1 APPPATH/Views/Reports/txn_report_display.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Reports/txn_report_display.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(201): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 11:42:39 --> Undefined array key "detArr"
+in APPPATH/Views/Reports/txn_report_display.php on line 3.
+ 1 APPPATH/Views/Reports/txn_report_display.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Reports/txn_report_display.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(201): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 11:57:49 --> Undefined property: stdClass::$wallet_name
+in APPPATH/Views/dispPaymentData.php on line 13.
+ 1 APPPATH/Views/dispPaymentData.php(13): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/dispPaymentData.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transactions.php(136): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Transactions->searchdata()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 14:13:14 --> Undefined variable $extSql
+in APPPATH/Models/Engine.php on line 1626.
+ 1 APPPATH/Models/Engine.php(1626): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1543): App\Models\Engine->fetchPatUnpaidBills()
+ 3 APPPATH/Models/Engine.php(1528): App\Models\Engine->updatePayPatBills()
+ 4 APPPATH/Helpers/global_helper.php(507): App\Models\Engine->prosPatientUnpaidBills()
+ 5 APPPATH/Helpers/global_helper.php(452): doProcessGlobalTransaction()
+ 6 APPPATH/Controllers/Malipo.php(259): doProcessCRDBTransaction()
+ 7 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 8 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 15:15:29 --> Undefined variable $extSql
+in APPPATH/Models/Engine.php on line 1626.
+ 1 APPPATH/Models/Engine.php(1626): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1543): App\Models\Engine->fetchPatUnpaidBills()
+ 3 APPPATH/Models/Engine.php(1528): App\Models\Engine->updatePayPatBills()
+ 4 APPPATH/Helpers/global_helper.php(507): App\Models\Engine->prosPatientUnpaidBills()
+ 5 APPPATH/Helpers/global_helper.php(452): doProcessGlobalTransaction()
+ 6 APPPATH/Controllers/Malipo.php(259): doProcessCRDBTransaction()
+ 7 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 8 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-29 18:22:00 --> Undefined variable $bill_id
+in APPPATH/Controllers/Billing.php on line 168.
+ 1 APPPATH/Controllers/Billing.php(168): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,248 @@
+CRITICAL - 2024-10-20 09:40:13 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 12:16:18 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:31 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:31 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:36 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:37 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:40 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:41 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:43 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:46 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:48 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:51 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:56 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:51:56 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:01 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:01 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:02 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:06 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:11 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:16 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:21 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:26 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:30 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:31 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 05:52:31 --> syntax error, unexpected token "if"
+in APPPATH/Helpers/global_helper.php on line 392.
+ 1 SYSTEMPATH/Controller.php(85): helper()
+ 2 APPPATH/Controllers/BaseController.php(46): CodeIgniter\Controller->initController()
+ 3 SYSTEMPATH/CodeIgniter.php(859): App\Controllers\BaseController->initController()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 15:24:44 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 15:31:19 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 16:43:46 --> Undefined array key "data"
+in APPPATH/Helpers/global_helper.php on line 154.
+ 1 APPPATH/Helpers/global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(294): dispResponseCRDBValidate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbverify()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 17:16:53 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 18:29:48 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-20 20:48:15 --> Undefined property: stdClass::$reference
+in APPPATH/Helpers/global_helper.php on line 914.
+ 1 APPPATH/Helpers/global_helper.php(914): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(440): nmbGenSubmitJson()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbbillrequest()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

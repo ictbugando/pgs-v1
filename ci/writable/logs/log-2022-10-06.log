@@ -1,0 +1,308 @@
+CRITICAL - 2022-10-06 04:19:54 --> Undefined variable: user_id
+in APPPATH\Views\settings.php on line 6.
+ 1 APPPATH\Views\settings.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Views\\settings.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(81): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:19:55 --> Undefined variable: user_id
+in APPPATH\Views\settings.php on line 6.
+ 1 APPPATH\Views\settings.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Views\\settings.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(81): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:21:34 --> Undefined variable: user_id
+in APPPATH\Views\settings.php on line 6.
+ 1 APPPATH\Views\settings.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Views\\settings.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(81): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:21:36 --> Undefined variable: user_id
+in APPPATH\Views\settings.php on line 6.
+ 1 APPPATH\Views\settings.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_id', 'APPPATH\\Views\\settings.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(81): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:28:26 --> Object of class Joomla\CMS\Session\Session could not be converted to string
+in APPPATH\Models\Engine.php on line 516.
+ 1 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard))
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:46:12 --> Too few arguments to function App\Models\Engine::permitedChangeUserProfile(), 1 passed in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 70 and exactly 2 expected
+in APPPATH\Models\Engine.php on line 515.
+ 1 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard))
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:46:47 --> Class 'App\Models\stdClass' not found
+in APPPATH\Models\Engine.php on line 516.
+ 1 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:48:13 --> Class 'App\Models\stdClass' not found
+in APPPATH\Models\Engine.php on line 516.
+ 1 APPPATH\Controllers\Dashboard.php(71): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:48:15 --> Class 'App\Models\stdClass' not found
+in APPPATH\Models\Engine.php on line 516.
+ 1 APPPATH\Controllers\Dashboard.php(71): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:49:34 --> Undefined variable: user
+in APPPATH\Models\Engine.php on line 523.
+ 1 APPPATH\Models\Engine.php(523): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Models\\Engine.php', 523, [...])
+ 2 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:50:57 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(523): CodeIgniter\Model->__get('globalObject')
+ 4 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:51:38 --> Undefined variable: s_user_id
+in APPPATH\Models\Engine.php on line 523.
+ 1 APPPATH\Models\Engine.php(523): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: s_user_id', 'APPPATH\\Models\\Engine.php', 523, [...])
+ 2 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:52:13 --> Undefined variable: user
+in APPPATH\Models\Engine.php on line 527.
+ 1 APPPATH\Models\Engine.php(527): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Models\\Engine.php', 527, [...])
+ 2 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:55:34 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(527): CodeIgniter\Model->__get('permitSuperUser')
+ 4 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:56:42 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(527): CodeIgniter\Model->__get('permitSuperUser')
+ 4 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 04:59:43 --> Undefined property: stdClass::$permitSuperUser
+in APPPATH\Models\Engine.php on line 528.
+ 1 APPPATH\Models\Engine.php(528): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$permitSuperUser', 'APPPATH\\Models\\Engine.php', 528, [...])
+ 2 APPPATH\Controllers\Dashboard.php(70): App\Models\Engine->permitedChangeUserProfile(Object(App\Controllers\Dashboard), 967)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 06:11:26 --> Trying to get property 'group_id' of non-object
+in APPPATH\Views\settings.php on line 58.
+ 1 APPPATH\Views\settings.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'group_id\' of non-object', 'APPPATH\\Views\\settings.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(84): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(976)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 06:11:51 --> Trying to get property 'group_id' of non-object
+in APPPATH\Views\settings.php on line 58.
+ 1 APPPATH\Views\settings.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'group_id\' of non-object', 'APPPATH\\Views\\settings.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(84): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(972)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 06:17:32 --> Trying to get property 'name' of non-object
+in APPPATH\Views\settings.php on line 31.
+ 1 APPPATH\Views\settings.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'name\' of non-object', 'APPPATH\\Views\\settings.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(89): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 07:03:04 --> Call to undefined function App\Controllers\isExistingUserId()
+in APPPATH\Controllers\Dashboard.php on line 463.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserpass()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 07:07:51 --> Call to undefined function App\Controllers\isExistingUserId()
+in APPPATH\Controllers\Dashboard.php on line 463.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->updateuserpass()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 07:55:02 --> Undefined variable: userType
+in APPPATH\Views\settings.php on line 66.
+ 1 APPPATH\Views\settings.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userType', 'APPPATH\\Views\\settings.php', 66, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(82): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(977)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:01:29 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result_array()
+in APPPATH\Models\Engine.php on line 287.
+ 1 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:02:43 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 290.
+ 1 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:03:35 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Engine.php on line 290.
+ 1 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:05:38 --> Creating default object from empty value
+in APPPATH\Models\Engine.php on line 291.
+ 1 APPPATH\Models\Engine.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Models\\Engine.php', 291, [...])
+ 2 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:07:48 --> Creating default object from empty value
+in APPPATH\Models\Engine.php on line 292.
+ 1 APPPATH\Models\Engine.php(292): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Models\\Engine.php', 292, [...])
+ 2 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:09:15 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\Engine.php on line 293.
+ 1 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:10:22 --> Undefined variable: resArray
+in APPPATH\Models\Engine.php on line 301.
+ 1 APPPATH\Models\Engine.php(301): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: resArray', 'APPPATH\\Models\\Engine.php', 301, [...])
+ 2 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:11:11 --> Creating default object from empty value
+in APPPATH\Models\Engine.php on line 295.
+ 1 APPPATH\Models\Engine.php(295): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Models\\Engine.php', 295, [...])
+ 2 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:11:53 --> Creating default object from empty value
+in APPPATH\Models\Engine.php on line 296.
+ 1 APPPATH\Models\Engine.php(296): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Models\\Engine.php', 296, [...])
+ 2 APPPATH\Controllers\BaseController.php(59): App\Models\Engine->getLanguages()
+ 3 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-06 09:39:35 --> Unknown column 'tb3.lang_id' in 'on clause'
+CRITICAL - 2022-10-06 09:39:35 --> Unknown column 'tb3.lang_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* , tb5.lang_code  FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										LEFT JOIN bmc_language_type tb5 ON tb5.id = tb3.lang_id
+										WHERE tb1.id = \'967\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* , tb5.lang_code  FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										LEFT JOIN bmc_language_type tb5 ON tb5.id = tb3.lang_id
+										WHERE tb1.id = \'967\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* , tb5.lang_code  FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										LEFT JOIN bmc_language_type tb5 ON tb5.id = tb3.lang_id
+										WHERE tb1.id = \'967\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(336): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* , tb5.lang_code  FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										LEFT JOIN bmc_language_type tb5 ON tb5.id = tb3.lang_id
+										WHERE tb1.id = \'967\' LIMIT 1')
+ 5 APPPATH\Controllers\BaseController.php(53): App\Models\Engine->fetchUserDetails(967)
+ 6 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-06 09:43:47 --> Undefined property: CodeIgniter\View\View::$sesionLanguage
+in APPPATH\Views\settings.php on line 33.
+ 1 APPPATH\Views\settings.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$sesionLanguage', 'APPPATH\\Views\\settings.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(82): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings(967)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

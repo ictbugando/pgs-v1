@@ -1,0 +1,198 @@
+CRITICAL - 2023-05-22 03:20:43 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(664): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Dashboard.php(107): App\Models\Engine->fetchNewPatientForm()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 04:39:52 --> Trying to get property 'newPatRecordSName' of non-object
+in APPPATH\Views\reception.php on line 22.
+ 1 APPPATH\Views\reception.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newPatRecordSName\' of non-object', 'APPPATH\\Views\\reception.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reception.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 04:40:32 --> Trying to get property 'newPatRecordSName' of non-object
+in APPPATH\Views\reception.php on line 22.
+ 1 APPPATH\Views\reception.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newPatRecordSName\' of non-object', 'APPPATH\\Views\\reception.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reception.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:14:34 --> Using $this when not in object context
+in APPPATH\Helpers\global_helper.php on line 62.
+ 1 APPPATH\Controllers\Dashboard.php(107): fetchNewPatientForm()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:21:07 --> Using $this when not in object context
+in APPPATH\Helpers\global_helper.php on line 77.
+ 1 APPPATH\Controllers\Dashboard.php(107): fetchNewPatientForm()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:31:33 --> Too few arguments to function fetchNewPatientForm(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 107 and exactly 2 expected
+in APPPATH\Helpers\global_helper.php on line 74.
+ 1 APPPATH\Controllers\Dashboard.php(107): fetchNewPatientForm()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:32:15 --> Too few arguments to function fetchNewPatientForm(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 107 and exactly 2 expected
+in APPPATH\Helpers\global_helper.php on line 74.
+ 1 APPPATH\Controllers\Dashboard.php(107): fetchNewPatientForm()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:33:05 --> Too few arguments to function fetchNewPatientForm(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 107 and exactly 2 expected
+in APPPATH\Helpers\global_helper.php on line 74.
+ 1 APPPATH\Controllers\Dashboard.php(107): fetchNewPatientForm()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:36:25 --> Cannot use object of type stdClass as array
+in APPPATH\Views\reception.php on line 107.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:37:43 --> Trying to get property 'settingsHeaderLabel' of non-object
+in APPPATH\Views\settings.php on line 18.
+ 1 APPPATH\Views\settings.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'settingsHeaderLabel\' of non-object', 'APPPATH\\Views\\settings.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\settings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('settings', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(83): view('settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->settings()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:39:01 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 06:40:12 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 07:14:45 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 07:14:52 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 07:16:55 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform('1', '99')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 07:18:19 --> Trying to get property 'newUserRecordLabelHeader' of non-object
+in APPPATH\Views\popUserNew.php on line 6.
+ 1 APPPATH\Views\popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'newUserRecordLabelHeader\' of non-object', 'APPPATH\\Views\\popUserNew.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(264): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform('1', '99')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 09:17:25 --> Call to undefined function fetchIdTypes()
+in APPPATH\Views\reception.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 09:18:21 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Views\reception.php(10): CodeIgniter\Model->__call('sfetchIdTypes', [])
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reception.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 7 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 09:18:44 --> Undefined property: CodeIgniter\View\View::$Engine
+in APPPATH\Views\reception.php on line 10.
+ 1 APPPATH\Views\reception.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$Engine', 'APPPATH\\Views\\reception.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reception.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 09:21:25 --> Cannot use object of type stdClass as array
+in APPPATH\Views\reception.php on line 88.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('reception', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(111): view('reception', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reception()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

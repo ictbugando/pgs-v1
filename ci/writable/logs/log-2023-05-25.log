@@ -1,0 +1,83 @@
+CRITICAL - 2023-05-25 03:24:16 --> Trying to get property 'groups' of non-object
+in APPPATH\Controllers\BaseController.php on line 53.
+ 1 APPPATH\Controllers\BaseController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'groups\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-25 04:53:12 --> Unknown column 'tb1.kata_id' in 'on clause'
+CRITICAL - 2023-05-25 04:53:12 --> Unknown column 'tb1.kata_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.kata_id = tb3.loc_kata
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								LIMIT 0  , 10 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.kata_id = tb3.loc_kata
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								LIMIT 0  , 10 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.kata_id = tb3.loc_kata
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								LIMIT 0  , 10 ')
+ 4 APPPATH\Models\Engine.php(763): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.kata_id = tb3.loc_kata
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								LIMIT 0  , 10 ')
+ 5 APPPATH\Views\Patients\patients.php(7): App\Models\Engine->fetchPatientList(0)
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\patients.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/patients', [], true)
+ 9 APPPATH\Controllers\Patients.php(15): view('Patients/patients', [])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->index()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 04:59:35 --> Undefined variable: start
+in APPPATH\Models\Engine.php on line 784.
+ 1 APPPATH\Models\Engine.php(784): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: start', 'APPPATH\\Models\\Engine.php', 784, [...])
+ 2 APPPATH\Controllers\Patients.php(23): App\Models\Engine->fetchPatientRecord('\'1')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record('\'1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-25 05:00:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1' LIMIT 1' at line 6
+CRITICAL - 2023-05-25 05:00:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1' LIMIT 1' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'\'1\' LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'\'1\' LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'\'1\' LIMIT 1')
+ 4 APPPATH\Models\Engine.php(784): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb2.*  FROM bmc_patient_profile tb1
+								INNER JOIN bmc_patient_wallet tb2 ON tb2.pat_id = tb1.pat_id
+								INNER JOIN bmc_mkoa_wilaya_kata tb3 ON tb1.loc_kata = tb3.kata_id
+								INNER JOIN bmc_mkoa_wilaya tb4 ON tb4.wilaya_id = tb3.wilaya_id
+								INNER JOIN bmc_mkoa tb5 ON tb5.mkoa_id = tb4.mkoa_id
+								WHERE tb1.pat_id = \'\'1\' LIMIT 1')
+ 5 APPPATH\Controllers\Patients.php(23): App\Models\Engine->fetchPatientRecord('\'1')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record('\'1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

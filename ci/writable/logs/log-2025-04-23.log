@@ -1,0 +1,64 @@
+CRITICAL - 2025-04-23 15:32:51 --> No connection could be made because the target machine actively refused it
+in C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 269.
+ 1 C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php(269): mysqli->real_connect('127.0.0.1', 'root', 'Napendajc@90', null, 3307, null, 0)
+ 2 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\server\\htdocs\\bmc\\public', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 4 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 5 C:\server\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 8 C:\server\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 9 APPPATH\Controllers\BaseController.php(60): Joomla\CMS\Session\Session->get('user')
+10 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:44:53 --> Array to string conversion
+in APPPATH\Models\Engine.php on line 619.
+ 1 APPPATH\Models\Engine.php(619): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\Engine.php', 619)
+ 2 APPPATH\Controllers\Dashboard.php(184): App\Models\Engine->fetchAllUserList(0, 'C:\\server\\htdocs\\bmc\\public', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-23 15:46:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0'  
+										LIMIT  0 , 20' at line 5
+CRITICAL - 2025-04-23 15:46:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0'  
+										LIMIT  0 , 20' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										WHERE (tb3.id != 8) && block == \'0\'  
+										LIMIT  0 , 20 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										WHERE (tb3.id != 8) && block == \'0\'  
+										LIMIT  0 , 20 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										WHERE (tb3.id != 8) && block == \'0\'  
+										LIMIT  0 , 20 ')
+ 4 APPPATH\Models\Engine.php(601): CodeIgniter\Database\BaseConnection->query('SELECT tb1.* , tb3.title , tb2.group_id , tb4.* FROM bmc_1.bmc_users tb1 
+										INNER JOIN bmc_1.bmc_user_usergroup_map tb2 ON tb2.user_id = tb1.id
+										INNER JOIN bmc_1.bmc_usergroups tb3 ON tb3.id = tb2.group_id
+										LEFT JOIN bmc_user_profile_custom tb4 ON tb4.user_id = tb1.id
+										WHERE (tb3.id != 8) && block == \'0\'  
+										LIMIT  0 , 20 ')
+ 5 APPPATH\Controllers\Dashboard.php(184): App\Models\Engine->fetchAllUserList(0, 'C:\\server\\htdocs\\bmc\\public', 0)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 20:21:56 --> Too few arguments to function App\Models\Engine::archiveuser(), 0 passed in C:\server\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 182 and exactly 1 expected
+in APPPATH\Models\Engine.php on line 623.
+ 1 APPPATH\Controllers\Dashboard.php(182): App\Models\Engine->archiveuser()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->archiveuser('978')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,15 @@
+CRITICAL - 2025-03-25 06:13:42 --> No connection could be made because the target machine actively refused it
+in C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php on line 269.
+ 1 C:\server\htdocs\bmc1\libraries\vendor\joomla\database\src\Mysqli\MysqliDriver.php(269): mysqli->real_connect('127.0.0.1', 'root', 'Napendajc@90', null, 3307, null, 0)
+ 2 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Handler\DatabaseHandler.php(233): Joomla\Database\Mysqli\MysqliDriver->connect()
+ 3 [internal function]: Joomla\Session\Handler\DatabaseHandler->open('C:\\server\\htdocs\\bmc\\public', '0b0bdaa5cae842ad4f8ea26d57018dd8')
+ 4 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Storage\NativeStorage.php(481): session_start()
+ 5 C:\server\htdocs\bmc1\libraries\src\Session\Storage\JoomlaStorage.php(306): Joomla\Session\Storage\NativeStorage->start()
+ 6 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(406): Joomla\CMS\Session\Storage\JoomlaStorage->start()
+ 7 C:\server\htdocs\bmc1\libraries\vendor\joomla\session\src\Session.php(333): Joomla\Session\Session->start()
+ 8 C:\server\htdocs\bmc1\libraries\src\Session\Session.php(198): Joomla\Session\Session->has('user')
+ 9 APPPATH\Filters\CheckPublic.php(13): Joomla\CMS\Session\Session->get('user')
+10 SYSTEMPATH\Filters\Filters.php(173): App\Filters\CheckPublic->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH\CodeIgniter.php(440): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

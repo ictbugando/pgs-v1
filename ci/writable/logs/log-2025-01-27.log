@@ -1,0 +1,26 @@
+CRITICAL - 2025-01-27 13:58:04 --> Call to undefined method App\Controllers\Test::updatePayBillUsingWallet()
+in APPPATH\Controllers\Test.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-27 13:58:46 --> Undefined variable $bill_id
+in APPPATH\Controllers\Test.php on line 12.
+ 1 APPPATH\Controllers\Test.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bill_id', 'APPPATH\\Controllers\\Test.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-27 14:08:10 --> Duplicate entry 'E00000000111882' for key 'bmc_bills.bill_num'
+CRITICAL - 2025-01-27 14:08:10 --> Duplicate entry 'E00000000111882' for key 'bmc_bills.bill_num'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (187055, \'1\', \'2025/01/27\', \'\', \'2025/01/27\', 1000, \'E00000000111882\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111882\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (187055, \'1\', \'2025/01/27\', \'\', \'2025/01/27\', 1000, \'E00000000111882\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111882\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (187055, \'1\', \'2025/01/27\', \'\', \'2025/01/27\', 1000, \'E00000000111882\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111882\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (:pat_id:, :bill_terms:, :bill_creation:, :bill_comments:, :bill_expiry:, :bill_total_cost:, :bill_num:, :bill_user_id:, :bill_items_json:, :control_num:)', [...], false)
+ 5 APPPATH\Models\Engine.php(1001): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

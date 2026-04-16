@@ -1,0 +1,150 @@
+CRITICAL - 2023-11-16 12:37:50 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:39:19 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:41:00 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:43:17 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:50:10 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:58:05 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 15:53:26 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 16:16:00 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 16:16:25 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 19:06:26 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(168): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-16 19:09:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%') || (tb2.type_name LIKE '%'%')
+									ORDER BY tb1.prod_id DESC' at line 4
+CRITICAL - 2023-11-16 19:09:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%') || (tb2.type_name LIKE '%'%')
+									ORDER BY tb1.prod_id DESC' at line 4
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(344): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Billing.php(70): App\Models\Engine->getSearchProduct()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-16 19:11:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%') || (tb2.type_name LIKE '%'%')
+									ORDER BY tb1.prod_id DESC' at line 4
+CRITICAL - 2023-11-16 19:11:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%') || (tb2.type_name LIKE '%'%')
+									ORDER BY tb1.prod_id DESC' at line 4
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(344): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Billing.php(70): App\Models\Engine->getSearchProduct()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-16 19:12:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY tb1.prod_id DESC' at line 5
+CRITICAL - 2023-11-16 19:12:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY tb1.prod_id DESC' at line 5
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Engine.php(344): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Billing.php(70): App\Models\Engine->getSearchProduct()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->searchword()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

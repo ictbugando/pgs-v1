@@ -1,0 +1,198 @@
+CRITICAL - 2022-08-22 07:46:29 --> Undefined property: App\Controllers\Dashboard::$Engine
+in APPPATH\Controllers\Dashboard.php on line 18.
+ 1 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Dashboard::$Engine', 'APPPATH\\Controllers\\Dashboard.php', 18, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 07:49:46 --> syntax error, unexpected '$Engine' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('dashboard/fetchuniqueref')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('dashboard/fetchuniqueref')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('dashboard/fetchuniqueref')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-22 07:50:12 --> Table 'bugando.bmc_pay_tokens' doesn't exist
+CRITICAL - 2022-08-22 07:50:12 --> Table 'bugando.bmc_pay_tokens' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM bmc_pay_tokens tb1 
+									   LIMIT 0 , 30 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM bmc_pay_tokens tb1 
+									   LIMIT 0 , 30 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM bmc_pay_tokens tb1 
+									   LIMIT 0 , 30 ')
+ 4 APPPATH\Models\Engine.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM bmc_pay_tokens tb1 
+									   LIMIT 0 , 30 ')
+ 5 APPPATH\Controllers\Dashboard.php(22): App\Models\Engine->getGeneratedReference(0)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 07:52:05 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\Engine.php on line 13.
+ 1 APPPATH\Controllers\Dashboard.php(22): App\Models\Engine->getGeneratedReference(0)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 07:54:25 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result_array()
+in APPPATH\Models\Engine.php on line 16.
+ 1 APPPATH\Controllers\Dashboard.php(22): App\Models\Engine->getGeneratedReference(0)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:30:38 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Dashboard.php on line 27.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('dashboard/fetchuniqueref')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('dashboard/fetchuniqueref')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('dashboard/fetchuniqueref')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:31:06 --> Undefined variable: refData
+in APPPATH\Views\dispUniqueReference.php on line 2.
+ 1 APPPATH\Views\dispUniqueReference.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: refData', 'APPPATH\\Views\\dispUniqueReference.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispUniqueReference.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:31:29 --> Undefined variable: refData
+in APPPATH\Views\dispUniqueReference.php on line 2.
+ 1 APPPATH\Views\dispUniqueReference.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: refData', 'APPPATH\\Views\\dispUniqueReference.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispUniqueReference.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:31:44 --> Undefined property: CodeIgniter\View\View::$refData
+in APPPATH\Views\dispUniqueReference.php on line 2.
+ 1 APPPATH\Views\dispUniqueReference.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$refData', 'APPPATH\\Views\\dispUniqueReference.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispUniqueReference.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:41:09 --> Undefined variable: refData
+in APPPATH\Controllers\Dashboard.php on line 26.
+ 1 APPPATH\Controllers\Dashboard.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: refData', 'APPPATH\\Controllers\\Dashboard.php', 26, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:41:12 --> Undefined variable: refData
+in APPPATH\Controllers\Dashboard.php on line 26.
+ 1 APPPATH\Controllers\Dashboard.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: refData', 'APPPATH\\Controllers\\Dashboard.php', 26, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 08:42:12 --> Argument 2 passed to view() must be of the type array, object given, called in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 26
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference', Object(App\Controllers\Dashboard))
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:02:41 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dispUniqueReference.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:03:51 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dispUniqueReference.php on line 6.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:05:24 --> Cannot use object of type stdClass as array
+in APPPATH\Views\dispUniqueReference.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispUniqueReference', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(26): view('dispUniqueReference', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchuniqueref()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:12:00 --> Undefined variable: Engine
+in APPPATH\Views\dashboard.php on line 66.
+ 1 APPPATH\Views\dashboard.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Engine', 'APPPATH\\Views\\dashboard.php', 66, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:13:36 --> Undefined variable: Engine
+in APPPATH\Controllers\Dashboard.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Engine', 'APPPATH\\Controllers\\Dashboard.php', 14, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:13:53 --> Undefined variable: Engine
+in APPPATH\Controllers\Dashboard.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Engine', 'APPPATH\\Controllers\\Dashboard.php', 14, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:15:11 --> Undefined variable: Engine
+in APPPATH\Controllers\Dashboard.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Engine', 'APPPATH\\Controllers\\Dashboard.php', 14, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:16:24 --> Undefined variable: viewData
+in APPPATH\Views\dashboard.php on line 68.
+ 1 APPPATH\Views\dashboard.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: viewData', 'APPPATH\\Views\\dashboard.php', 68, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(19): view('dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:18:43 --> Argument 2 passed to view() must be of the type array, object given, called in C:\xampp\htdocs\bmc\ci\app\Views\dashboard.php on line 78
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Views\dashboard.php(78): view('dispUniqueReference', Object(CodeIgniter\View\View))
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(19): view('dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-22 09:24:32 --> Argument 3 passed to view() must be of the type array, int given, called in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 18
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Dashboard.php(18): view('dispUniqueReference', [...], 1)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

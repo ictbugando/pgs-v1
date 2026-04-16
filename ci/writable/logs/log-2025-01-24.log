@@ -1,0 +1,11 @@
+CRITICAL - 2025-01-24 10:02:27 --> Undefined variable $pat_id
+in APPPATH\Views\Patients\record.php on line 12.
+ 1 APPPATH\Views\Patients\record.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pat_id', 'APPPATH\\Views\\Patients\\record.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Patients\\record.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Patients/record', [], true)
+ 5 APPPATH\Controllers\Patients.php(51): view('Patients/record', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Patients->record(187055)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Patients))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

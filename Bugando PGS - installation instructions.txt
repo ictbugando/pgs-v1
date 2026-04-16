@@ -1,0 +1,23 @@
+1. WINDOWS INSTALLATION
+- Extract the folder Bugando PGS - windows-server-pre-configured to the root C drive
+- Ensure the inner folder named server is a the root
+- Install Visual Studio redistributed VC_redistributed.x64
+- Install MySQL mysql-8.4.3-winx64
+- Setup php located in the server folder in the environmental variables
+- Install Apache24 by navigating to the folder C:\server\Apache24\bin and running the command httpd.exe -k install then start Apache
+- Once everything is setup go to mysql and create the database name bmc_1
+- Import the database .SQL backup to the database
+- navigate to bmc/app/Config/Database.php and setup MySQL database name, user, password and port
+- navigate to bmc1/configurations.php and setup database MySQL name, user, password and port
+- Once setup is complete, you can access system from http://localhost/bmc/public/
+- You can adjust Apache Virtualhost file to setup different hostname if so desired.
+
+2. UBUNTU / LINUX INSTALLATION
+- Install Apache, PHP and MySQL 8.4.3 from latest repositories. You can use the ones supplied in the file named Ubuntu repositories
+- Once this is setup navigate to /var/www/html/ and copy the folders named bmc and bmc1 here
+- Once everything is setup go to mysql and create the database name bmc_1
+- Import the database .SQL backup to the database
+- navigate to bmc/app/Config/Database.php and setup MySQL database name, user, password and port
+- navigate to bmc1/configurations.php and setup database MySQL name, user, password and port
+- Once setup is complete, you can access system from http://localhost/bmc/public/
+- You can adjust Apache Virtualhost file to setup different hostname if so desired.

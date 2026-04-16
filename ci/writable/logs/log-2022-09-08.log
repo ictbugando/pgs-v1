@@ -1,0 +1,33 @@
+CRITICAL - 2022-09-08 09:12:19 --> Trying to get property 'wallet_alias' of non-object
+in APPPATH\Views\dispPaymentData.php on line 12.
+ 1 APPPATH\Views\dispPaymentData.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'wallet_alias\' of non-object', 'APPPATH\\Views\\dispPaymentData.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispPaymentData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispPaymentData', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(24): view('dispPaymentData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 09:13:05 --> Trying to get property 'wallet_alias' of non-object
+in APPPATH\Views\dispPaymentData.php on line 13.
+ 1 APPPATH\Views\dispPaymentData.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'wallet_alias\' of non-object', 'APPPATH\\Views\\dispPaymentData.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispPaymentData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispPaymentData', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(24): view('dispPaymentData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 10:34:25 --> Trying to get property 'wallet_alias' of non-object
+in APPPATH\Views\dispPaymentData.php on line 13.
+ 1 APPPATH\Views\dispPaymentData.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'wallet_alias\' of non-object', 'APPPATH\\Views\\dispPaymentData.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dispPaymentData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dispPaymentData', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(24): view('dispPaymentData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

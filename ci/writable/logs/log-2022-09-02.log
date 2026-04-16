@@ -1,0 +1,35 @@
+CRITICAL - 2022-09-02 04:28:41 --> Undefined variable: str
+in APPPATH\Controllers\Dashboard.php on line 72.
+ 1 APPPATH\Controllers\Dashboard.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: str', 'APPPATH\\Controllers\\Dashboard.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopitems()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 04:29:32 --> Undefined variable: str
+in APPPATH\Controllers\Dashboard.php on line 72.
+ 1 APPPATH\Controllers\Dashboard.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: str', 'APPPATH\\Controllers\\Dashboard.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopitems()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 04:29:55 --> Undefined variable: str
+in APPPATH\Controllers\Dashboard.php on line 72.
+ 1 APPPATH\Controllers\Dashboard.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: str', 'APPPATH\\Controllers\\Dashboard.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopitems()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 04:47:27 --> Undefined offset: 2
+in APPPATH\Controllers\Dashboard.php on line 76.
+ 1 APPPATH\Controllers\Dashboard.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 2', 'APPPATH\\Controllers\\Dashboard.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopitems()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 04:48:45 --> Undefined offset: 2
+in APPPATH\Controllers\Dashboard.php on line 77.
+ 1 APPPATH\Controllers\Dashboard.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 2', 'APPPATH\\Controllers\\Dashboard.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopitems()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

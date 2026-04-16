@@ -1,0 +1,55 @@
+CRITICAL - 2023-08-07 10:53:56 --> Attempt to read property "trans_id" on array
+in APPPATH/Models/Engine.php on line 1229.
+ 1 APPPATH/Models/Engine.php(1229): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1185): App\Models\Engine->updatePatLatestMalipo()
+ 3 APPPATH/Helpers/global_helper.php(251): App\Models\Engine->calcPatientBalance()
+ 4 APPPATH/Helpers/global_helper.php(304): doProcessAITransaction()
+ 5 APPPATH/Controllers/Malipo.php(85): doAipros2Process()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-07 10:54:21 --> Attempt to read property "trans_id" on array
+in APPPATH/Models/Engine.php on line 1229.
+ 1 APPPATH/Models/Engine.php(1229): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1185): App\Models\Engine->updatePatLatestMalipo()
+ 3 APPPATH/Helpers/global_helper.php(251): App\Models\Engine->calcPatientBalance()
+ 4 APPPATH/Helpers/global_helper.php(304): doProcessAITransaction()
+ 5 APPPATH/Controllers/Malipo.php(85): doAipros2Process()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-07 12:58:31 --> Attempt to read property "trans_id" on array
+in APPPATH/Models/Engine.php on line 1229.
+ 1 APPPATH/Models/Engine.php(1229): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1185): App\Models\Engine->updatePatLatestMalipo()
+ 3 APPPATH/Helpers/global_helper.php(251): App\Models\Engine->calcPatientBalance()
+ 4 APPPATH/Helpers/global_helper.php(304): doProcessAITransaction()
+ 5 APPPATH/Controllers/Malipo.php(85): doAipros2Process()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-07 13:00:51 --> Attempt to read property "trans_id" on array
+in APPPATH/Models/Engine.php on line 1229.
+ 1 APPPATH/Models/Engine.php(1229): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1185): App\Models\Engine->updatePatLatestMalipo()
+ 3 APPPATH/Helpers/global_helper.php(251): App\Models\Engine->calcPatientBalance()
+ 4 APPPATH/Helpers/global_helper.php(304): doProcessAITransaction()
+ 5 APPPATH/Controllers/Malipo.php(85): doAipros2Process()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-07 14:36:13 --> Attempt to read property "trans_id" on array
+in APPPATH/Models/Engine.php on line 1229.
+ 1 APPPATH/Models/Engine.php(1229): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1185): App\Models\Engine->updatePatLatestMalipo()
+ 3 APPPATH/Helpers/global_helper.php(251): App\Models\Engine->calcPatientBalance()
+ 4 APPPATH/Helpers/global_helper.php(304): doProcessAITransaction()
+ 5 APPPATH/Controllers/Malipo.php(85): doAipros2Process()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

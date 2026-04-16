@@ -1,0 +1,116 @@
+CRITICAL - 2023-09-21 18:09:39 --> Undefined variable $dataValues
+in APPPATH/Controllers/Malipo.php on line 206.
+ 1 APPPATH/Controllers/Malipo.php(206): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:13:28 --> Undefined variable $dataValues
+in APPPATH/Controllers/Malipo.php on line 207.
+ 1 APPPATH/Controllers/Malipo.php(207): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:13:31 --> Undefined variable $dataValues
+in APPPATH/Controllers/Malipo.php on line 207.
+ 1 APPPATH/Controllers/Malipo.php(207): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:16:16 --> Undefined variable $dataValues
+in APPPATH/Controllers/Malipo.php on line 207.
+ 1 APPPATH/Controllers/Malipo.php(207): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:18:53 --> Undefined variable $dataValues
+in APPPATH/Controllers/Malipo.php on line 207.
+ 1 APPPATH/Controllers/Malipo.php(207): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:20:18 --> Undefined variable $jsonData
+in APPPATH/Controllers/Malipo.php on line 188.
+ 1 APPPATH/Controllers/Malipo.php(188): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 18:32:48 --> Undefined variable $jsonData
+in APPPATH/Controllers/Malipo.php on line 188.
+ 1 APPPATH/Controllers/Malipo.php(188): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:04:55 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 445.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:11:24 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 450.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:20:45 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 444.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:24:50 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 447.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:25:12 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 447.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:25:14 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 447.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 19:25:46 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 447.
+ 1 APPPATH/Controllers/Malipo.php(193): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 20:12:32 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 451.
+ 1 APPPATH/Controllers/Malipo.php(191): doProcessCRDBTransaction()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 20:13:44 --> Undefined variable $extSql
+in APPPATH/Models/Engine.php on line 1397.
+ 1 APPPATH/Models/Engine.php(1397): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1320): App\Models\Engine->fetchPatUnpaidBills()
+ 3 APPPATH/Models/Engine.php(1305): App\Models\Engine->updatePayPatBills()
+ 4 APPPATH/Helpers/global_helper.php(451): App\Models\Engine->prosPatientUnpaidBills()
+ 5 APPPATH/Controllers/Malipo.php(191): doProcessCRDBTransaction()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

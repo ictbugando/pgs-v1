@@ -1,0 +1,95 @@
+CRITICAL - 2025-01-20 07:26:33 --> Undefined array key 0
+in APPPATH\Views\Reports\txn_report_display.php on line 12.
+ 1 APPPATH\Views\Reports\txn_report_display.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Reports\\txn_report_display.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(287): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:26:52 --> Undefined array key 0
+in APPPATH\Views\Reports\txn_report_display.php on line 12.
+ 1 APPPATH\Views\Reports\txn_report_display.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Reports\\txn_report_display.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(287): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:35:48 --> Undefined array key 0
+in APPPATH\Views\Reports\txn_report_display.php on line 12.
+ 1 APPPATH\Views\Reports\txn_report_display.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Reports\\txn_report_display.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(289): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:36:52 --> strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated
+in APPPATH\Controllers\Dashboard.php on line 278.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Dashboard.php', 278)
+ 2 APPPATH\Controllers\Dashboard.php(278): strtotime(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:38:59 --> Undefined array key 0
+in APPPATH\Views\Reports\txn_report_display.php on line 12.
+ 1 APPPATH\Views\Reports\txn_report_display.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Reports\\txn_report_display.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(289): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:39:51 --> Undefined array key 0
+in APPPATH\Views\Reports\txn_report_display.php on line 14.
+ 1 APPPATH\Views\Reports\txn_report_display.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Reports\\txn_report_display.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(289): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 07:42:03 --> Undefined array key "id"
+in APPPATH\Views\Reports\txn_report_display.php on line 16.
+ 1 APPPATH\Views\Reports\txn_report_display.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\Reports\\txn_report_display.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\txn_report_display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/txn_report_display', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(289): view('Reports/txn_report_display', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchreport()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 08:21:33 --> sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\Reports\txn_report_display.php on line 22.
+ 1 APPPATH\Views\Reports\txn_report_wrap.php(50): require_once()
+ 2 APPPATH\Views\Reports\report.php(28): require_once('APPPATH\\Views\\Reports\\txn_report_wrap.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\report.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/report', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(26): view('Reports/report')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 09:00:02 --> Error: Out of memory (allocated 67108864) (tried to allocate 1695744 bytes)
+in APPPATH\Controllers\Dashboard.php on line 127.
+
+CRITICAL - 2025-01-20 09:00:07 --> Error: Out of memory (allocated 56623104) (tried to allocate 1052672 bytes)
+in APPPATH\Controllers\Dashboard.php on line 128.
+
+CRITICAL - 2025-01-20 09:00:13 --> Error: Out of memory (allocated 75497472) (tried to allocate 2093336 bytes)
+in APPPATH\Controllers\Dashboard.php on line 128.
+

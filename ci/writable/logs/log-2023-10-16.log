@@ -1,0 +1,23 @@
+CRITICAL - 2023-10-16 10:50:45 --> Undefined variable $invoiceRetAr
+in APPPATH/Helpers/global_helper.php on line 821.
+ 1 APPPATH/Helpers/global_helper.php(821): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(282): nmbBillSubmit()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 10:53:38 --> Undefined variable $description
+in APPPATH/Controllers/Malipo.php on line 291.
+ 1 APPPATH/Controllers/Malipo.php(291): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 10:55:33 --> Undefined variable $invoiceRetAr
+in APPPATH/Helpers/global_helper.php on line 839.
+ 1 APPPATH/Helpers/global_helper.php(839): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Malipo.php(292): nmbBillUpdate()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

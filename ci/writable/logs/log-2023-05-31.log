@@ -1,0 +1,221 @@
+CRITICAL - 2023-05-31 04:40:12 --> Undefined property: App\Controllers\Malipo::$input
+in APPPATH\Helpers\global_helper.php on line 106.
+ 1 APPPATH\Helpers\global_helper.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$input', 'APPPATH\\Helpers\\global_helper.php', 106, [])
+ 2 APPPATH\Controllers\Malipo.php(15): doValidatePermAiApi()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 04:41:55 --> Undefined property: App\Controllers\Malipo::$input
+in APPPATH\Helpers\global_helper.php on line 106.
+ 1 APPPATH\Helpers\global_helper.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$input', 'APPPATH\\Helpers\\global_helper.php', 106, [])
+ 2 APPPATH\Controllers\Malipo.php(15): doValidatePermAiApi()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 04:45:04 --> Undefined variable: request
+in APPPATH\Helpers\global_helper.php on line 106.
+ 1 APPPATH\Helpers\global_helper.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: request', 'APPPATH\\Helpers\\global_helper.php', 106, [])
+ 2 APPPATH\Controllers\Malipo.php(15): doValidatePermAiApi()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 04:46:20 --> Cannot access protected property App\Controllers\Malipo::$request
+in APPPATH\Helpers\global_helper.php on line 106.
+ 1 APPPATH\Controllers\Malipo.php(15): doValidatePermAiApi()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 04:48:29 --> Trying to get property 'REFERENCE' of non-object
+in APPPATH\Controllers\Malipo.php on line 19.
+ 1 APPPATH\Controllers\Malipo.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'REFERENCE\' of non-object', 'APPPATH\\Controllers\\Malipo.php', 19, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 05:11:33 --> Call to undefined function isXml()
+in APPPATH\Helpers\global_helper.php on line 20.
+ 1 APPPATH\Helpers\global_helper.php(136): getXmlOrg()
+ 2 APPPATH\Controllers\Malipo.php(37): saveLogs('3', '<COMMAND><STATUS>400</STATUS><MESSAGE>Permision Not Allowed</MESSAGE></COMMAND>')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 05:12:45 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 151.
+ 1 APPPATH\Helpers\global_helper.php(151): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 151, [...])
+ 2 APPPATH\Controllers\Malipo.php(37): saveLogs('3', '<COMMAND><STATUS>400</STATUS><MESSAGE>Permision Not Allowed</MESSAGE></COMMAND>')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 05:19:16 --> Call to undefined function NOW()
+in APPPATH\Helpers\global_helper.php on line 150.
+ 1 APPPATH\Controllers\Malipo.php(37): saveLogs('3', '<COMMAND><STATUS>400</STATUS><MESSAGE>Permision Not Allowed</MESSAGE></COMMAND>')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:39:36 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 133.
+ 1 APPPATH\Helpers\global_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 133, [...])
+ 2 APPPATH\Helpers\global_helper.php(264): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(312): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:40:38 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 133.
+ 1 APPPATH\Helpers\global_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 133, [...])
+ 2 APPPATH\Helpers\global_helper.php(266): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(314): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:41:16 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 133.
+ 1 APPPATH\Helpers\global_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 133, [...])
+ 2 APPPATH\Helpers\global_helper.php(266): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(314): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:41:40 --> Undefined variable: dataValues
+in APPPATH\Helpers\global_helper.php on line 320.
+ 1 APPPATH\Helpers\global_helper.php(320): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataValues', 'APPPATH\\Helpers\\global_helper.php', 320, [...])
+ 2 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:45:48 --> Undefined variable: dataValues
+in APPPATH\Helpers\global_helper.php on line 318.
+ 1 APPPATH\Helpers\global_helper.php(318): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataValues', 'APPPATH\\Helpers\\global_helper.php', 318, [...])
+ 2 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:46:34 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 133.
+ 1 APPPATH\Helpers\global_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 133, [...])
+ 2 APPPATH\Helpers\global_helper.php(264): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(312): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:47:30 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 133.
+ 1 APPPATH\Helpers\global_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 133, [...])
+ 2 APPPATH\Helpers\global_helper.php(265): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(313): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:48:50 --> Undefined property: App\Controllers\Malipo::$db
+in APPPATH\Helpers\global_helper.php on line 135.
+ 1 APPPATH\Helpers\global_helper.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Malipo::$db', 'APPPATH\\Helpers\\global_helper.php', 135, [...])
+ 2 APPPATH\Helpers\global_helper.php(268): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(316): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 09:50:19 --> Undefined variable: C
+in APPPATH\Helpers\global_helper.php on line 135.
+ 1 APPPATH\Helpers\global_helper.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: C', 'APPPATH\\Helpers\\global_helper.php', 135, [...])
+ 2 APPPATH\Helpers\global_helper.php(268): doValidateReference(0)
+ 3 APPPATH\Helpers\global_helper.php(316): doProcessValidation('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><COMMAND>
+							<TYPE>C2B</TYPE>
+							<CUSTOMERMSISDN>786670758</CUSTOMERMSISDN>
+							<MERCHANTMSISDN>780800125</MERCHANTMSISDN>
+							<AMOUNT>110</AMOUNT>
+							<PIN></PIN>
+							<REFERENCE>8123403687148339</REFERENCE>
+							<REFERENCE1>12345671</REFERENCE1>
+							<REFERENCE2>111511119</REFERENCE2>
+						</COMMAND>')
+ 4 APPPATH\Controllers\Malipo.php(37): doAipros1Validate()
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->aipros1()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 10:06:48 --> Trying to access array offset on value of type null
+in APPPATH\Helpers\global_helper.php on line 15.
+ 1 APPPATH\Helpers\global_helper.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Helpers\\global_helper.php', 15, [...])
+ 2 APPPATH\Helpers\global_helper.php(3): get_instance()
+ 3 SYSTEMPATH\Common.php(665): include_once('APPPATH\\Helpers\\global_helper.php')
+ 4 SYSTEMPATH\Controller.php(85): helper([...])
+ 5 APPPATH\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,45 @@
+CRITICAL - 2023-07-24 04:10:52 --> Attempt to read property "loginErrorMsg000" on array
+in APPPATH/Controllers/Login.php on line 83.
+ 1 APPPATH/Controllers/Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 04:40:36 --> Attempt to read property "loginErrorMsg000" on array
+in APPPATH/Controllers/Login.php on line 83.
+ 1 APPPATH/Controllers/Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 05:36:09 --> Attempt to read property "newUserRecordLabelHeader" on array
+in APPPATH/Views/popUserNew.php on line 6.
+ 1 APPPATH/Views/popUserNew.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/popUserNew.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Dashboard.php(118): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 06:17:00 --> Attempt to read property "loginErrorMsg004" on array
+in APPPATH/Controllers/Login.php on line 71.
+ 1 APPPATH/Controllers/Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 11:23:46 --> Cache unable to write to /var/www/html/bmc/ci/writable/cache/.
+in SYSTEMPATH/Cache/Handlers/FileHandler.php on line 61.
+ 1 SYSTEMPATH/Cache/Handlers/FileHandler.php(61): CodeIgniter\Cache\Exceptions\CacheException::forUnableToWrite()
+ 2 SYSTEMPATH/Cache/CacheFactory.php(60): CodeIgniter\Cache\Handlers\FileHandler->__construct()
+ 3 SYSTEMPATH/Config/Services.php(112): CodeIgniter\Cache\CacheFactory::getHandler()
+ 4 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\Services::cache()
+ 5 SYSTEMPATH/Config/BaseService.php(192): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(107): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\Services::cache()
+ 8 SYSTEMPATH/Common.php(67): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/CodeIgniter.php(649): cache()
+10 SYSTEMPATH/CodeIgniter.php(331): CodeIgniter\CodeIgniter->displayCache()
+11 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

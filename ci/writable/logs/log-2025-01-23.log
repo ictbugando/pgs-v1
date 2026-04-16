@@ -1,0 +1,257 @@
+CRITICAL - 2025-01-23 10:15:35 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1995): CodeIgniter\Model->__call('fetchPatUnpaidBillsfetchPatUnpaidBills', [...])
+ 4 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:16:22 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1996): CodeIgniter\Model->__call('fetchPatUnpaidBillsfetchPatUnpaidBills', [...])
+ 4 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:16:38 --> Call to undefined function App\Models\fetchPatUnpaidBillsfetchPatUnpaidBills()
+in APPPATH\Models\Engine.php on line 1996.
+ 1 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:17:26 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1996): CodeIgniter\Model->__call('fetchPatUnpaidBillsfetchPatUnpaidBills', [...])
+ 4 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:18:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1996): CodeIgniter\Model->__call('fetchPatUnpaidBillsfetchPatUnpaidBills', [...])
+ 4 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:18:40 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1996): CodeIgniter\Model->__call('fetchPatUnpaidBillsfetchPatUnpaidBills', [...])
+ 4 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:19:57 --> Undefined variable $entType
+in APPPATH\Models\Engine.php on line 1997.
+ 1 APPPATH\Models\Engine.php(1997): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $entType', 'APPPATH\\Models\\Engine.php', 1997)
+ 2 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 10:20:11 --> Undefined variable $row
+in APPPATH\Models\Engine.php on line 1807.
+ 1 APPPATH\Models\Engine.php(1807): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Models\\Engine.php', 1807)
+ 2 APPPATH\Models\Engine.php(1997): App\Models\Engine->getLastMasterEntry('185374', '1')
+ 3 APPPATH\Controllers\Test.php(9): App\Models\Engine->updatePayBillUsingWallet('185374', '287735')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Test->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:01:00 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1028): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:03:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1028): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:06:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1028): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:12:30 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Engine.php(1028): CodeIgniter\Model->__get('Engine')
+ 4 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:19:59 --> Undefined array key "data"
+in APPPATH\Helpers\global_helper.php on line 154.
+ 1 APPPATH\Helpers\global_helper.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'APPPATH\\Helpers\\global_helper.php', 154)
+ 2 APPPATH\Controllers\Malipo.php(318): dispResponseCRDBValidate([...], '2')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Malipo))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-23 11:57:01 --> Undefined array key 0
+in APPPATH\Models\Engine.php on line 344.
+ 1 APPPATH\Models\Engine.php(344): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Models\\Engine.php', 344)
+ 2 APPPATH\Controllers\Api.php(20): App\Models\Engine->cronstart(3)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Api->domastersynch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:07:59 --> Unknown column 'synch_queue' in 'field list'
+CRITICAL - 2025-01-23 23:08:00 --> Unknown column 'synch_queue' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287751\', \'2025-01-23 23:07:59\', 1737662939)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287751\', \'2025-01-23 23:07:59\', 1737662939)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287751\', \'2025-01-23 23:07:59\', 1737662939)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (:bill_id:, :cleared_date:, :synch_queue:)', [...], false)
+ 5 APPPATH\Models\Engine.php(2039): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(1030): App\Models\Engine->updatePayBillUsingWallet(185374, 287751)
+ 7 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:08:13 --> Unknown column 'synch_queue' in 'field list'
+CRITICAL - 2025-01-23 23:08:13 --> Unknown column 'synch_queue' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287752\', \'2025-01-23 23:08:13\', 1737662953)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287752\', \'2025-01-23 23:08:13\', 1737662953)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287752\', \'2025-01-23 23:08:13\', 1737662953)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (:bill_id:, :cleared_date:, :synch_queue:)', [...], false)
+ 5 APPPATH\Models\Engine.php(2039): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(1030): App\Models\Engine->updatePayBillUsingWallet(185374, 287752)
+ 7 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:08:58 --> Unknown column 'synch_queue' in 'field list'
+CRITICAL - 2025-01-23 23:08:58 --> Unknown column 'synch_queue' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287753\', \'2025-01-23 23:08:57\', 1737662997)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287753\', \'2025-01-23 23:08:57\', 1737662997)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287753\', \'2025-01-23 23:08:57\', 1737662997)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (:bill_id:, :cleared_date:, :synch_queue:)', [...], false)
+ 5 APPPATH\Models\Engine.php(2039): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(1030): App\Models\Engine->updatePayBillUsingWallet(185374, 287753)
+ 7 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:14:34 --> Duplicate entry 'E00000000111876' for key 'bmc_bills.bill_num'
+CRITICAL - 2025-01-23 23:14:35 --> Duplicate entry 'E00000000111876' for key 'bmc_bills.bill_num'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (185374, \'1\', \'2025/01/23\', \'\', \'2025/01/23\', 1000, \'E00000000111876\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111876\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (185374, \'1\', \'2025/01/23\', \'\', \'2025/01/23\', 1000, \'E00000000111876\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111876\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (185374, \'1\', \'2025/01/23\', \'\', \'2025/01/23\', 1000, \'E00000000111876\', \'977\', \'{\\"0\\":{\\"id\\":\\"10\\",\\"qty\\":1,\\"cost\\":\\"1000\\",\\"tax\\":0,\\"discount\\":0,\\"total\\":1000},\\"grandTotal\\":1000}\', \'E00000000111876\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bills` (`pat_id`, `bill_terms`, `bill_creation`, `bill_comments`, `bill_expiry`, `bill_total_cost`, `bill_num`, `bill_user_id`, `bill_items_json`, `control_num`) VALUES (:pat_id:, :bill_terms:, :bill_creation:, :bill_comments:, :bill_expiry:, :bill_total_cost:, :bill_num:, :bill_user_id:, :bill_items_json:, :control_num:)', [...], false)
+ 5 APPPATH\Models\Engine.php(995): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:14:35 --> Unknown column 'synch_queue' in 'field list'
+CRITICAL - 2025-01-23 23:14:35 --> Unknown column 'synch_queue' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287754\', \'2025-01-23 23:14:34\', 1737663335)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287754\', \'2025-01-23 23:14:34\', 1737663335)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287754\', \'2025-01-23 23:14:34\', 1737663335)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (:bill_id:, :cleared_date:, :synch_queue:)', [...], false)
+ 5 APPPATH\Models\Engine.php(2039): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(1030): App\Models\Engine->updatePayBillUsingWallet(185374, 287754)
+ 7 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:15:07 --> Unknown column 'synch_queue' in 'field list'
+CRITICAL - 2025-01-23 23:15:07 --> Unknown column 'synch_queue' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287756\', \'2025-01-23 23:15:07\', 1737663367)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287756\', \'2025-01-23 23:15:07\', 1737663367)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (\'287756\', \'2025-01-23 23:15:07\', 1737663367)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bmc_bill_cleared` (`bill_id`, `cleared_date`, `synch_queue`) VALUES (:bill_id:, :cleared_date:, :synch_queue:)', [...], false)
+ 5 APPPATH\Models\Engine.php(2039): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\Engine.php(1030): App\Models\Engine->updatePayBillUsingWallet(185374, 287756)
+ 7 APPPATH\Controllers\Billing.php(191): App\Models\Engine->saveBillDetails([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->postnewbill()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-23 23:46:09 --> Unknown column 'tb1.pat_id' in 'on clause'
+CRITICAL - 2025-01-23 23:46:09 --> Unknown column 'tb1.pat_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT tb1.wallet_master_id , tb1.master_entry_id , tb1.entry_type , tb1.amount , tb1.start_bal ,
+											   tb1.close_bal , tb1.siku , tb3.reference , tb4.control_num , tb5.other_names  , tb5.sur_name 
+										FROM bmc_wallet_master_global tb1	
+										INNER JOIN bmc_wallet_master tb2 ON tb2.master_entry_id  = tb1.master_entry_id 
+										LEFT JOIN bmc_malipo tb3 on tb3.trans_id = tb2.ext_reference 
+										LEFT JOIN bmc_bills tb4 ON tb4.bill_id = tb2.ext_reference
+										LEFT JOIN bmc_patient_profile tb5 ON tb5.pat_id = tb1.pat_id
+										ORDER BY tb1.wallet_master_id  DESC LIMIT 0 , 500 ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tb1.wallet_master_id , tb1.master_entry_id , tb1.entry_type , tb1.amount , tb1.start_bal ,
+											   tb1.close_bal , tb1.siku , tb3.reference , tb4.control_num , tb5.other_names  , tb5.sur_name 
+										FROM bmc_wallet_master_global tb1	
+										INNER JOIN bmc_wallet_master tb2 ON tb2.master_entry_id  = tb1.master_entry_id 
+										LEFT JOIN bmc_malipo tb3 on tb3.trans_id = tb2.ext_reference 
+										LEFT JOIN bmc_bills tb4 ON tb4.bill_id = tb2.ext_reference
+										LEFT JOIN bmc_patient_profile tb5 ON tb5.pat_id = tb1.pat_id
+										ORDER BY tb1.wallet_master_id  DESC LIMIT 0 , 500 ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tb1.wallet_master_id , tb1.master_entry_id , tb1.entry_type , tb1.amount , tb1.start_bal ,
+											   tb1.close_bal , tb1.siku , tb3.reference , tb4.control_num , tb5.other_names  , tb5.sur_name 
+										FROM bmc_wallet_master_global tb1	
+										INNER JOIN bmc_wallet_master tb2 ON tb2.master_entry_id  = tb1.master_entry_id 
+										LEFT JOIN bmc_malipo tb3 on tb3.trans_id = tb2.ext_reference 
+										LEFT JOIN bmc_bills tb4 ON tb4.bill_id = tb2.ext_reference
+										LEFT JOIN bmc_patient_profile tb5 ON tb5.pat_id = tb1.pat_id
+										ORDER BY tb1.wallet_master_id  DESC LIMIT 0 , 500 ')
+ 4 APPPATH\Models\Engine.php(1916): CodeIgniter\Database\BaseConnection->query('SELECT tb1.wallet_master_id , tb1.master_entry_id , tb1.entry_type , tb1.amount , tb1.start_bal ,
+											   tb1.close_bal , tb1.siku , tb3.reference , tb4.control_num , tb5.other_names  , tb5.sur_name 
+										FROM bmc_wallet_master_global tb1	
+										INNER JOIN bmc_wallet_master tb2 ON tb2.master_entry_id  = tb1.master_entry_id 
+										LEFT JOIN bmc_malipo tb3 on tb3.trans_id = tb2.ext_reference 
+										LEFT JOIN bmc_bills tb4 ON tb4.bill_id = tb2.ext_reference
+										LEFT JOIN bmc_patient_profile tb5 ON tb5.pat_id = tb1.pat_id
+										ORDER BY tb1.wallet_master_id  DESC LIMIT 0 , 500 ')
+ 5 APPPATH\Views\Reports\report.php(8): App\Models\Engine->getGlobalMasterStatement(0, 0)
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Reports\\report.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Reports/report', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(26): view('Reports/report')
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->reports()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

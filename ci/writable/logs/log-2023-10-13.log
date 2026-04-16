@@ -1,0 +1,40 @@
+CRITICAL - 2023-10-13 14:01:09 --> Call to undefined function App\Controllers\var_dum()
+in APPPATH/Controllers/Malipo.php on line 277.
+ 1 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:24:12 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 788.
+ 1 APPPATH/Helpers/global_helper.php(839): nmbGetToken()
+ 2 APPPATH/Controllers/Malipo.php(256): nmbBillCancel()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:24:21 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 788.
+ 1 APPPATH/Helpers/global_helper.php(839): nmbGetToken()
+ 2 APPPATH/Controllers/Malipo.php(256): nmbBillCancel()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbinvoicepush()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 17:21:28 --> Undefined variable $jsonData
+in APPPATH/Helpers/global_helper.php on line 319.
+ 1 APPPATH/Helpers/global_helper.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Helpers/global_helper.php(446): getNMBDataArr()
+ 3 APPPATH/Controllers/Malipo.php(350): doProcessNMBTransaction()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbprocesscallback()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 17:22:01 --> Undefined variable $jsonData
+in APPPATH/Helpers/global_helper.php on line 319.
+ 1 APPPATH/Helpers/global_helper.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Helpers/global_helper.php(446): getNMBDataArr()
+ 3 APPPATH/Controllers/Malipo.php(350): doProcessNMBTransaction()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->nmbprocesscallback()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

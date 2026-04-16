@@ -1,0 +1,44 @@
+CRITICAL - 2023-06-10 08:34:45 --> Undefined variable: pat_id
+in APPPATH\Views\billing\newbill.php on line 2.
+ 1 APPPATH\Views\billing\newbill.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pat_id', 'APPPATH\\Views\\billing\\newbill.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\newbill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/newbill', [], true)
+ 5 APPPATH\Controllers\Billing.php(27): view('billing/newbill')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newbill('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 08:35:52 --> Undefined variable: patRecArray
+in APPPATH\Views\billing\newbill.php on line 13.
+ 1 APPPATH\Views\billing\newbill.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patRecArray', 'APPPATH\\Views\\billing\\newbill.php', 13, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\newbill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/newbill', [], true)
+ 5 APPPATH\Controllers\Billing.php(32): view('billing/newbill')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newbill(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 08:37:50 --> Undefined variable: patRecArray
+in APPPATH\Views\billing\newbill.php on line 2.
+ 1 APPPATH\Views\billing\newbill.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patRecArray', 'APPPATH\\Views\\billing\\newbill.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\newbill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/newbill', [], true)
+ 5 APPPATH\Controllers\Billing.php(32): view('billing/newbill')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newbill(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 08:37:52 --> Undefined variable: patRecArray
+in APPPATH\Views\billing\newbill.php on line 2.
+ 1 APPPATH\Views\billing\newbill.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: patRecArray', 'APPPATH\\Views\\billing\\newbill.php', 2, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\billing\\newbill.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('billing/newbill', [], true)
+ 5 APPPATH\Controllers\Billing.php(32): view('billing/newbill')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Billing->newbill(1)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Billing))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

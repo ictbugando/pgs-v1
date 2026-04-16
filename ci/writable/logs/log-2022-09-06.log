@@ -1,0 +1,326 @@
+ERROR - 2022-09-06 03:53:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE '9HM97OX7H47' ORDER BY tb...' at line 7
+CRITICAL - 2022-09-06 03:53:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE '9HM97OX7H47' ORDER BY tb...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(206): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:54:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE '9HM97OX7H47' ORDER BY tb...' at line 7
+CRITICAL - 2022-09-06 03:54:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE '9HM97OX7H47' ORDER BY tb...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(206): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE trans_reference LIKE \'%9HM97OX7H47%\'  , receipt LIKE %9HM97OX7H47% , 
+						  msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:55:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE '9HM97OX7H47' ORD...' at line 7
+CRITICAL - 2022-09-06 03:55:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE '9HM97OX7H47' ORD...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  , tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  , tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  , tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(206): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  , tb1.receipt LIKE %9HM97OX7H47% , 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:56:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47% || 
+						  tb1.msisdn LIKE '9HM97OX7H47' ORDER BY tb1.trans_i...' at line 7
+CRITICAL - 2022-09-06 03:56:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47% || 
+						  tb1.msisdn LIKE '9HM97OX7H47' ORDER BY tb1.trans_i...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  || tb1.receipt LIKE %9HM97OX7H47% || 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  || tb1.receipt LIKE %9HM97OX7H47% || 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  || tb1.receipt LIKE %9HM97OX7H47% || 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(206): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE tb1.trans_reference LIKE \'%9HM97OX7H47%\'  || tb1.receipt LIKE %9HM97OX7H47% || 
+						  tb1.msisdn LIKE \'9HM97OX7H47\' ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:57:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '9HM97OX7H47') 
+					ORDER BY t...' at line 7
+CRITICAL - 2022-09-06 03:57:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '9HM97OX7H47') 
+					ORDER BY t...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'9HM97OX7H47\') 
+					ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'9HM97OX7H47\') 
+					ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'9HM97OX7H47\') 
+					ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(207): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'9HM97OX7H47\') 
+					ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:57:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '%9HM97OX7H47%') 
+					ORDER BY...' at line 7
+CRITICAL - 2022-09-06 03:57:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '%9HM97OX7H47%') 
+					ORDER BY...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(207): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-06 03:57:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '%9HM97OX7H47%') 
+					ORDER BY...' at line 7
+CRITICAL - 2022-09-06 03:57:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE '%9HM97OX7H47%') 
+					ORDER BY...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 4 APPPATH\Models\Engine.php(207): CodeIgniter\Database\BaseConnection->query(' SELECT tb1.trans_id , tb1.msisdn , tb1.receipt , tb1.trans_reference , tb1.trans_status , tb1.amount , 
+						   tb2.trans_date , tb3.wallet_alias , tb4.*
+					FROM bmc_malipo tb1
+					INNER JOIN bmc_malipo_trans_details tb2	ON tb2.trans_id = tb1.trans_id
+					INNER JOIN bmc_malipo_wallets tb3 ON tb3.wallet_id = tb2.trans_sp
+					INNER JOIN bmc_malipo_status tb4 ON tb4.st_code = tb1.trans_status
+					WHERE (tb1.trans_reference LIKE \'%9HM97OX7H47%\')  || (tb1.receipt LIKE %9HM97OX7H47%) || 
+						  (tb1.msisdn LIKE \'%9HM97OX7H47%\') 
+					ORDER BY tb1.trans_id DESC ')
+ 5 APPPATH\Controllers\Dashboard.php(100): App\Models\Engine->srchTxnData('9HM97OX7H47')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 03:57:47 --> Trying to get property 'trans_date' of non-object
+in APPPATH\Views\popPaymentDataItem.php on line 3.
+ 1 APPPATH\Views\popPaymentDataItem.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'trans_date\' of non-object', 'APPPATH\\Views\\popPaymentDataItem.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popPaymentDataItem.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popPaymentDataItem', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(102): view('popPaymentDataItem', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchtxndata()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 04:04:18 --> Error: Allowed memory size of 536870912 bytes exhausted (tried to allocate 8388608 bytes)
+in SYSTEMPATH\ThirdParty\Kint\Parser\Parser.php on line 492.
+

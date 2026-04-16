@@ -1,0 +1,52 @@
+CRITICAL - 2023-08-23 11:41:56 --> Undefined property: stdClass::$pat_id
+in APPPATH/Views/billing/billPreviewDetails.php on line 7.
+ 1 APPPATH/Views/billing/billPreviewDetails.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/billing/billPreviewDetails.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(192): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-23 11:42:37 --> Undefined property: stdClass::$pat_id
+in APPPATH/Views/billing/billPreviewDetails.php on line 7.
+ 1 APPPATH/Views/billing/billPreviewDetails.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/billing/billPreviewDetails.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(192): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-23 11:42:54 --> Undefined property: stdClass::$pat_id
+in APPPATH/Views/billing/billPreviewDetails.php on line 7.
+ 1 APPPATH/Views/billing/billPreviewDetails.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/billing/billPreviewDetails.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(192): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-23 11:44:41 --> Undefined property: stdClass::$pat_id
+in APPPATH/Views/billing/billPreviewDetails.php on line 7.
+ 1 APPPATH/Views/billing/billPreviewDetails.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/billing/billPreviewDetails.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Billing.php(192): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Billing->fetchbillprev()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-23 13:17:27 --> Using $this when not in object context
+in APPPATH/Helpers/global_helper.php on line 273.
+ 1 APPPATH/Helpers/global_helper.php(307): doProcessAITransaction()
+ 2 APPPATH/Controllers/Malipo.php(104): doAipros2Process()
+ 3 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->aipros2()
+ 4 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

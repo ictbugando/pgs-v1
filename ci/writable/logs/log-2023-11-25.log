@@ -1,0 +1,12 @@
+CRITICAL - 2023-11-25 18:57:53 --> Undefined variable $extSql
+in APPPATH/Models/Engine.php on line 1426.
+ 1 APPPATH/Models/Engine.php(1426): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Engine.php(1349): App\Models\Engine->fetchPatUnpaidBills()
+ 3 APPPATH/Models/Engine.php(1334): App\Models\Engine->updatePayPatBills()
+ 4 APPPATH/Helpers/global_helper.php(494): App\Models\Engine->prosPatientUnpaidBills()
+ 5 APPPATH/Helpers/global_helper.php(441): doProcessGlobalTransaction()
+ 6 APPPATH/Controllers/Malipo.php(208): doProcessCRDBTransaction()
+ 7 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Malipo->crdbpost()
+ 8 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(57): CodeIgniter\CodeIgniter->run()

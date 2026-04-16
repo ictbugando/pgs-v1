@@ -1,0 +1,42 @@
+CRITICAL - 2023-05-29 08:23:57 --> Trying to get property 'groups' of non-object
+in APPPATH\Controllers\BaseController.php on line 57.
+ 1 APPPATH\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'groups\' of non-object', 'APPPATH\\Controllers\\BaseController.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:32:18 --> Trying to get property 'loginErrorMsg000' of non-object
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg000\' of non-object', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:35:58 --> Trying to get property 'loginErrorMsg001' of non-object
+in APPPATH\Controllers\Login.php on line 38.
+ 1 APPPATH\Controllers\Login.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg001\' of non-object', 'APPPATH\\Controllers\\Login.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:37:32 --> Undefined property: App\Controllers\Dashboard::$Engine
+in APPPATH\Controllers\BaseController.php on line 59.
+ 1 APPPATH\Controllers\BaseController.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Dashboard::$Engine', 'APPPATH\\Controllers\\BaseController.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 09:16:16 --> Trying to get property 'loginErrorMsg004' of non-object
+in APPPATH\Controllers\Login.php on line 71.
+ 1 APPPATH\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg004\' of non-object', 'APPPATH\\Controllers\\Login.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 09:28:27 --> Trying to get property 'loginErrorMsg000' of non-object
+in APPPATH\Controllers\Login.php on line 83.
+ 1 APPPATH\Controllers\Login.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'loginErrorMsg000\' of non-object', 'APPPATH\\Controllers\\Login.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()

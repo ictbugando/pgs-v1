@@ -1,0 +1,197 @@
+CRITICAL - 2022-09-26 05:47:58 --> Too few arguments to function App\Models\Engine::fetchAllUserList(), 0 passed in C:\xampp\htdocs\bmc\ci\app\Controllers\Dashboard.php on line 73 and exactly 1 expected
+in APPPATH\Models\Engine.php on line 280.
+ 1 APPPATH\Controllers\Dashboard.php(73): App\Models\Engine->fetchAllUserList()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 05:53:25 --> Undefined variable: user
+in APPPATH\Controllers\Dashboard.php on line 76.
+ 1 APPPATH\Controllers\Dashboard.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Controllers\\Dashboard.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 05:54:46 --> Array to string conversion
+in APPPATH\Views\administrator.php on line 2.
+ 1 APPPATH\Views\administrator.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\administrator.php', 2, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 05:56:03 --> Array to string conversion
+in APPPATH\Views\administrator.php on line 2.
+ 1 APPPATH\Views\administrator.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\administrator.php', 2, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 06:09:24 --> Undefined variable: refArr
+in APPPATH\Views\administrator.php on line 11.
+ 1 APPPATH\Views\administrator.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: refArr', 'APPPATH\\Views\\administrator.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 06:10:14 --> Trying to get property 'name' of non-object
+in APPPATH\Views\administrator.php on line 11.
+ 1 APPPATH\Views\administrator.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'name\' of non-object', 'APPPATH\\Views\\administrator.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 06:11:50 --> Undefined property: stdClass::$token_ext_phone
+in APPPATH\Views\administrator.php on line 15.
+ 1 APPPATH\Views\administrator.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$token_ext_phone', 'APPPATH\\Views\\administrator.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 09:01:37 --> Undefined variable: payDataView
+in APPPATH\Views\administrator.php on line 19.
+ 1 APPPATH\Views\administrator.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: payDataView', 'APPPATH\\Views\\administrator.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\administrator.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('administrator', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(78): view('administrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 10:01:04 --> Undefined offset: 1
+in APPPATH\Controllers\Dashboard.php on line 209.
+ 1 APPPATH\Controllers\Dashboard.php(209): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH\\Controllers\\Dashboard.php', 209, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 10:01:25 --> Undefined offset: 0
+in APPPATH\Models\Engine.php on line 309.
+ 1 APPPATH\Models\Engine.php(309): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Models\\Engine.php', 309, [...])
+ 2 APPPATH\Controllers\Dashboard.php(211): App\Models\Engine->fetchUserDetails('780')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:19:28 --> Trying to get property 'name' of non-object
+in APPPATH\Views\popUserDetails.php on line 16.
+ 1 APPPATH\Views\popUserDetails.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'name\' of non-object', 'APPPATH\\Views\\popUserDetails.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserDetails.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserDetails', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(214): view('popUserDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:19:43 --> Trying to get property 'name' of non-object
+in APPPATH\Views\popUserDetails.php on line 16.
+ 1 APPPATH\Views\popUserDetails.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'name\' of non-object', 'APPPATH\\Views\\popUserDetails.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserDetails.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserDetails', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(214): view('popUserDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:20:15 --> Trying to get property 'name' of non-object
+in APPPATH\Views\popUserDetails.php on line 16.
+ 1 APPPATH\Views\popUserDetails.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'name\' of non-object', 'APPPATH\\Views\\popUserDetails.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserDetails.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserDetails', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(214): view('popUserDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:22:24 --> Undefined variable: q1
+in APPPATH\Models\Engine.php on line 304.
+ 1 APPPATH\Models\Engine.php(304): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: q1', 'APPPATH\\Models\\Engine.php', 304, [...])
+ 2 APPPATH\Controllers\Dashboard.php(212): App\Models\Engine->fetchUserDetails('967')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:37:19 --> syntax error, unexpected ')'
+in APPPATH\Views\popUserDetails.php on line 59.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserDetails', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(215): view('popUserDetails', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 12:38:55 --> Undefined property: stdClass::$group_id
+in APPPATH\Views\popUserDetails.php on line 59.
+ 1 APPPATH\Views\popUserDetails.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$group_id', 'APPPATH\\Views\\popUserDetails.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserDetails.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserDetails', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(215): view('popUserDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchpopuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 13:00:07 --> Undefined variable: userData
+in APPPATH\Views\popUserNew.php on line 43.
+ 1 APPPATH\Views\popUserNew.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userData', 'APPPATH\\Views\\popUserNew.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(227): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 13:00:15 --> Undefined variable: userData
+in APPPATH\Views\popUserNew.php on line 43.
+ 1 APPPATH\Views\popUserNew.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: userData', 'APPPATH\\Views\\popUserNew.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\popUserNew.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('popUserNew', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(227): view('popUserNew', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->fetchnewuserform()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 14:15:28 --> Call to undefined method Joomla\CMS\Application\SiteApplication::loadUserByUsername()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 14:19:53 --> Call to undefined method Joomla\CMS\User\UserFactory::getApplication()
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 14:20:32 --> Non-static method Joomla\CMS\User\UserFactory::loadUserByUsername() should not be called statically
+in APPPATH\Controllers\Dashboard.php on line 251.
+ 1 APPPATH\Controllers\Dashboard.php(251): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Non-static method Joomla\\CMS\\User\\UserFactory::loadUserByUsername() should not be called statically', 'APPPATH\\Controllers\\Dashboard.php', 251, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->postnewuser()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(57): CodeIgniter\CodeIgniter->run()
