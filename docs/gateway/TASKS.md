@@ -13,28 +13,28 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 ## Phase 0 — Foundations (R0)
 
 - [ ] **T-0.1 Repository & skeleton** · S · R0
-  New repo `pgs-v2` (separate from the legacy repo). Laravel 12+, PHP 8.3, `declare(strict_types=1)`, module folders per ARCHITECTURE §4.
-  *AC:* `composer install && php artisan test` passes; README with local setup; `.gitignore` covers `.env`, `storage/`, `vendor/`, logs.
+  New repo `pgs-v2` (separate from the legacy repo). Go module (current stable Go), layout per ARCHITECTURE §4 (`cmd/pgs`, `internal/…`, `db/`, `web/`), Makefile, sqlc and goose configured.
+  *AC:* `make test` (`go test -race ./...`) passes; `make build` produces a single static `pgs` binary; README with local setup; `.gitignore` covers `.env`, `data/`, `bin/`, logs.
 - [ ] **T-0.2 Local dev environment** · S · R0 · deps T-0.1
-  Docker Compose: app, nginx, Postgres 16, Redis, MinIO, Mailpit, Vault (dev mode).
+  Docker Compose: `pgs` (all roles, live reload), Caddy, Postgres 16, Mailpit, SMS sink.
   *AC:* `make up` brings up a working stack; `.env.example` has placeholders only.
 - [ ] **T-0.3 CI pipeline** · M · R0 · deps T-0.1
-  GitHub Actions: Pint, PHPStan L8 (Larastan), Deptrac, Pest with a Postgres service, `composer audit`, gitleaks, coverage report.
+  GitHub Actions: golangci-lint, `go vet`, import-boundary check, `go test -race` with a Postgres service, fuzz smoke run, sqlc generated-code check, `govulncheck`, gitleaks, coverage report.
   *AC:* All jobs are required checks on `main`; a seeded secret fails the build.
 - [ ] **T-0.4 Forbidden-pattern checks** · S · R0 · deps T-0.3
-  Custom PHPStan rules or a grep job for: `dd(`, `dump(`, `var_dump(`, `print_r(`, `die(`, `exit(`, interpolated `*Raw(` SQL, `verify => false`, `env(` outside `config/`, and file names matching `*Old|*Bk|*Backup`.
+  `forbidigo`/`gosec` rules plus a CI grep for: `fmt.Print*`/`println` outside `cmd/`, `os.Exit`/`log.Fatal` outside `main`, `InsecureSkipVerify`, SQL built with `fmt.Sprintf` or string concatenation, float types in money-handling packages, `os.Getenv` outside the config package, `templ.Raw`, and file names matching `*_old|*_bk|*_backup`.
   *AC:* Each pattern has a failing fixture test.
 - [ ] **T-0.5 Shared kernel** · M · R0 · deps T-0.1
-  `Money` (integer minor units, ISO-4217 exponent table, `parse`, `format`, arithmetic, currency guard), prefixed ULID generator, `Clock` interface, base domain exception, masking helpers.
-  *AC:* Property tests for `Money::parse` (rejects floats with extra decimals, negatives, junk); 100 % coverage of `Money`.
+  `money.Amount` (int64 minor units, ISO-4217 exponent table, `Parse`, `Format`, overflow-checked arithmetic, currency guard), prefixed ULID generator, `Clock` interface, typed domain errors, masking helpers.
+  *AC:* Fuzz tests for `money.Parse` (rejects extra decimals, negatives, junk); 100 % coverage of package `money`.
 - [ ] **T-0.6 Error handling & problem+json** · S · R0 · deps T-0.5
-  Global exception handler → RFC 9457 with `code` + `trace_id`; no stack traces when `APP_DEBUG=false`; boot guard that refuses production with debug on.
+  Error-to-problem+json middleware (RFC 9457 with `code` + `trace_id`) and panic-recovery middleware; no internal details in production responses; boot guard that refuses production with debug features on.
   *AC:* Tests for each error class in DESIGN §6.3; boot guard test.
 - [ ] **T-0.7 Observability baseline** · M · R0 · deps T-0.1
-  JSON logging with `trace_id`/`org_code`/`app_version` processor, OpenTelemetry tracing, `/health/live` and `/health/ready`, Prometheus metrics endpoint (internal only), Sentry with personal-data scrubbing.
+  `slog` JSON logging with `trace_id`/`org_code`/`app_version` processor, OpenTelemetry tracing, `/health/live` and `/health/ready`, Prometheus metrics endpoint (internal only), Sentry with personal-data scrubbing.
   *AC:* A request produces correlated log + trace; the metrics endpoint is not reachable publicly.
 - [ ] **T-0.8 Secrets management** · M · R0 · deps T-0.2
-  Vault integration (KV v2) for channel keys, webhook secrets, personal-data encryption keys; key-rotation helper.
+  Built-in encrypted secret store (D-017): AES-256-GCM envelope encryption, master key from a root-only file/systemd credential (never in the DB or image), optional Vault backend. Holds channel credentials, webhook secrets, personal-data keys. `pgs secrets rotate` re-wraps keys.
   *AC:* No secret in config files; rotating a channel key requires no deploy.
 - [ ] **T-0.9 Route-protection test** · S · R0 · deps T-0.1
   Test that fails if any route lacks one of `channel.auth`, `api.hmac`, `portal.auth`, `public` middleware groups (RULES S9).
@@ -71,7 +71,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   `vendor.support` role; time-boxed grant/revoke by `system.admin` (2FA, reason, ≤ 72 h, auto-expire); alerts and audit on grant and use.
   *AC:* A support account cannot log in after expiry; it cannot refund, approve, or export personal data.
 - [ ] **T-1.3 Audit log** · M · R0 · deps T-0.5
-  Append-only `audit_logs` (partitioned, hash-chained), `Audit::record()`, DB role with INSERT/SELECT only, chain-verification command.
+  Append-only `audit_logs` (partitioned, hash-chained), `audit.Record()`, DB role with INSERT/SELECT only, chain-verification command.
   *AC:* An UPDATE on audit_logs fails with a permission error; tampering is detected by the verify command.
 - [ ] **T-1.4 Portal authentication** · M · R1 · deps T-1.1
   Login, password policy (≥ 12 characters, breached-password check), lockout, TOTP 2FA (required for admins, vendor support, and sensitive roles), session hardening, CSRF.
@@ -83,7 +83,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Generic `ApprovalRequest` (maker ≠ checker, 2FA on approve, expiry, audit) reused by refunds, suspense, and bank-account changes.
   *AC:* The same user cannot approve their own request; expired requests cannot be approved.
 - [ ] **T-1.7 API credentials & HMAC auth** · M · R1 · deps T-1.1, T-0.8
-  Key creation (secret shown once), scopes, IP allow-list, rotation with overlap; `api.hmac` middleware per DESIGN §6.1 (timestamp window, nonce replay cache, `hash_equals`).
+  Key creation (secret shown once), scopes, IP allow-list, rotation with overlap; `api.hmac` middleware per DESIGN §6.1 (timestamp window, nonce replay cache in Postgres, `hmac.Equal`).
   *AC:* Tests for bad signature, skew, replay, revoked key, wrong scope, IP not allowed; a reference client in `tests/Support`.
 - [ ] **T-1.8 Idempotency middleware** · S · R1 · deps T-1.7
   `Idempotency-Key` storage per DESIGN §2; replay of the stored response; 409 on reuse with a different body.
@@ -112,13 +112,13 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 ## Phase 3 — Payments & ledger core (R1)
 
 - [ ] **T-3.1 Ledger** · M · R1 · deps T-0.5, T-1.2
-  Accounts, journals, entries per DESIGN §3; `Ledger::post()` enforcing balance and currency; reversal support; invariant checker job + alert.
+  Accounts, journals, entries per DESIGN §3; `ledger.Post()` enforcing balance and currency; reversal support; invariant checker job + alert.
   *AC:* Unbalanced posting throws; the invariant job reports 0 violations after the full test suite.
 - [ ] **T-3.2 Allocation policy** · S · R1 · deps T-2.3
-  Pure `AllocationPolicy::decide()` implementing the DESIGN §8.5 table, including dry-run for validation.
+  Pure `allocation.Decide()` implementing the DESIGN §8.5 table, including dry-run for validation.
   *AC:* Table-driven tests cover every row; property test: posted + suspense = received amount.
 - [ ] **T-3.3 Payment ingest (idempotent)** · L · R1 · deps T-3.1, T-3.2
-  `Payments::ingest()` per DESIGN §5.2 in one transaction: unique `(channel_id, channel_txn_id)`, invoice row lock, ledger, invoice update, suspense, outbox, audit, response snapshot; serialization retry.
+  `payments.Service.Ingest()` per DESIGN §5.2 in one transaction: unique `(channel_id, channel_txn_id)`, invoice row lock, ledger, invoice update, suspense, outbox, audit, response snapshot; serialization retry.
   *AC:* The same notification sent 20× in parallel produces exactly 1 payment and identical responses; the ledger balances.
 - [ ] **T-3.4 Payment state machine & reversals** · M · R1 · deps T-3.3
   States per DESIGN §8.2; channel-initiated reversal creates reversing journal entries and updates the invoice.
@@ -148,13 +148,13 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Confirm via status query where available (DESIGN §5.3); per-channel circuit breaker and timeouts (RULES E4).
 
 - [ ] **T-4.10 Channel credential intake & Test connection** · M · R1 · deps T-4.1, T-0.8, T-1.6
-  Portal *Channel accounts → Add* form and `pgs channel add` writing straight to the secret store (RULES S22); adapter `healthCheck()`; display of callback URLs and outbound IP; maker-checker activation; per-channel "credentials checklist" for organisations (from T-4.0).
+  Portal *Channel accounts → Add* form and `pgs channel add` writing straight to the secret store (RULES S22); adapter `HealthCheck()`; display of callback URLs and outbound IP; maker-checker activation; per-channel "credentials checklist" for organisations (from T-4.0).
   *AC:* A new organisation goes from credentials to an accepted test payment in the same day with no code change; secrets never appear in logs, DB dumps, or the UI after entry.
 
 ## Phase 5 — Notifications (R1)
 
 - [ ] **T-5.1 Outbox relay** · M · R1 · deps T-3.3
-  Relay worker (`SKIP LOCKED`, 1 s poll), creates deliveries per subscribed endpoint.
+  River-based relay job (`SKIP LOCKED`, 1 s poll), creates deliveries per subscribed endpoint.
   *AC:* No event is lost when the worker is killed mid-batch (test).
 - [ ] **T-5.2 Webhook endpoints & dispatcher** · M · R1 · deps T-5.1
   Endpoint management API, secret rotation, signing per DESIGN §6.4, retry schedule, DEAD state, auto-disable after 50 failures, redelivery API.

@@ -15,9 +15,9 @@ Status: Draft v0.1 · Companion to [PRD](PRD.md). Detailed schemas and contracts
 
 ## 2. Architectural style: modular monolith
 
-PGS v2 is **one Laravel application split into strictly bounded modules**, deployed as several **process roles** (web, channel-ingress, workers, scheduler) from the same image.
+PGS v2 is **one Go program (`pgs`) split into strictly bounded packages** (D-016). It compiles to a single static binary that runs as several **process roles** from the same image: `pgs serve api`, `pgs serve ingress`, `pgs serve portal`, `pgs worker` (background jobs and schedules), and the `pgs` admin CLI (install, upgrade, migrate, doctor, channel). On small installations every role can run in one process (`pgs serve all`).
 
-Why not microservices? The team is small, and the transactional guarantees we need (payment + ledger + outbox in one DB transaction) are much easier inside one database. Module boundaries are enforced in code (Deptrac rules; see RULES §6), so any module can be extracted later if needed.
+Why not microservices? The team is small, and the transactional guarantees we need (payment + ledger + outbox in one DB transaction) are much easier inside one database. Module boundaries are enforced in code (Go `internal/` packages plus `depguard` import rules; see RULES §6), so any module can be extracted later if needed.
 
 ## 3. System context
 
@@ -67,21 +67,29 @@ Each hostname has its own ingress rules, rate limits, and WAF policy. **Channel 
 ## 4. Modules
 
 ```
-app/Modules/
-  Organization/     organisation profile (single row), branches, validated settings, feature flags
-  Identity/         users, roles, permissions, 2FA, API credentials
-  Payers/           payer registry
-  Invoicing/        invoices, line items, control numbers, bulk jobs
-  Channels/         adapter contract + one adapter per channel (Crdb, Nmb, Mkcb, Mpesa, ...)
-  Payments/         payment intake, allocation, state machine, reversals, suspense
-  Ledger/           accounts, journal entries, balance checks
-  Notifications/    outbox, webhook dispatcher, SMS, email
-  Reconciliation/   statement import, matching engine, exceptions
-  Refunds/          maker-checker refund workflow
-  Reporting/        read models, exports
-  Audit/            append-only audit log
-  Shared/           Money value object, IDs, clock, errors, crypto helpers
+cmd/pgs/              the only entry point: serve (api|ingress|portal|all), worker, migrate,
+                      install, upgrade, rollback, backup, doctor, channel …
+internal/
+  organization/       organisation profile (single row), branches, settings, feature flags
+  identity/           users, roles, permissions, 2FA, API credentials
+  payers/             payer registry
+  invoicing/          invoices, line items, control numbers, bulk jobs
+  channels/           adapter interface + one sub-package per channel (crdb, nmb, mkcb, mpesa, …)
+  payments/           payment intake, allocation, state machine, reversals, suspense
+  ledger/             accounts, journal entries, balance checks
+  notifications/      outbox, webhook dispatcher, SMS, email
+  reconciliation/     statement import, matching engine, exceptions
+  refunds/            maker-checker refund workflow
+  reporting/          read models, exports
+  audit/              append-only audit log
+  shared/             money, ids, clock, errs, crypto, mask
+  platform/           db (pgx + sqlc), jobs (River), httpx (middleware), config, secrets, telemetry
+db/
+  migrations/         goose migrations (embedded in the binary)
+  queries/            hand-written SQL, compiled to type-safe Go by sqlc
+web/                  templ templates + static assets (embedded in the binary)
 ```
+Each module package holds its domain types, its service (the public API other modules call), its sqlc-generated store (private to the module), and its HTTP handlers.
 
 **Dependency direction** (enforced):
 ```
@@ -139,7 +147,7 @@ If step 4 fails with an unexpected error, the raw message from step 2 stays in `
 ### 5.4 Webhook delivery (outbox pattern)
 ```
 outbox_events (written in the same TX as the domain change)
-   └─► Relay worker (polls every 1 s, SKIP LOCKED) → creates webhook_deliveries per subscribed endpoint
+   └─► Relay job on River (polls every 1 s, SKIP LOCKED) → creates webhook_deliveries per subscribed endpoint
           └─► Dispatcher worker: POST signed payload
                 2xx → DELIVERED
                 other/timeout → retry with backoff: 10s, 1m, 5m, 30m, 2h, 6h, 12h, 24h (8 attempts ≈ 45h)
@@ -160,12 +168,12 @@ MISSING_INTERNAL → auto-create payment via Payments.ingest(source=RECON), flag
 - **PostgreSQL 16+**, a single cluster. Primary plus a streaming replica (reports and read APIs may use the replica; money writes never do).
 - **Single-tenant:** one database per installation, holding one organisation's data. There is **no `tenant_id` column, no tenant scoping, and no RLS**. Isolation between organisations is physical (separate DB, host/containers, secrets, backups). Branch scoping inside an organisation is ordinary RBAC.
 - **IDs:** ULIDs (sortable, non-guessable) as public IDs, with a prefix per type (`inv_`, `pay_`, `pyr_`, `evt_`).
-- **Money:** `BIGINT amount_minor` + `CHAR(3) currency`. There is no float or decimal arithmetic in PHP code; a `Money` value object is used everywhere.
+- **Money:** `BIGINT amount_minor` + `CHAR(3) currency`. There is no floating-point arithmetic anywhere; the `money.Amount` type (int64 minor units + currency, checked arithmetic) is used everywhere.
 - **Time:** `timestamptz`, stored in UTC.
-- **Personal data:** name, phone, and email are encrypted at the application level (AES-256-GCM, key from KMS/Vault), with a blind index (HMAC) where search is needed.
+- **Personal data:** name, phone, and email are encrypted at the application level (AES-256-GCM, key from the installation's secret store), with a blind index (HMAC) where search is needed.
 - **Partitioning:** `channel_messages`, `audit_logs`, `webhook_deliveries`, and `ledger_entries` are partitioned by month from day one.
-- **Redis:** queues, rate limiting, locks, cache. **Never the source of truth.**
-- **Object storage (S3-compatible, e.g., MinIO):** statements, bulk upload files, PDFs, exports. Private buckets, signed URLs.
+- **No Redis (D-017).** Background jobs, schedules, and the outbox relay run on **River**, a job queue stored in PostgreSQL, so a job is enqueued in the same transaction as the business change. Locks use Postgres advisory locks. The API nonce replay cache is a Postgres table with TTL cleanup. Rate limiting is in-process (token bucket) behind the reverse proxy's per-host limits. That is one less service to run and back up on every VPS.
+- **File storage:** statements, bulk upload files, PDFs, exports on an encrypted local volume by default; S3-compatible storage optional via config. Never web-served directly: downloads go through authorised, time-limited links.
 
 ## 7. Security architecture
 
@@ -176,35 +184,34 @@ MISSING_INTERNAL → auto-create payment via Payments.ingest(source=RECON), flag
 | Integration API auth | HMAC-SHA256 request signing with key ID, timestamp (±300 s), nonce (replay cache 10 min); optional mTLS; per-key scopes and IP allow-list |
 | Portal auth | Session cookies (Secure, HttpOnly, SameSite=Lax), CSRF, TOTP 2FA, lockout and rate limit, password policy (length ≥ 12, breached-password check) |
 | Authorisation | RBAC with permissions and branch scoping; maker-checker for refunds, suspense allocation, and collection-account changes |
-| Secrets | HashiCorp Vault (or cloud KMS) → injected at runtime. Nothing in git or images. Per-installation and per-channel credentials (never shared between organisations), rotatable |
+| Secrets | Built-in encrypted secret store (D-017): secrets encrypted with AES-256-GCM (envelope encryption) under a master key delivered to the service as a root-only file/systemd credential, never stored in the DB, image, or git. HashiCorp Vault supported as an optional backend. Nothing in git or images. Per-installation and per-channel credentials (never shared between organisations), rotatable |
 | Data | Personal data column encryption, encrypted backups, DB access only from the app subnet, no public DB port |
 | Vendor access | No standing vendor access; time-boxed support accounts granted by the System Admin; SSH/host access via bastion with session recording for vendor-hosted installs |
 | Audit | Append-only `audit_logs` (DB role has INSERT only; hash-chained rows for tamper evidence) |
-| Supply chain | Composer lock, `composer audit`, Dependabot/Renovate, image scanning (Trivy), signed images |
+| Supply chain | `go.sum` checksums + `go mod verify`, `govulncheck`, Dependabot/Renovate, reproducible builds (`-trimpath`), SBOM, image scanning (Trivy), cosign-signed images |
 
 Threat model summary (STRIDE) and controls are in DESIGN §9.
 
 ## 8. Deployment topology
 
 ```
-               Internet
-                  │
-         ┌────────┴────────┐
-         │ LB / WAF (TLS)  │  separate listeners: api / channels / portal / pay
-         └──┬──────┬──────┬┘
-            │      │      │
-   ┌────────▼┐ ┌───▼─────┐ ┌▼────────┐
-   │ web     │ │ ingress │ │ portal  │   php-fpm + nginx containers (same image, different role)
-   │ (api)   │ │(channel)│ │         │   ≥ 2 replicas each
-   └────┬────┘ └───┬─────┘ └────┬────┘
-        └──────────┼────────────┘
-          ┌────────┴─────────┐
-          │ PostgreSQL (HA)  │  Redis (sentinel)   MinIO/S3   Vault
-          └────────┬─────────┘
-        ┌──────────┴──────────────────────────┐
-        │ workers: callbacks(high) · outbox · │   Laravel Horizon, separate queues
-        │ webhooks · sms · recon · reports    │   + 1 scheduler
-        └─────────────────────────────────────┘
+                 Internet (443 only)
+                        │
+          ┌─────────────┴──────────────┐
+          │ Caddy reverse proxy (TLS)  │  hosts: api / channels / portal / pay
+          └──┬─────────┬──────────┬────┘  per-host rate limits; channels host IP-allow-listed
+             │         │          │
+      ┌──────▼──┐ ┌────▼────┐ ┌───▼─────┐
+      │ pgs     │ │ pgs     │ │ pgs     │   same image, different role
+      │ api     │ │ ingress │ │ portal  │   (Large size: ×2 across two app hosts)
+      └────┬────┘ └────┬────┘ └────┬────┘
+           └───────────┼───────────┘
+             ┌─────────┴─────────┐      ┌───────────────────────────────┐
+             │ PostgreSQL 16+    │◄─────┤ pgs worker (River queues):    │
+             │ data · jobs ·     │      │ callbacks · outbox · webhooks │
+             │ outbox · secrets  │      │ sms · recon · reports · cron  │
+             └───────────────────┘      └───────────────────────────────┘
+  Standard size: everything above on one VPS (Docker Compose), encrypted volume for files, off-host backups.
 ```
 
 - **Runtime:** Docker images with Docker Compose + systemd. Vendor-hosted installations each get **their own dedicated VPS** (D-014), and large installations get the multi-host layout in DESIGN §11.1. No Kubernetes; the one-VPS-per-organisation model doesn't need it.
@@ -225,15 +232,21 @@ Threat model summary (STRIDE) and controls are in DESIGN §9.
 
 | Concern | Choice | Notes |
 |---|---|---|
-| Language/framework | PHP 8.3+ / Laravel 12+ | Team familiarity from the legacy system; mature queues, migrations, policies, testing |
+| Language | **Go** (current stable release) | Compiled, strict static typing, explicit error handling, single static binary, strong standard-library crypto/TLS (D-016) |
+| HTTP | `net/http` + `chi` router | Small and standard-library compatible |
 | DB | PostgreSQL 16+ | `ON CONFLICT … RETURNING`, transactional DDL (safer upgrades), partitioning, `SKIP LOCKED`, jsonb, partial indexes |
-| Install/upgrade | `pgs` CLI (bash/PHP) + Docker Compose; Ansible for vendor-hosted fleet | Same tooling for vendor-hosted and on-prem |
-| Queue | Redis + Laravel Horizon | Separate queues and worker pools per concern |
-| Portal UI | Laravel + Livewire (or Inertia/Vue) + Tailwind | Server-rendered, CSRF-friendly |
+| DB access | `pgx` + **`sqlc`** | Hand-written SQL compiled to type-checked Go at build time; no ORM; parameters always bound |
+| Migrations | `goose`, embedded in the binary | Run by `pgs migrate` / `pgs upgrade` |
+| Jobs, outbox, schedules | **River** (Postgres-backed) | Transactional enqueue with the business change; separate queues per concern; no Redis (D-017) |
+| Portal UI | `templ` + htmx + Tailwind (pre-built CSS), embedded in the binary | Server-rendered, CSRF-friendly, no separate front-end app |
+| Config | `org.yaml` + environment → typed structs, JSON-Schema validated at boot | |
+| Secrets | Built-in encrypted store (default) or Vault | D-017 |
+| Install/upgrade | `pgs` CLI (same Go binary) + Docker Compose; Ansible for the VPS baseline | Same tooling for vendor-hosted and on-prem |
 | API docs | OpenAPI 3.1 (source of truth, contract-tested) | |
-| Static analysis | PHPStan level 8 (Larastan), Deptrac, PHP-CS-Fixer / Pint | |
-| Tests | Pest/PHPUnit, Testcontainers (Postgres), channel simulators | |
-| Infra | Docker, Terraform/Ansible, GitHub Actions | |
+| Static analysis | `golangci-lint` (errcheck, exhaustive, gosec, depguard, forbidigo, bodyclose, sqlclosecheck, …), `go vet`, `staticcheck` | |
+| Tests | `go test` with `-race`, native fuzzing, `testcontainers-go` (Postgres), channel simulators | |
+| Supply chain | `govulncheck`, `go mod verify`, SBOM, Trivy, cosign | |
+| Infra | Docker, Ansible, GitHub Actions | |
 
 Alternatives considered are recorded as decisions in [MEMORY.md](MEMORY.md#2-decision-log).
 

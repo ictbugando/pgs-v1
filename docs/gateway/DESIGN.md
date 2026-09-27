@@ -53,7 +53,7 @@ Which channels the organisation accepts, and **its own collection account** at e
 | channel_id | FK | unique (one collection account per channel; extend to many if an organisation has several accounts at one bank) |
 | collection_account | text (encrypted) | organisation's bank account / MNO paybill/till number |
 | channel_biller_ref | text | biller ID the channel uses for this organisation |
-| credentials_ref | text | Vault path, never the secret itself |
+| credentials_ref | text | secret-store key, never the secret itself |
 | status | enum | `PENDING_UAT, ACTIVE, DISABLED` |
 
 ### payers
@@ -177,61 +177,61 @@ Tables: `ledger_accounts(id, code, type, currency)`, `journals(id jrn_…, payme
 ## 5. Channel integration
 
 ### 5.1 Adapter contract
-```php
-interface ChannelAdapter
-{
-    public function code(): string;
+```go
+// Adapter is implemented once per channel, in internal/channels/<code>.
+type Adapter interface {
+	Code() string
+	// Validation, Notification, StatusQuery, StatementAPI, RefundAPI, Push
+	Capabilities() []Capability
 
-    /** Throw ChannelAuthException on failure. Never returns false. */
-    public function authenticate(Request $request): void;
+	// Authenticate returns a non-nil error on any failure. There is no "allow" fallback.
+	Authenticate(r *http.Request, body []byte) error
 
-    public function parseValidation(Request $request): ValidationRequest;
-    public function renderValidation(ValidationResult $result): Response;
+	ParseValidation(body []byte) (ValidationRequest, error)
+	RenderValidation(w http.ResponseWriter, res ValidationResult) error
 
-    public function parseNotification(Request $request): PaymentNotification;
-    public function renderNotificationAck(IngestResult $result): Response;
+	ParseNotification(body []byte) (PaymentNotification, error)
+	RenderNotificationAck(w http.ResponseWriter, res IngestResult) error
 
-    /** Optional capabilities, declared via capabilities(). */
-    public function queryStatus(string $channelTxnId): ?PaymentNotification;   // STATUS_QUERY
-    public function fetchStatement(CarbonImmutable $date, ChannelAccount $account): iterable; // RECON
-    public function refund(Refund $refund, ChannelAccount $account): RefundResult;   // REFUND
+	// Optional capabilities: return ErrNotSupported unless declared in Capabilities().
+	QueryStatus(ctx context.Context, acct ChannelAccount, channelTxnID string) (*PaymentNotification, error)
+	FetchStatement(ctx context.Context, acct ChannelAccount, day time.Time) ([]StatementLine, error)
+	Refund(ctx context.Context, acct ChannelAccount, r Refund) (RefundResult, error)
 
-    /** @return list<Capability> VALIDATION|NOTIFICATION|STATUS_QUERY|STATEMENT_API|REFUND_API|PUSH */
-    public function capabilities(): array;
+	// HealthCheck verifies credentials without moving money (used by Test connection, §5.5).
+	HealthCheck(ctx context.Context, acct ChannelAccount) (HealthCheckResult, error)
 }
 ```
 
-Normalised DTOs (in `Modules/Channels/Domain`):
-```php
-final readonly class PaymentNotification {
-    public function __construct(
-        public string $channelCode,
-        public string $channelTxnId,
-        public ?string $channelReceipt,
-        public string $controlNumber,
-        public Money $amount,
-        public ?string $payerMsisdn,
-        public ?string $payerName,
-        public CarbonImmutable $paidAt,
-        public array $extra = [],   // adapter-specific, never read by the core
-    ) {}
+Normalised types (package `internal/channels`):
+```go
+type PaymentNotification struct {
+	ChannelCode    string
+	ChannelTxnID   string
+	ChannelReceipt string       // optional
+	ControlNumber  string
+	Amount         money.Amount // int64 minor units + currency; never a float
+	PayerMSISDN    string       // optional; personal data
+	PayerName      string       // optional; personal data
+	PaidAt         time.Time
+	Extra          map[string]string // adapter-specific; never read by the core
 }
 ```
 
-Routes are generated from registered adapters: `POST /channels/{code}/validate`, `POST /channels/{code}/notify`, each behind `channel.auth:{code}` middleware, which calls `authenticate()`.
+Routes are generated from registered adapters: `POST /channels/{code}/validate`, `POST /channels/{code}/notify`, each behind the `channel.auth:{code}` middleware group, which calls `Authenticate()` before anything else.
 
-### 5.2 Ingest algorithm (`Payments::ingest`)
+### 5.2 Ingest algorithm (`payments.Service.Ingest`)
 ```
 1. Luhn/format check on control number → if invalid: result=INVALID_REFERENCE (still record payment → SUSPENSE if money moved)
 2. BEGIN
 3.   INSERT payment … ON CONFLICT (channel_id, channel_txn_id) DO NOTHING RETURNING id
      → if no row: SELECT existing; COMMIT; return existing.response_snapshot   (duplicate, idempotent)
 4.   SELECT invoice WHERE control_number = ? FOR UPDATE
-5.   decision = AllocationPolicy::decide(invoice, amount)        // pure function, §8.5
-6.   Ledger::post(journal for decision)
+5.   decision = allocation.Decide(invoice, amount)               // pure function, §8.5
+6.   ledger.Post(tx, journal for decision)
 7.   update invoice.paid_minor / status via InvoiceStateMachine
 8.   create SuspenseItem if needed
-9.   Outbox::record(events…); Audit::record(…)
+9.   outbox.Record(tx, events…); audit.Record(tx, …)   // River jobs enqueued in the same tx
 10.  payment.status = POSTED|SUSPENSE; payment.response_snapshot = result
 11. COMMIT
 ```
@@ -241,10 +241,10 @@ Serialization failures or deadlocks → retry the transaction up to 3 times. Oth
 | Strategy | Used when | Implementation |
 |---|---|---|
 | `MTLS` | Channel supports client certs | LB terminates and verifies against the channel's CA; passes the verified subject DN; the app checks the DN against config |
-| `HMAC_SIGNATURE` | Channel signs requests with a shared secret | Canonical string per channel spec; `hash_equals`; timestamp window |
+| `HMAC_SIGNATURE` | Channel signs requests with a shared secret | Canonical string per channel spec; `hmac.Equal` (constant time); timestamp window |
 | `RSA_SIGNATURE` | Channel signs with a private key | Verify with the channel's public cert (rotatable, 2 active keys) |
-| `PAYLOAD_ENCRYPTION` | e.g. MKCB AES-GCM | Decrypt with a per-channel key from Vault; the GCM tag gives integrity; also require a timestamp/nonce inside the payload where available |
-| `CIDR` | **Always, in addition** | `IpUtils::checkIp($clientIp, $allowlist)` using the trusted-proxy-resolved IP |
+| `PAYLOAD_ENCRYPTION` | e.g. MKCB AES-GCM | Decrypt with a per-channel key from the secret store; the GCM tag gives integrity; also require a timestamp/nonce inside the payload where available |
+| `CIDR` | **Always, in addition** | `net/netip` prefix matching against the allow-list, using the trusted-proxy-resolved IP |
 
 **Compensating controls** when a channel supports only CIDR (no crypto):
 - Site-to-site VPN/IPsec or a private link to the channel, so the channel host is not public.
@@ -266,18 +266,13 @@ Every supported channel ships as a built-in adapter in every installation, built
 
 1. **Organisation gets its credentials** from its bank/MNO through its normal banking relationship: biller/merchant ID, API keys or client certificate, collection account/paybill.
 2. **Secure intake.** The credentials are entered either by the organisation's `system.admin` in *Channel accounts → Add*, or by vendor staff with `pgs channel add <code>` during an approved support session. They go **straight into the installation's secret store**. `channel_accounts` holds only the reference. Credentials are never sent by email, WhatsApp, or documents (RULES S22).
-3. **Test connection.** The adapter's `healthCheck()` runs an auth handshake, status query, or sandbox ping where the channel supports one. The screen shows the values the bank must have on file: **callback URL(s)** and the installation's **outbound IP**.
+3. **Test connection.** The adapter's `HealthCheck()` runs an auth handshake, status query, or sandbox ping where the channel supports one. The screen shows the values the bank must have on file: **callback URL(s)** and the installation's **outbound IP**.
 4. **Activate.** Maker-checker (`system.admin` → `finance.manager`), then status `ACTIVE`, and the channel accepts payments immediately.
 
 Some banks still register the callback URL and whitelist the IP on their side. The organisation passes the values from step 3 to its bank together with its credential request. This is an administrative step, never a development task.
 
 A channel that is **not yet supported** becomes a new adapter in the shared codebase, available to every installation in the next release. It is never a per-organisation customisation (RULES C9).
 
-Adapter contract addition:
-```php
-    /** Verify credentials without moving money. */
-    public function healthCheck(ChannelAccount $account): HealthCheckResult;
-```
 
 ## 6. Integration API
 
@@ -295,7 +290,7 @@ Canonical string:
 ```
 METHOD \n PATH \n CANONICAL_QUERY (sorted, url-encoded) \n TIMESTAMP \n NONCE \n HEX(SHA256(body))
 ```
-`Signature = base64(HMAC_SHA256(secret, canonical))`. The server rejects requests where the timestamp is off by more than 300 s, the nonce was seen in the last 10 min (Redis), the key is unknown or revoked, the source IP is outside the key's allow-list (if set), or the key lacks the required scope.
+`Signature = base64(HMAC_SHA256(secret, canonical))`. The server rejects requests where the timestamp is off by more than 300 s, the nonce was seen in the last 10 min (Postgres `api_nonces` table), the key is unknown or revoked, the source IP is outside the key's allow-list (if set), or the key lacks the required scope.
 
 Key scopes: `invoices:read`, `invoices:write`, `payments:read`, `refunds:write`, `webhooks:manage`, `reports:read`. A key's secret is shown once at creation; only an encrypted copy is stored, and keys can be rotated with overlap.
 
@@ -335,7 +330,7 @@ POST /v1/invoices
 { "id": "inv_01J…", "control_number": "912345678903", "status": "ISSUED",
   "amount": "510000", "paid": "0", "currency": "TZS", … }
 ```
-Amounts in the API are **decimal strings in major units** (`"510000"`, `"12.50"` for USD). They are converted with `Money::parse` (RULES M3). JSON numbers are never used for money.
+Amounts in the API are **decimal strings in major units** (`"510000"`, `"12.50"` for USD). They are converted with `money.Parse` (RULES M3). JSON numbers are never used for money.
 
 ### 6.3 Error catalogue (RFC 9457)
 ```json
@@ -429,7 +424,7 @@ Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoi
 `REQUESTED → APPROVED → EXECUTING → COMPLETED` · `REQUESTED → REJECTED` · `EXECUTING → FAILED → (retry) EXECUTING`
 Execution happens from the organisation's own collection account (channel refund API or an exported instruction file). We never disburse.
 
-### 8.5 Allocation policy (`AllocationPolicy::decide`, pure function)
+### 8.5 Allocation policy (`allocation.Decide`, pure function)
 | Invoice state | Policy | Amount vs due | Outcome |
 |---|---|---|---|
 | not found | — | any | SUSPENSE `UNKNOWN_CONTROL_NUMBER` |

@@ -12,7 +12,7 @@ The project's long-term memory: what has been decided, what is assumed, what is 
 | **Deployment** | **Single-tenant:** one codebase, a separate installation per organisation (own DB, secrets, domain). No tenants (D-009) |
 | **Model** | Route only. Payers pay straight into each organisation's own collection account. We never hold funds (D-002) |
 | **Predecessor** | Bugando PGS — CodeIgniter 4.2.1 + Joomla, hospital-only (this repo: `/ci`, `/public`) |
-| **Stack** | PHP 8.3+ / Laravel 12+ / PostgreSQL 16+ / Redis / Docker (D-003, D-004) |
+| **Stack** | Go (single static binary `pgs`) / PostgreSQL 16+ (data, jobs, outbox, secrets) / sqlc / River / templ + htmx / Docker on one VPS per installation (D-016, D-017) |
 | **Phase** | Documentation drafted (v0.1); build not started. Next: T-0.1, T-4.0, T-8.6 |
 | **Docs** | [PRD](PRD.md) · [ARCHITECTURE](ARCHITECTURE.md) · [DESIGN](DESIGN.md) · [RULES](RULES.md) · [TASKS](TASKS.md) |
 
@@ -26,7 +26,7 @@ Format: **ID — decision** (date, status) — why · consequences
 - **D-002 — Routing only; we never hold, settle, or disburse funds** (2026-09-27, **confirmed by owner**)
   Why: owner's business decision. It also greatly reduces regulatory exposure (no trust account or settlement). Consequences: the ledger is a collections memo sub-ledger (DESIGN §3); refunds are executed from the organisation's own account (DESIGN §8.4); settlement, payouts, and fee deduction are out of scope; each organisation must have its own collection account/paybill at each channel (`channel_accounts`).
 
-- **D-003 — Modular monolith on Laravel + PostgreSQL** (2026-09-27, proposed)
+- **D-003 — Modular monolith on Laravel + PostgreSQL** (2026-09-27, proposed; **Laravel part superseded by D-016**; the modular monolith and PostgreSQL still stand)
   Why: small team; payment + ledger + outbox need one DB transaction; team PHP experience. Alternatives: microservices (too much ops overhead); Go (slower portal development); keep CodeIgniter (weaker ecosystem for queues, policies, testing). Postgres over MySQL for transactional DDL (safer unattended upgrades), `ON CONFLICT … RETURNING`, partitioning, `SKIP LOCKED`, and stricter semantics.
 
 - **D-004 — Shared schema multi-tenancy with `tenant_id` + Postgres RLS** (2026-09-27, ~~proposed~~ **superseded by D-009**)
@@ -64,6 +64,12 @@ Format: **ID — decision** (date, status) — why · consequences
 
 - **D-015 — Emergency security patch fallback** (2026-09-27, **owner decision**)
   Why: an actively exploited `CRITICAL` vulnerability can't wait indefinitely for an unreachable coordinator. Rule: if the Update Coordinator and deputy don't respond within 24 h, the organisation's System Admin may approve instead (2FA, reason recorded, coordinator notified). Never silent, never without an approval from the organisation. Closes Q-013. See DESIGN §11.2 step 7, RULES G6.
+
+- **D-016 — Go is the implementation language** (2026-09-27, **confirmed by owner**)
+  Why: the owner wants a strong language for a delicate system. Go gives compiled strict typing, explicit error handling (errors can't be silently ignored; `errcheck` enforces it), a single static binary that fits one-VPS-per-installation and offline on-prem upgrades, a strong standard library for TLS/crypto, built-in fuzzing and a race detector, and a small language the PHP team can learn in weeks. Alternatives: Kotlin/Java + Spring (best for SOAP/ISO 8583 and bank-provided Java SDKs, but heavier per VPS and slower to build); C#/.NET (similar); PHP (familiar but weaker typing); TypeScript (float numbers, npm supply-chain risk); Rust (safest but slow delivery, hard hiring). Consequences: stack in ARCHITECTURE §10; sqlc removes string-built SQL (legacy L2); RULES §3 and §6 rewritten for Go; any bank that insists on SOAP gets a hand-written client inside its adapter only.
+
+- **D-017 — No Redis; built-in encrypted secret store by default** (2026-09-27, accepted, follows D-016 and D-014)
+  Why: every installation is one VPS, so every extra service is extra work to run, secure, and back up hundreds of times. Background jobs, schedules, outbox relay, locks, and the nonce cache all run on PostgreSQL (River, advisory locks, TTL tables), and jobs are enqueued in the same transaction as the business change. Secrets live in an AES-256-GCM encrypted store whose master key is a root-only file/systemd credential outside the DB; Vault stays an optional backend for organisations that already run it.
 
 ## 3. Assumptions (verify, then convert to decisions)
 
@@ -139,6 +145,7 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 
 Newest first. One line per session: date — who — what changed — next.
 
+- 2026-09-27 — Claude (with owner) — Owner chose Go (D-016); dropped Redis and made the built-in secret store the default (D-017). Rewrote the stack, module layout, adapter interface, rules, and tasks for Go. — Next: create the `pgs-v2` repo and start T-0.1; T-8.6; T-4.0.
 - 2026-09-27 — Claude (with owner) — Owner decided D-015 (emergency patch fallback to System Admin); SMS provider to be provided (Q-007); product name to be decided (Q-008). — Next: Q-002, Q-007, Q-008 when available; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner decided D-013 (no BoT licence) and D-014 (dedicated VPS per vendor-hosted install); Q-002 control-number format not yet decided. Added T-0.16. — Next: Q-002, Q-013, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-010 (credentials-only channel onboarding), D-011 (identical environment either hosting mode), D-012 (updates via the organisation's designated personnel). Added DESIGN §5.5 and §11, RULES S22/C11/G6, tasks T-0.15, T-4.10, T-7.8. — Next: Q-001, Q-002, Q-013; start T-0.1, T-4.0, T-8.6.

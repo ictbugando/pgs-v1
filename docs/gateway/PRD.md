@@ -152,7 +152,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 | **Compliance** | Tanzania Personal Data Protection Act 2022 (PDPC registration as processor). No Bank of Tanzania licence or registration required for the routing-only model (owner decision D-013). TRA/EFD receipt requirements where applicable (Q-006). |
 | **Localisation** | English and Kiswahili UI and SMS templates. Currency TZS (plus USD P1). Timezone Africa/Dar_es_Salaam in UI; UTC in storage. |
 | **Upgradability** | Any installation upgrades from the previous two minor releases in ≤ 30 min of downtime-free operation (channel ingress kept up); rollback tested for every release |
-| **Maintainability** | ≥ 80 % test coverage on the Payments, Ledger, Channels, and Recon modules. No module > 500-line classes. |
+| **Maintainability** | ≥ 80 % test coverage on the Payments, Ledger, Channels, and Recon modules. No file over 500 lines; import boundaries between modules enforced in CI. |
 
 ## 8. Release plan
 
