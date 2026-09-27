@@ -499,13 +499,14 @@ Vendor-hosted or on the organisation's server, an installation is the **same thi
 **Reference requirements** (assumption A-008, confirm by load test T-9.1):
 | Size | Typical organisation | Servers |
 |---|---|---|
-| Standard | Most schools, clinics, SACCOs | 1 host: 4 vCPU, 8 GB RAM, 100 GB SSD + separate backup target |
+| Standard | Most schools, clinics, SACCOs | 1 host (vendor-hosted: one dedicated VPS, D-014): 4 vCPU, 8 GB RAM, 100 GB SSD + separate backup target |
 | Large | Referral hospital, large school group (≥ 20 TPS peaks) | 2 app hosts (4 vCPU / 8 GB) + 1 DB host (8 vCPU / 32 GB, 250 GB SSD) + backup target |
 
 - **OS/runtime:** Ubuntu Server LTS, Docker Engine + Compose plugin, NTP time sync.
 - **Inbound:** HTTPS 443 from the channels' IP ranges (channel ingress) and from the organisation's systems/staff (API, portal). Nothing else.
 - **Outbound:** HTTPS to channel APIs, SMS provider, and email relay. Optional: the vendor image registry (otherwise use the offline bundle) and fleet telemetry.
 - **DNS/TLS:** a public hostname per entry point with a valid certificate (Let's Encrypt or the organisation's own).
+- **Vendor-hosted VPS (D-014):** one dedicated VPS per installation, never shared. The provider and region are chosen per installation, so an organisation that needs its data kept in Tanzania gets a VPS in Tanzania. The VPS is provisioned from the same baseline (OS hardening, firewall, Docker) by `pgs install`/Ansible.
 - **Backups:** encrypted, to a target outside the host (object storage or NAS). A restore test runs at install time.
 
 **Integration with the organisation's management system** (HMS, SIS, ERP) is identical in both modes: it calls the integration API and receives webhooks. On-prem installs may use the LAN path, but the contract, signing, and certificates are the same.

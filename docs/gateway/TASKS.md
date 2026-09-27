@@ -55,6 +55,9 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Private repo holding each installation's `org.yaml` + inventory (no secrets); org-code registry; opt-in health telemetry (allow-listed fields, RULES O5) to a vendor fleet dashboard showing version, health, last backup, recon status.
   *AC:* Telemetry payload test proves no personal or transaction data; dashboard lists all installations and their versions.
 
+- [ ] **T-0.16 VPS provisioning baseline** · M · R1 · deps T-0.12
+  Ansible/cloud-init baseline for a dedicated VPS per vendor-hosted installation (D-014): OS hardening, SSH keys only + bastion, firewall (443 in from channel ranges and the organisation), unattended OS security updates, Docker, off-host backup target, monitoring agent. Provider-agnostic.
+  *AC:* A fresh VPS from any supported provider becomes a ready host in ≤ 20 min; CIS-style hardening checks pass.
 - [ ] **T-0.15 Reference environment & requirements** · S · R1 · deps T-0.12
   Publish the hosting requirements (DESIGN §11.1): server sizes, OS, network in/out, DNS/TLS, backups; `pgs doctor` checks a server against them before install.
   *AC:* `pgs doctor` passes on a reference VM and fails with clear messages on an undersized or misconfigured one.
@@ -222,7 +225,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-9.4 Runbooks** · M
   Incident response, channel outage, key rotation, failed-processing replay, recon exception handling, DR failover.
 - [ ] **T-9.5 Compliance pack** · M · owner: business
-  PDPC registration, data processing agreements with each organisation (for vendor-hosted installs and support access), retention policy, legal opinion on BoT position (Q-001).
+  PDPC registration, data processing agreements with each organisation (for vendor-hosted installs and support access), retention policy. (No BoT licence needed, D-013.)
 - [ ] **T-9.6 Integrator documentation site** · M
   Rendered OpenAPI, webhook guide with verification code samples (PHP, JS, Python, Java), sandbox onboarding guide.
 

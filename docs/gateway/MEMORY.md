@@ -56,6 +56,12 @@ Format: **ID — decision** (date, status) — why · consequences
 - **D-012 — Updates go through each organisation's designated personnel (Update Coordinator)** (2026-09-27, **confirmed by owner**)
   Why: owner's decision. The organisation controls when its system changes. Consequences: `update.coordinator` role, Updates page with approval of version + window, `pgs upgrade` blocked without approval, and no forced upgrades (DESIGN §11.2, RULES G6, T-7.8). Answers Q-011 (upgrade approval).
 
+- **D-013 — No Bank of Tanzania licence or registration required** (2026-09-27, **owner decision**)
+  Why: owner's position for the routing-only model (D-002): PGS v2 never receives, holds, or disburses funds. Consequences: no licensing workstream; closes Q-001. If the model ever moves towards holding funds, this decision must be revisited first.
+
+- **D-014 — Vendor-hosted installations each run on their own VPS** (2026-09-27, **owner decision**)
+  Why: a dedicated VPS per installation removes shared-data-centre concerns and keeps isolation physical (D-009). The provider and region can be chosen per organisation (e.g., in-country when required). Consequences: VPS provisioning baseline (T-0.16); sizing per DESIGN §11.1; closes Q-004.
+
 ## 3. Assumptions (verify, then convert to decisions)
 
 - **A-001** Launch channels are the legacy ones: CRDB, NMB, MKCB (banks) first; M-Pesa, Mixx by Yas, Airtel next.
@@ -71,10 +77,10 @@ Format: **ID — decision** (date, status) — why · consequences
 
 | ID | Question | Owner | Blocks |
 |---|---|---|---|
-| Q-001 | Does a routing-only gateway need BoT registration/approval under the NPS Act 2015 (e.g., as a payment system provider or technical service provider)? Get a legal opinion. | Business | R2 go-live |
-| Q-002 | Control-number format constraints for each channel (length, prefix, numeric only)? | Business → channel specs | D-006, T-2.2 |
+| Q-001 | ~~BoT registration/approval needed?~~ **Answered → D-013** (no). | — | — |
+| Q-002 | Control-number format constraints for each channel (length, prefix, numeric only)? **Not yet decided** (owner, 2026-09-27). Default in DESIGN §4 stands until decided; the format is configurable, so this does not block early work. | Business → channel specs | D-006, T-2.2 (before R1) |
 | Q-003 | Will we serve government institutions that are mandated to use GePG? If so, integrate GePG as a channel or exclude them? | Business | T-10.8 |
-| Q-004 | ~~Hosting mode~~ **answered → D-011** (identical either way). Still open: which data centre/provider for vendor-hosted installs, and PDPA data-residency confirmation. | Business/Ops | T-0.10 |
+| Q-004 | ~~Hosting mode / data centre~~ **Answered → D-011, D-014** (identical environment; a dedicated VPS per vendor-hosted installation, region chosen per organisation). | — | — |
 | Q-005 | Legal retention period for financial and audit records (assumed ≥ 7 years)? | Compliance | Partition/archival policy |
 | Q-006 | Do receipts need TRA EFD/VFD integration, and if so is that the organisation's or our responsibility? | Compliance | T-2.6 |
 | Q-007 | Which SMS provider? | Business | T-5.3 |
@@ -130,6 +136,7 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 
 Newest first. One line per session: date — who — what changed — next.
 
+- 2026-09-27 — Claude (with owner) — Owner decided D-013 (no BoT licence) and D-014 (dedicated VPS per vendor-hosted install); Q-002 control-number format not yet decided. Added T-0.16. — Next: Q-002, Q-013, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-010 (credentials-only channel onboarding), D-011 (identical environment either hosting mode), D-012 (updates via the organisation's designated personnel). Added DESIGN §5.5 and §11, RULES S22/C11/G6, tasks T-0.15, T-4.10, T-7.8. — Next: Q-001, Q-002, Q-013; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-009 (single-tenant, one installation per organisation). Removed tenancy from all docs; added installer/upgrade/fleet/vendor-support design and tasks. — Next: owner answers Q-004, Q-011, Q-012.
 - 2026-09-27 — Claude (with owner) — Analysed the legacy Bugando PGS; drafted PRD, ARCHITECTURE, DESIGN, RULES, TASKS, MEMORY v0.1; owner confirmed D-002 (routing only). — Next: owner answers Q-001, Q-002, Q-004, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.

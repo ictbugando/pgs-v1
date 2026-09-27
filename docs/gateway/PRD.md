@@ -149,7 +149,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 | **Correctness** | Money stored as integer minor units. Ledger always balances (checked continuously). Idempotency on every write path. |
 | **Auditability** | Financial records and audit log retained ≥ 7 years (confirm with compliance, Q-005). Audit log append-only. |
 | **Observability** | Structured JSON logs with `trace_id`. Metrics and alerts per channel. Error tracking. |
-| **Compliance** | Tanzania Personal Data Protection Act 2022 (PDPC registration as processor). National Payment Systems Act 2015 (confirm licence need, Q-001). TRA/EFD receipt requirements where applicable (Q-006). |
+| **Compliance** | Tanzania Personal Data Protection Act 2022 (PDPC registration as processor). No Bank of Tanzania licence or registration required for the routing-only model (owner decision D-013). TRA/EFD receipt requirements where applicable (Q-006). |
 | **Localisation** | English and Kiswahili UI and SMS templates. Currency TZS (plus USD P1). Timezone Africa/Dar_es_Salaam in UI; UTC in storage. |
 | **Upgradability** | Any installation upgrades from the previous two minor releases in ≤ 30 min of downtime-free operation (channel ingress kept up); rollback tested for every release |
 | **Maintainability** | ≥ 80 % test coverage on the Payments, Ledger, Channels, and Recon modules. No module > 500-line classes. |
@@ -167,7 +167,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Regulatory: being classed as a payment service provider | High | Routing-only model (confirmed, D-002): funds never touch our accounts. Still obtain a legal opinion on BoT registration/approval needs before R2 (Q-001) |
+| Regulatory: being classed as a payment service provider | Low | Routing-only model (D-002): funds never touch our accounts; owner has determined no BoT licence is needed (D-013). Keep the model routing-only; revisit D-013 if that ever changes |
 | Bank/MNO integration lead time (contracts, UAT, IP whitelisting) | High (first build) / Low (each new organisation) | Adapters are built and certified **once** for all installations (T-4.0 early, simulator early). A new organisation only supplies credentials (D-010) |
 | Update Coordinator slow to approve a critical security patch | Medium | Severity flag, reminders escalating to the System Admin, 72 h approval target; emergency policy (Q-013) |
 | A channel does not support signing or mTLS | High | Compensating controls: strict CIDR, VPN/IPsec tunnel, payload encryption, anomaly alerts (DESIGN §5.3) |
