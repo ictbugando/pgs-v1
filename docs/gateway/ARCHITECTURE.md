@@ -7,10 +7,11 @@ Status: Draft v0.1 · Companion to [PRD](PRD.md). Detailed schemas and contracts
 ## 1. Architectural drivers
 
 1. **Money correctness over everything.** No lost, duplicated, or unexplained transactions.
-2. **Hostile inputs at every edge.** Channels, merchants, and portal users are all untrusted.
+2. **Hostile inputs at every edge.** Channels, integrating systems, and portal users are all untrusted.
 3. **Many channels, one core.** Adding a bank must not touch business logic.
-4. **Many tenants, one deployment.** Strict isolation.
+4. **One codebase, one installation per organisation.** Differences between organisations come from configuration, never code (D-009).
 5. **Small team.** Operational simplicity beats theoretical scalability.
+6. **Easy to install, upgrade, and support at many sites**, including on-premises servers run by the organisation.
 
 ## 2. Architectural style: modular monolith
 
@@ -22,17 +23,43 @@ Why not microservices? The team is small, and the transactional guarantees we ne
 
 ```
                 ┌──────────────────────────── PGS v2 ────────────────────────────┐
- Merchant  ───► │ api.<domain>        Merchant REST API (HMAC-signed)            │
+ Org apps  ───► │ api.<domain>        Integration REST API (HMAC-signed)         │
  systems   ◄─── │                     Webhooks out (signed)                      │
                 │                                                                │
  Banks/MNOs ──► │ channels.<domain>   Channel ingress (mTLS / signature / CIDR)  │
             ◄── │                     Status queries, statements, refunds (out)  │
                 │                                                                │
- Staff     ───► │ portal.<domain>     Operator & merchant portal (2FA, RBAC)     │
+ Staff     ───► │ portal.<domain>     Organisation portal (2FA, RBAC)            │
  Payers    ───► │ pay.<domain>        Public invoice lookup & receipt verify     │
                 └────────────────────────────────────────────────────────────────┘
                         │ SMS gateway (out)   │ Email (out)   │ Object storage
 ```
+
+The box above is **one organisation's installation**. `<domain>` is that organisation's domain (e.g., `pay.<school>.ac.tz`), or a vendor subdomain for vendor-hosted installs (e.g., `<org>.<vendor-domain>`). Every organisation gets its own copy of this whole picture.
+
+### 3.1 Deployment model: one codebase, many installations
+
+```
+                 ┌──────────── one Git repo, one main branch ────────────┐
+                 │  tagged releases  →  signed container image vX.Y.Z   │
+                 └───────────────┬──────────────────────────────────────┘
+                                 │ same image everywhere
+     ┌───────────────────────────┼───────────────────────────┐
+     ▼                           ▼                           ▼
+ ┌────────────┐            ┌────────────┐              ┌────────────┐
+ │ BMC        │            │ School A   │              │ SACCO B    │   each: own DB, secrets,
+ │ install    │            │ install    │              │ install    │   domain, channel accounts,
+ │ org.yaml   │            │ org.yaml   │              │ org.yaml   │   backups
+ └─────┬──────┘            └─────┬──────┘              └─────┬──────┘
+       └──── health telemetry only (no personal data) ───────┘──► Vendor fleet dashboard
+```
+
+- **Configuration as code:** each installation has an `org.yaml` (non-secret settings: profile, sector, enabled channels, policies, feature flags, SMS templates, control-number org code) in a private **deployments repo**, plus secrets in that installation's own Vault/secret store. The app validates the config against a schema at boot and refuses to start if it is invalid.
+- **No forks:** there are no per-organisation branches or code paths. A need specific to one organisation becomes a feature flag, a configuration option, or an adapter (channel or integration) that any organisation could enable (RULES C9).
+- **Releases:** semantic versioning. Each installation runs a tagged release, and its version shows in the portal and the telemetry.
+- **Hosting:** vendor-hosted (preferred: we control patching) or on the organisation's premises (supported: same image, offline upgrade bundle). See Q-004.
+- **Upgrades:** `pgs upgrade vX.Y.Z` runs pre-flight checks → backup → pull image → expand migrations → rolling restart (channel ingress last, kept up) → smoke tests → report. Rollback restores the previous image. Contract migrations only run in the next release.
+- **Support access:** vendor staff have no standing access. The System Admin grants a time-boxed support account (2FA, audited, auto-expires).
 
 Each hostname has its own ingress rules, rate limits, and WAF policy. **Channel ingress is isolated** so that portal or API traffic spikes, or a portal deploy, cannot block payment callbacks.
 
@@ -40,9 +67,9 @@ Each hostname has its own ingress rules, rate limits, and WAF policy. **Channel 
 
 ```
 app/Modules/
-  Tenancy/          tenants, branches, settings, feature flags
+  Organization/     organisation profile (single row), branches, validated settings, feature flags
   Identity/         users, roles, permissions, 2FA, API credentials
-  Payers/           payer registry per tenant
+  Payers/           payer registry
   Invoicing/        invoices, line items, control numbers, bulk jobs
   Channels/         adapter contract + one adapter per channel (Crdb, Nmb, Mkcb, Mpesa, ...)
   Payments/         payment intake, allocation, state machine, reversals, suspense
@@ -57,7 +84,7 @@ app/Modules/
 
 **Dependency direction** (enforced):
 ```
-Channels ──► Payments ──► Invoicing ──► Payers ──► Tenancy
+Channels ──► Payments ──► Invoicing ──► Payers ──► Organization
                  │            │
                  └──► Ledger ◄┘
 Notifications, Audit, Reporting: consume domain events; nothing depends on them synchronously.
@@ -71,11 +98,11 @@ Shared: everyone may depend on it; it depends on nothing.
 
 ### 5.1 Invoice creation
 ```
-Merchant ─POST /v1/invoices (HMAC, Idempotency-Key)─► API
-  API: authenticate → authorise tenant → validate → Invoicing.create()
+Org system ─POST /v1/invoices (HMAC, Idempotency-Key)─► API
+  API: authenticate → authorise (key scopes) → validate → Invoicing.create()
     DB TX { insert invoice + items; allocate control number; insert outbox(invoice.created) }
   ◄─ 201 {invoice, control_number}
-Worker: outbox → webhook invoice.created → merchant ; SMS control number → payer
+Worker: outbox → webhook invoice.created → org system ; SMS control number → payer
 ```
 
 ### 5.2 Channel validation (inquiry)
@@ -115,7 +142,7 @@ outbox_events (written in the same TX as the domain change)
           └─► Dispatcher worker: POST signed payload
                 2xx → DELIVERED
                 other/timeout → retry with backoff: 10s, 1m, 5m, 30m, 2h, 6h, 12h, 24h (8 attempts ≈ 45h)
-                exhausted → DEAD, alert tenant + operator; manual/API redelivery possible
+                exhausted → DEAD, alert System Admin; manual/API redelivery possible
 ```
 
 ### 5.5 Daily reconciliation
@@ -130,9 +157,7 @@ MISSING_INTERNAL → auto-create payment via Payments.ingest(source=RECON), flag
 ## 6. Data architecture
 
 - **PostgreSQL 16+**, a single cluster. Primary plus a streaming replica (reports and read APIs may use the replica; money writes never do).
-- **Multi-tenancy:** shared schema with a `tenant_id` column on every tenant-scoped table. Enforced in two layers:
-  1. an application global scope bound from the authenticated context;
-  2. **Postgres Row-Level Security** policies using `current_setting('app.tenant_id')`, as defence in depth.
+- **Single-tenant:** one database per installation, holding one organisation's data. There is **no `tenant_id` column, no tenant scoping, and no RLS**. Isolation between organisations is physical (separate DB, host/containers, secrets, backups). Branch scoping inside an organisation is ordinary RBAC.
 - **IDs:** ULIDs (sortable, non-guessable) as public IDs, with a prefix per type (`inv_`, `pay_`, `pyr_`, `evt_`).
 - **Money:** `BIGINT amount_minor` + `CHAR(3) currency`. There is no float or decimal arithmetic in PHP code; a `Money` value object is used everywhere.
 - **Time:** `timestamptz`, stored in UTC.
@@ -147,11 +172,12 @@ MISSING_INTERNAL → auto-create payment via Payments.ingest(source=RECON), flag
 |---|---|
 | Edge | TLS 1.2+/HSTS; WAF; per-host rate limits; channel host allows only whitelisted CIDRs at the firewall **and** the app |
 | Channel auth | Per-channel strategy: mTLS client cert, request signature (HMAC/RSA), or payload encryption (AES-GCM for MKCB). CIDR check is always **in addition to**, never instead of, these |
-| Merchant auth | HMAC-SHA256 request signing with key ID, timestamp (±300 s), nonce (replay cache 10 min); optional mTLS; per-key scopes and IP allow-list |
+| Integration API auth | HMAC-SHA256 request signing with key ID, timestamp (±300 s), nonce (replay cache 10 min); optional mTLS; per-key scopes and IP allow-list |
 | Portal auth | Session cookies (Secure, HttpOnly, SameSite=Lax), CSRF, TOTP 2FA, lockout and rate limit, password policy (length ≥ 12, breached-password check) |
-| Authorisation | RBAC with permissions; tenant scoping; maker-checker for refunds, suspense allocation, and payout/bank-account changes |
-| Secrets | HashiCorp Vault (or cloud KMS) → injected at runtime. Nothing in git or images. Per-channel/per-tenant credentials, rotatable |
+| Authorisation | RBAC with permissions and branch scoping; maker-checker for refunds, suspense allocation, and collection-account changes |
+| Secrets | HashiCorp Vault (or cloud KMS) → injected at runtime. Nothing in git or images. Per-installation and per-channel credentials (never shared between organisations), rotatable |
 | Data | Personal data column encryption, encrypted backups, DB access only from the app subnet, no public DB port |
+| Vendor access | No standing vendor access; time-boxed support accounts granted by the System Admin; SSH/host access via bastion with session recording for vendor-hosted installs |
 | Audit | Append-only `audit_logs` (DB role has INSERT only; hash-chained rows for tamper evidence) |
 | Supply chain | Composer lock, `composer audit`, Dependabot/Renovate, image scanning (Trivy), signed images |
 
@@ -181,24 +207,26 @@ Threat model summary (STRIDE) and controls are in DESIGN §9.
 ```
 
 - **Runtime:** Docker images, deployed to a Tanzania-hosted data centre or cloud (data residency, Q-004). Start with Docker Compose + systemd on 2 hosts, or k3s. Move to Kubernetes only when needed.
-- **Environments:** `local` → `sandbox` (merchant-facing test, channel simulators) → `staging` (real channel UAT) → `production`. There is no shared DB between environments.
+- **Environments:** `local` → `sandbox` (integrator-facing test, channel simulators) → `staging` (real channel UAT) → `production`. There is no shared DB between environments.
 - **Deploys:** zero-downtime rolling. DB migrations must be backward compatible (expand → migrate → contract).
 - **Backups:** Postgres WAL archiving + nightly base backup to encrypted off-site storage. PITR. Restore drill every quarter.
 
 ## 9. Observability
 
-- **Logs:** structured JSON to stdout → Loki/ELK. Mandatory fields: `trace_id`, `tenant_id`, `module`, `event`. Personal data masked.
+- **Logs:** structured JSON to stdout → Loki/ELK. Mandatory fields: `trace_id`, `org_code` (installation label), `app_version`, `module`, `event`. Personal data masked.
 - **Tracing:** OpenTelemetry. The `trace_id` flows channel request → payment → outbox → webhook, and is included in every API error response.
 - **Metrics:** Prometheus. Per channel: requests, auth failures, p95 latency, error rate, "minutes since last payment". Webhook success rate, queue depth, recon exception count, ledger imbalance (must be 0).
 - **Alerts:** ledger imbalance ≠ 0 (page); channel auth failures spike; channel silent during business hours; `FAILED_PROCESSING` messages > 0; webhook DLQ growth; queue lag > 60 s; recon exceptions > threshold.
-- **Error tracking:** Sentry (with personal-data scrubbing).
+- **Error tracking:** Sentry (with personal-data scrubbing), tagged by `org_code` and `app_version`.
+- **Fleet view (vendor):** each installation pushes health-only telemetry (version, uptime, queue lag, error rates, recon status, last backup time) to the vendor's fleet dashboard. The payload is allow-listed and contains no personal or transaction-level data. Organisations can opt out, for example on-prem sites with no outbound internet.
 
 ## 10. Technology choices
 
 | Concern | Choice | Notes |
 |---|---|---|
 | Language/framework | PHP 8.3+ / Laravel 12+ | Team familiarity from the legacy system; mature queues, migrations, policies, testing |
-| DB | PostgreSQL 16+ | RLS, `ON CONFLICT`, partitioning, `SKIP LOCKED`, strong transactional semantics |
+| DB | PostgreSQL 16+ | `ON CONFLICT … RETURNING`, transactional DDL (safer upgrades), partitioning, `SKIP LOCKED`, jsonb, partial indexes |
+| Install/upgrade | `pgs` CLI (bash/PHP) + Docker Compose; Ansible for vendor-hosted fleet | Same tooling for vendor-hosted and on-prem |
 | Queue | Redis + Laravel Horizon | Separate queues and worker pools per concern |
 | Portal UI | Laravel + Livewire (or Inertia/Vue) + Tailwind | Server-rendered, CSRF-friendly |
 | API docs | OpenAPI 3.1 (source of truth, contract-tested) | |
@@ -210,6 +238,6 @@ Alternatives considered are recorded as decisions in [MEMORY.md](MEMORY.md#2-dec
 
 ## 11. Evolution path
 
-- **Settlement/aggregator mode is out of scope** (D-002: we route, we never hold funds). The ledger is a merchant-collections sub-ledger. If the business model ever changes, that is a new decision with licensing implications, not an extension.
+- **Settlement/aggregator mode is out of scope** (D-002: we route, we never hold funds). The ledger is a collections sub-ledger. If the business model ever changes, that is a new decision with licensing implications, not an extension.
 - **High volume:** extract `Channels` ingress to its own service (it only calls `Payments.ingest`), and add read replicas for reporting.
 - **Payer app / checkout page:** builds on the public `pay.` host and the same API.

@@ -28,7 +28,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 ## 2. Idempotency & consistency
 
 - **I1** Every channel notification MUST be deduplicated by a unique constraint on `(channel_id, channel_txn_id)`. A duplicate returns the **original** response. **[L6]**
-- **I2** Every mutating merchant API endpoint MUST accept an `Idempotency-Key` header, and MUST require one on `POST /invoices`, `POST /refunds`, and bulk jobs.
+- **I2** Every mutating integration API endpoint MUST accept an `Idempotency-Key` header, and MUST require one on `POST /invoices`, `POST /refunds`, and bulk jobs.
 - **I3** Domain state change, ledger posting, and outbox event MUST be committed in **one DB transaction**. Never dispatch a webhook, SMS, or queue job directly from inside business logic; write to the outbox.
 - **I4** Concurrent updates to an invoice MUST lock it (`SELECT … FOR UPDATE`) or rely on a unique constraint. Never read-modify-write without a lock.
 - **I5** Queue jobs MUST be idempotent and safe to run twice.
@@ -40,7 +40,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **S1** MUST NOT commit secrets, passwords, keys, tokens, or certificates, including in comments, tests, docs, or "old" files. Secrets come from Vault or the environment at runtime. **[L1]**
 - **S2** `.env`, `storage/`, logs, dumps, and uploads MUST be in `.gitignore`. CI runs a secret scanner (gitleaks) on every push. It is a blocking check.
 - **S3** Production MUST run with `APP_ENV=production` and `APP_DEBUG=false`. The app MUST refuse to boot in production if debug is on. **[L5]**
-- **S4** Each channel and each tenant has its own credentials. Keys MUST be rotatable without a deploy.
+- **S4** Each installation and each channel has its own credentials. Secrets MUST NOT be shared or reused between organisations' installations. Keys MUST be rotatable without a deploy.
 
 ### 3.2 Input & data access
 - **S5** MUST use the query builder, Eloquent, or bound parameters. String-interpolated SQL is forbidden. CI blocks `DB::raw`, `whereRaw`, and `selectRaw` containing `$` variables unless the line has an allow-list comment reviewed by security. **[L2]**
@@ -52,7 +52,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **S9** Every route MUST belong to a route group with explicit middleware: `channel.auth:{code}`, `api.hmac`, `portal.auth`, or `public`. A test asserts that no route is unprotected by accident. There is **no auto-routing**. **[L3]**
 - **S10** Channel authentication MUST NOT rely on IP alone. The IP check uses full-address/CIDR matching (`IpUtils::checkIp`) against a configured list and uses the proxy-validated client IP. **[L4]**
 - **S11** An authentication failure MUST NOT fall through to "allow". Default is deny. There is no `return true` placeholder, even temporarily. **[L4]**
-- **S12** Every query touching tenant data MUST be tenant-scoped. Cross-tenant access (operator views) is only allowed through explicit operator policies and is audited.
+- **S12** Vendor staff MUST NOT have standing access to any installation. Access is granted by the organisation, time-boxed, restricted to `vendor.support`, and audited (DESIGN §7.2).
 - **S13** Sensitive actions (refund, suspense allocation, bank account change, API key creation, role change) MUST require maker-checker or 2FA re-confirmation, as specified in DESIGN §7.
 - **S14** Signature comparisons MUST use constant-time comparison (`hash_equals`).
 
@@ -69,7 +69,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 
 ## 4. Errors & resilience
 
-- **E1** Errors in the merchant API use **RFC 9457 problem+json** with a stable machine `code` and a `trace_id` (catalogue in DESIGN §6). No stack traces or SQL in responses.
+- **E1** Errors in the integration API use **RFC 9457 problem+json** with a stable machine `code` and a `trace_id` (catalogue in DESIGN §6). No stack traces or SQL in responses.
 - **E2** Channel responses MUST follow each channel's spec exactly, including the code that makes the channel retry. That mapping lives in the adapter only.
 - **E3** Never swallow exceptions. Catch only to add context, translate to a domain error, or perform a documented fallback. `catch (\Throwable) {}` is forbidden.
 - **E4** Every outbound HTTP call MUST set connect and total timeouts (default 5 s / 15 s), use retries with jittered backoff only for idempotent operations, and sit behind a circuit breaker per channel.
@@ -79,9 +79,10 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 ## 5. Logging & observability
 
 - **O1** Use structured logging (`Log::info('payment.posted', [...])`), with an event name plus context. No string-concatenated log messages.
-- **O2** Every log line and span includes `trace_id` and `tenant_id` (when known).
+- **O2** Every log line and span includes `trace_id`, `org_code`, and `app_version`.
 - **O3** Log level discipline: `error` = someone must act; `warning` = degraded but handled; `info` = business events; `debug` = off in production.
 - **O4** Every new channel or queue MUST come with metrics and at least one alert rule.
+- **O5** Fleet telemetry MUST use an explicit allow-list of health fields. Adding a field needs a privacy review. Personal or transaction-level data MUST NOT leave an installation.
 
 ## 6. Code structure
 
@@ -93,11 +94,13 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **C6** Classes ≤ 500 lines, methods ≤ 50 lines (SHOULD). God-classes like the legacy `Engine.php` are forbidden. **[L11]**
 - **C7** Use `final` classes by default, readonly DTOs, and enums for statuses. No magic strings for states.
 - **C8** Config comes via typed config classes. `env()` is only allowed inside `config/*.php`.
+- **C9** **One codebase, no forks.** There MUST NOT be per-organisation branches, forks, or code paths (`if ($org === 'bmc')` is forbidden). A need specific to one organisation becomes a config option, a feature flag, or an adapter that any installation could enable.
+- **C10** Every new setting MUST be added to the `org.yaml` schema with a safe default, so existing installations keep working after upgrade without editing their config.
 
 ## 7. Database
 
-- **D1** Every schema change goes through a migration. Migrations MUST be backward compatible with the currently deployed code (expand/contract).
-- **D2** Every tenant-scoped table has `tenant_id NOT NULL`, an index on it, and an RLS policy.
+- **D1** Every schema change goes through a migration. Migrations MUST be backward compatible with the currently deployed code (expand/contract). They MUST run unattended on every installation, whatever its data volume: no manual steps, and long backfills run as resumable background jobs.
+- **D2** The system is single-tenant: one database per organisation. Do not add `tenant_id` or tenant scoping. Branch scoping uses `branch_id` + RBAC.
 - **D3** Foreign keys and `NOT NULL` are used wherever they make sense. Uniqueness is enforced by constraints, not application checks.
 - **D4** No `DELETE` on financial tables (`payments`, `ledger_*`, `invoices`, `refunds`, `audit_logs`). Use status changes or reversals.
 - **D5** Timestamps are `timestamptz` in UTC. Public IDs are prefixed ULIDs. Never expose auto-increment IDs.
@@ -105,7 +108,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 ## 8. API
 
 - **A1** The OpenAPI spec is the contract. Change the spec first, then the code. Contract tests run in CI.
-- **A2** Breaking changes only in a new version (`/v2`). Additive changes (new optional fields, new event types) are allowed, and merchants must ignore unknown fields.
+- **A2** Breaking changes only in a new version (`/v2`). Additive changes (new optional fields, new event types) are allowed, and receiving systems must ignore unknown fields.
 - **A3** Pagination is cursor-based. Maximum page size is 100.
 - **A4** Every list endpoint is filterable by `created_at` range and status.
 
@@ -123,7 +126,8 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **G1** Branch from `main`: `feat/…`, `fix/…`, `chore/…`, with the task ID. Use Conventional Commits.
 - **G2** All changes go through a PR with ≥ 1 approving review. Changes to Payments, Ledger, Channels, auth, or crypto need a review from a designated owner (CODEOWNERS).
 - **G3** CI must be green: lint, PHPStan, Deptrac, tests, `composer audit`, gitleaks, route-protection test, OpenAPI contract tests.
-- **G4** No force-push to `main`. Releases are tagged (`vX.Y.Z`) with a changelog.
+- **G4** No force-push to `main`. Releases are tagged (`vX.Y.Z`) with a changelog and upgrade notes.
+- **G5** Every release MUST pass the upgrade test (install previous release with seeded data → upgrade → smoke tests → rollback) before it is published to installations.
 
 ## 11. Definition of Done
 

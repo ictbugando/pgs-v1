@@ -2,18 +2,20 @@
 
 Status: Draft v0.1 · Implements [PRD](PRD.md) within [ARCHITECTURE](ARCHITECTURE.md), under [RULES](RULES.md).
 
-> **Business model reminder (D-002):** PGS v2 **routes** payments. Money moves from the payer directly into the merchant's own collection account at the bank/MNO. We never hold or disburse funds. Everything below, especially the ledger and refunds, follows from that.
+> **Deployment model (D-009):** everything below describes **one installation serving one organisation**. There are no tenants and no `tenant_id`. Each organisation runs its own installation of the same codebase.
+>
+> **Business model reminder (D-002):** PGS v2 **routes** payments. Money moves from the payer directly into the organisation's own collection account at the bank/MNO. We never hold or disburse funds. Everything below, especially the ledger and refunds, follows from that.
 
 ---
 
 ## 1. Domain model
 
 ```
-Tenant 1─* Branch
-Tenant 1─* User ─*─* Role
-Tenant 1─* ApiCredential
-Tenant 1─* TenantChannel (channel enabled + merchant's collection account/credentials at that channel)
-Tenant 1─* Payer 1─* Invoice 1─* InvoiceItem
+Organization (single row) 1─* Branch
+User ─*─* Role (optionally scoped to Branch)
+ApiCredential (one per integrating system, e.g. eHMS, SIS, ERP)
+ChannelAccount (channel enabled + the organisation's collection account/credentials at that channel)
+Payer 1─* Invoice 1─* InvoiceItem
 Invoice 1─1 ControlNumber
 Invoice 1─* Allocation *─1 Payment *─1 Channel
 Payment 1─* ChannelMessage (raw inbound/outbound)
@@ -27,38 +29,42 @@ AuditLog (append-only, references any entity)
 
 ## 2. Data model (key tables)
 
-All tenant-scoped tables have `tenant_id` + RLS (RULES D2). Every table has `created_at` and `updated_at` (`timestamptz`). Public IDs are prefixed ULIDs.
+Single-tenant: no table has `tenant_id` (RULES D2). Every table has `created_at` and `updated_at` (`timestamptz`). Public IDs are prefixed ULIDs.
 
-### tenants
+### organization (exactly one row, enforced by `CHECK (id = 1)`)
 | column | type | notes |
 |---|---|---|
-| id | ulid PK | `ten_…` |
-| code | varchar(20) unique | short slug, used in reports |
+| id | smallint PK | always 1 |
+| org_code | char(3) | numeric issuer code allocated by the vendor, unique across all installations; used in control numbers and telemetry (§4) |
 | legal_name, display_name | text | |
 | sector | enum | `SCHOOL, HOSPITAL, SACCO, UTILITY, RELIGIOUS, EVENTS, OTHER` |
 | tin | varchar(20) | |
-| status | enum | `ONBOARDING, ACTIVE, SUSPENDED, CLOSED` |
-| settings | jsonb | validated by `TenantSettings` DTO: expiry default, amount/overpayment policies, SMS sender and templates, locale |
+| logo_path | text | |
 
-### tenant_channels
-Which channels a tenant accepts, and **the merchant's own collection account** at each.
+Non-secret settings (expiry default, amount/overpayment policies, SMS sender and templates, locale, feature flags) come from `org.yaml` (ARCHITECTURE §3.1), validated at boot by the `OrgConfig` DTO. Settings that admins may change at runtime are stored in `settings` (key, value jsonb, updated_by) and audited.
+
+### branches
+`id brn_…, code, name, status` — campuses, departments, or cash points.
+
+### channel_accounts
+Which channels the organisation accepts, and **its own collection account** at each.
 | column | type | notes |
 |---|---|---|
-| tenant_id, channel_id | FK | unique pair |
-| collection_account | text (encrypted) | merchant's bank account / MNO paybill/till number |
-| channel_merchant_ref | text | identifier the channel uses for this merchant |
+| channel_id | FK | unique (one collection account per channel; extend to many if an organisation has several accounts at one bank) |
+| collection_account | text (encrypted) | organisation's bank account / MNO paybill/till number |
+| channel_biller_ref | text | biller ID the channel uses for this organisation |
 | credentials_ref | text | Vault path, never the secret itself |
 | status | enum | `PENDING_UAT, ACTIVE, DISABLED` |
 
 ### payers
-`id pyr_…, tenant_id, external_ref (unique per tenant), name_enc, phone_enc, phone_bidx, email_enc, email_bidx, metadata jsonb`
+`id pyr_…, external_ref (unique), name_enc, phone_enc, phone_bidx, email_enc, email_bidx, metadata jsonb`
 
 ### invoices
 | column | type | notes |
 |---|---|---|
 | id | `inv_…` | |
-| tenant_id, branch_id?, payer_id | FK | |
-| external_ref | varchar(64) | merchant's bill number; unique per tenant |
+| branch_id?, payer_id | FK | |
+| external_ref | varchar(64) | bill number from the integrating system; unique |
 | control_number | varchar(20) unique | see §4 |
 | currency | char(3) | |
 | amount_minor | bigint | null when `amount_policy = OPEN` |
@@ -81,7 +87,6 @@ Which channels a tenant accepts, and **the merchant's own collection account** a
 | column | type | notes |
 |---|---|---|
 | id | `pay_…` | |
-| tenant_id | FK | resolved from the control number (null → suspense under the operator tenant) |
 | channel_id | FK | |
 | channel_txn_id | varchar(100) | **UNIQUE (channel_id, channel_txn_id)** — idempotency (RULES I1) |
 | channel_receipt | varchar(100) | receipt shown to payer |
@@ -104,41 +109,41 @@ Raw inbound and outbound messages, **written before processing** (RULES E5).
 See §3.
 
 ### suspense_items
-`id sus_…, payment_id, tenant_id?, reason (UNKNOWN_CONTROL_NUMBER|INVOICE_EXPIRED|INVOICE_CANCELLED|INVOICE_ALREADY_PAID|OVERPAYMENT|CURRENCY_MISMATCH|UNDERPAYMENT_EXACT), amount_minor, status (OPEN|PENDING_APPROVAL|RESOLVED), resolution (ALLOCATED|CREDIT|REFUND), resolved_by, approved_by, note`
+`id sus_…, payment_id, reason (UNKNOWN_CONTROL_NUMBER|INVOICE_EXPIRED|INVOICE_CANCELLED|INVOICE_ALREADY_PAID|OVERPAYMENT|CURRENCY_MISMATCH|UNDERPAYMENT_EXACT), amount_minor, status (OPEN|PENDING_APPROVAL|RESOLVED), resolution (ALLOCATED|CREDIT|REFUND), resolved_by, approved_by, note`
 
 ### refunds
-`id ref_…, tenant_id, payment_id, invoice_id?, amount_minor, reason, status (§8.4), requested_by, approved_by, executed_via (CHANNEL_API|MERCHANT_BANK_FILE), channel_ref, executed_at`
+`id ref_…, payment_id, invoice_id?, amount_minor, reason, status (§8.4), requested_by, approved_by, executed_via (CHANNEL_API|ORG_BANK_FILE), channel_ref, executed_at`
 
 ### outbox_events
-`id evt_…, tenant_id, type, aggregate_type, aggregate_id, payload jsonb, occurred_at, relayed_at?`
+`id evt_…, type, aggregate_type, aggregate_id, payload jsonb, occurred_at, relayed_at?`
 
 ### webhook_endpoints / webhook_deliveries
-Endpoints: `id whe_…, tenant_id, url (https only), secret_ref, event_types text[], status, failure_streak`.
+Endpoints: `id whe_…, url (https only), secret_ref, event_types text[], status, failure_streak`.
 Deliveries (partitioned): `id, event_id, endpoint_id, attempt, status (PENDING|DELIVERED|FAILED|DEAD), next_attempt_at, response_code, response_ms, last_error`.
 
 ### recon_runs / statement_lines / recon_exceptions
-Runs: `channel_id, tenant_id?, statement_date, source (API|SFTP|UPLOAD), status, counts jsonb`.
+Runs: `channel_id, channel_account_id, statement_date, source (API|SFTP|UPLOAD), status, counts jsonb`.
 Lines: normalised statement rows with `channel_txn_id, amount_minor, value_date, raw jsonb`.
 Exceptions: `type (MISSING_INTERNAL|MISSING_AT_CHANNEL|AMOUNT_MISMATCH|DUPLICATE), payment_id?, statement_line_id?, status (OPEN|INVESTIGATING|RESOLVED), assignee, resolution_note`.
 
 ### audit_logs (append-only, partitioned, hash-chained)
-`id, tenant_id?, actor_type (USER|API_KEY|CHANNEL|SYSTEM), actor_id, action, entity_type, entity_id, before jsonb, after jsonb, ip, user_agent, trace_id, prev_hash, hash`. The app DB role has `INSERT` + `SELECT` only.
+`id, actor_type (USER|API_KEY|CHANNEL|SYSTEM|VENDOR_SUPPORT), actor_id, action, entity_type, entity_id, before jsonb, after jsonb, ip, user_agent, trace_id, prev_hash, hash`. The app DB role has `INSERT` + `SELECT` only.
 
 ### idempotency_keys
-`tenant_id, key, request_hash, response_status, response_body, created_at` — unique `(tenant_id, key)`, kept 24 h. Same key + different body → `409 idempotency_key_reused`.
+`api_credential_id, key, request_hash, response_status, response_body, created_at` — unique `(api_credential_id, key)`, kept 24 h. Same key + different body → `409 idempotency_key_reused`.
 
-## 3. Ledger (merchant-collections sub-ledger)
+## 3. Ledger (collections sub-ledger)
 
-We never hold funds, so the ledger is a **memo sub-ledger**. It records what each merchant has collected through each channel, how that was allocated, and what is unresolved. It is what we reconcile against channel statements and against the merchant's view.
+We never hold funds, so the ledger is a **memo sub-ledger**. It records what the organisation has collected through each channel, how that was allocated, and what is unresolved. It is what we reconcile against channel statements and against the organisation's view.
 
-### 3.1 Accounts (created per tenant × channel as needed)
+### 3.1 Accounts (created per channel account as needed)
 | Account | Normal side | Meaning |
 |---|---|---|
-| `CHANNEL_COLLECTIONS:{tenant}:{channel}` | Debit | Money the channel reports as received into the merchant's collection account |
-| `INVOICE_SETTLED:{tenant}` | Credit | Collections allocated to invoices |
-| `PAYER_CREDIT:{tenant}` | Credit | Overpayments / credits held for payers (merchant's liability to payer) |
-| `SUSPENSE:{tenant or UNASSIGNED}` | Credit | Collections not yet allocated |
-| `REFUNDED:{tenant}:{channel}` | Credit | Refunds executed from the merchant's collection account |
+| `CHANNEL_COLLECTIONS:{channel_account}` | Debit | Money the channel reports as received into the organisation's collection account |
+| `INVOICE_SETTLED` | Credit | Collections allocated to invoices |
+| `PAYER_CREDIT` | Credit | Overpayments / credits held for payers (organisation's liability to payer) |
+| `SUSPENSE` | Credit | Collections not yet allocated |
+| `REFUNDED:{channel_account}` | Credit | Refunds executed from the organisation's collection account |
 
 ### 3.2 Postings
 | Event | Debit | Credit |
@@ -156,11 +161,13 @@ We never hold funds, so the ledger is a **memo sub-ledger**. It records what eac
 2. `invoice.paid_minor` = Σ INVOICE_SETTLED credits for that invoice − reversals.
 3. Σ CHANNEL_COLLECTIONS for (channel, date) = Σ matched statement lines (after recon).
 
-Tables: `ledger_accounts(id, tenant_id, code, type, currency)`, `journals(id jrn_…, tenant_id, payment_id?, refund_id?, suspense_id?, reverses_journal_id?, description, posted_at)`, `ledger_entries(journal_id, account_id, direction D|C, amount_minor > 0)`.
+Tables: `ledger_accounts(id, code, type, currency)`, `journals(id jrn_…, payment_id?, refund_id?, suspense_id?, reverses_journal_id?, description, posted_at)`, `ledger_entries(journal_id, account_id, direction D|C, amount_minor > 0)`.
 
 ## 4. Control numbers
 
-- **Format (default):** 12 digits = `P` (1-digit environment/issuer prefix, configurable, e.g. `9` prod, `8` sandbox) + 10 random digits + 1 **Luhn** check digit.
+- **Format (default):** 12 digits = `E` (1-digit environment: `9` prod, `8` sandbox) + `OOO` (3-digit **org code**, allocated by the vendor and unique across all installations) + 7 random digits + 1 **Luhn** check digit. Where a channel allows 14 digits, use 9 random digits.
+- **Why the org code:** installations are separate, so without it two organisations could issue the same number. That becomes dangerous if a channel, aggregator, or bank biller ever resolves by control number alone. The org code also tells support staff at a glance which organisation a number belongs to.
+- **Capacity:** 7 random digits = 10M numbers per org code. When usage passes 50 %, allocate a second org code to the installation (the config allows a list).
 - **Generation:** CSPRNG → check uniqueness via the unique index → retry on conflict (max 5, then alert). Random, not sequential, so numbers cannot be enumerated to scrape payer data. **[L12]**
 - **Validation at ingress:** length + prefix + Luhn check before any DB lookup. Typos are caught without a DB hit, and the adapter returns "invalid reference".
 - **Lifetime:** one control number per invoice. It is never reused, even after cancellation.
@@ -186,8 +193,8 @@ interface ChannelAdapter
 
     /** Optional capabilities, declared via capabilities(). */
     public function queryStatus(string $channelTxnId): ?PaymentNotification;   // STATUS_QUERY
-    public function fetchStatement(CarbonImmutable $date, TenantChannel $tc): iterable; // RECON
-    public function refund(Refund $refund, TenantChannel $tc): RefundResult;   // REFUND
+    public function fetchStatement(CarbonImmutable $date, ChannelAccount $account): iterable; // RECON
+    public function refund(Refund $refund, ChannelAccount $account): RefundResult;   // REFUND
 
     /** @return list<Capability> VALIDATION|NOTIFICATION|STATUS_QUERY|STATEMENT_API|REFUND_API|PUSH */
     public function capabilities(): array;
@@ -254,7 +261,7 @@ Serialization failures or deadlocks → retry the transaction up to 3 times. Oth
 | MKCB | `mkcbfetchcontrol`, `mkcbprocesscontrol`, `mkcbrecon` | **none (always allowed)** | AES-GCM payload encryption with a **new rotated key** + CIDR + status confirmation |
 | M-Pesa / Mixx / Airtel | `aipros*` (XML) | IP prefix (Airtel `41.7`, `13.2`) | P1 — per the MNO's current API (C2B/B2C) |
 
-## 6. Merchant API
+## 6. Integration API
 
 Base: `https://api.<domain>/v1` · JSON · UTF-8 · OpenAPI 3.1 at `/v1/openapi.json`.
 
@@ -283,7 +290,7 @@ Key scopes: `invoices:read`, `invoices:write`, `payments:read`, `refunds:write`,
 | `GET /invoices/{id}` · `GET /invoices?external_ref=&status=&created_from=` | Read / list |
 | `PATCH /invoices/{id}` | Amend amount/expiry/description (unpaid only) |
 | `POST /invoices/{id}/cancel` | Cancel (unpaid only) |
-| `GET /control-numbers/{cn}` | Resolve to invoice (own tenant only) |
+| `GET /control-numbers/{cn}` | Resolve to invoice |
 | `GET /payments/{id}` · `GET /payments?invoice_id=&channel=&from=` | Read / list |
 | `POST /refunds` · `GET /refunds/{id}` | Request / read refund (approval happens in portal) |
 | `PUT /payers/{external_ref}` · `GET /payers/{id}` | Upsert / read payer |
@@ -323,7 +330,7 @@ Amounts in the API are **decimal strings in major units** (`"510000"`, `"12.50"`
 | 400 | `validation_failed` (+ `errors[]` per field) | Schema/rule failure |
 | 401 | `authentication_failed` | Bad signature, unknown key, timestamp skew, replayed nonce |
 | 403 | `forbidden` / `insufficient_scope` / `ip_not_allowed` | |
-| 404 | `not_found` | Also returned for other tenants' resources (no existence leak) |
+| 404 | `not_found` | Also returned when the key's scope/branch does not cover the resource (no existence leak) |
 | 409 | `duplicate_external_ref` · `invoice_not_payable` · `invoice_not_editable` · `idempotency_key_reused` | |
 | 422 | `amount_invalid` · `currency_not_enabled` · `items_total_mismatch` | Business rule |
 | 429 | `rate_limited` (+ `Retry-After`) | Default 50 rps per key |
@@ -333,7 +340,7 @@ Amounts in the API are **decimal strings in major units** (`"510000"`, `"12.50"`
 Channel-facing error codes are adapter-specific and mapped from the internal result enum `IngestOutcome` (`POSTED, DUPLICATE, SUSPENSE, INVALID_REFERENCE, AUTH_FAILED, MALFORMED, TEMPORARY_FAILURE`). `TEMPORARY_FAILURE` MUST map to the channel's "retry later" code.
 
 ### 6.4 Webhooks
-Request to the merchant:
+Request to the organisation's webhook endpoint:
 ```
 POST <endpoint url>
 Content-Type: application/json
@@ -343,38 +350,36 @@ X-PGS-Signature: t=1790000000,v1=<hex hmac_sha256(secret, t + "." + raw_body)>
 ```
 Body:
 ```json
-{ "id": "evt_01J…", "type": "invoice.paid", "created_at": "…", "tenant_id": "ten_…",
+{ "id": "evt_01J…", "type": "invoice.paid", "created_at": "…", "org_code": "123",
   "data": { "invoice": { … }, "payment": { … } } }
 ```
-Merchants must verify the signature, reject `t` older than 5 min, respond 2xx within 10 s, and dedupe on `id` (delivery is at-least-once, and ordering is not guaranteed; use `invoice.version`).
+Receiving systems must verify the signature, reject `t` older than 5 min, respond 2xx within 10 s, and dedupe on `id` (delivery is at-least-once, and ordering is not guaranteed; use `invoice.version`).
 
 Event types: `invoice.created`, `invoice.updated`, `invoice.partially_paid`, `invoice.paid`, `invoice.expired`, `invoice.cancelled`, `payment.received`, `payment.reversed`, `suspense.created`, `suspense.resolved`, `refund.requested`, `refund.approved`, `refund.completed`, `refund.failed`, `bulk_job.completed`.
 
-Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoint with 50 consecutive failures is auto-disabled and the tenant admin gets an email.
+Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoint with 50 consecutive failures is auto-disabled and the System Admin gets an email.
 
 ## 7. Access control
 
 ### 7.1 Roles
 | Role | Scope | Key permissions |
 |---|---|---|
-| `operator.admin` | Platform | Tenants, channels, users, all reads; cannot approve own actions |
-| `operator.support` | Platform | Read all tenants (audited), resolve recon exceptions (maker) |
-| `operator.finance` | Platform | Approve suspense/recon resolutions (checker) |
-| `merchant.admin` | Tenant | Settings, users, API keys, webhooks, reports |
-| `merchant.cashier` | Tenant/branch | Create/cancel invoices, view payments, reprint receipts |
-| `merchant.accountant` | Tenant | Reports, request refunds, suspense allocation (maker) |
-| `merchant.approver` | Tenant | Approve refunds and suspense allocations (checker) |
-| `auditor` | Tenant or platform | Read-only incl. audit log |
+| `system.admin` | Installation | Settings, users, roles, channel accounts (maker), API keys, webhooks, grant vendor support; cannot approve own actions |
+| `finance.manager` | Installation | Approve channel-account changes, refunds, suspense allocations (checker) |
+| `accountant` | Installation/branch | Reports, recon exceptions, request refunds, suspense allocation (maker) |
+| `cashier` | Branch | Create/cancel invoices, view payments, reprint receipts |
+| `auditor` | Installation | Read-only incl. audit log |
+| `vendor.support` | Installation, **time-boxed** | Granted by `system.admin` for N hours: diagnostics, failed-processing replay, logs. No refunds, approvals, or personal-data export. 2FA; every action audited |
 
 ### 7.2 Sensitive actions
 | Action | Control |
 |---|---|
 | Refund | Maker-checker (different users) + 2FA on approve |
 | Suspense allocation / credit | Maker-checker |
-| Change collection account in `tenant_channels` | Operator maker-checker + 2FA + email notification to tenant admin |
+| Change collection account in `channel_accounts` | Maker-checker (`system.admin` → `finance.manager`) + 2FA + email to all admins |
 | Create / rotate API key, webhook secret | 2FA re-confirmation; secret shown once |
 | Role changes | 2FA; audit |
-| Cross-tenant read by operator | Allowed by policy; always audited with reason |
+| Grant vendor support access | `system.admin` + 2FA; max 72 h; reason required; auto-expires; audited |
 
 ## 8. State machines & allocation
 
@@ -401,14 +406,14 @@ Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoi
 
 ### 8.4 Refund
 `REQUESTED → APPROVED → EXECUTING → COMPLETED` · `REQUESTED → REJECTED` · `EXECUTING → FAILED → (retry) EXECUTING`
-Execution happens from the merchant's own collection account (channel refund API or an exported instruction file). We never disburse.
+Execution happens from the organisation's own collection account (channel refund API or an exported instruction file). We never disburse.
 
 ### 8.5 Allocation policy (`AllocationPolicy::decide`, pure function)
 | Invoice state | Policy | Amount vs due | Outcome |
 |---|---|---|---|
 | not found | — | any | SUSPENSE `UNKNOWN_CONTROL_NUMBER` |
 | CANCELLED | — | any | SUSPENSE `INVOICE_CANCELLED` |
-| EXPIRED | — | any | SUSPENSE `INVOICE_EXPIRED` (tenant setting may allow `ACCEPT_AFTER_EXPIRY`) |
+| EXPIRED | — | any | SUSPENSE `INVOICE_EXPIRED` (organisation setting may allow `ACCEPT_AFTER_EXPIRY`) |
 | PAID | — | any | SUSPENSE `INVOICE_ALREADY_PAID` |
 | ISSUED/PARTIAL | EXACT | = due | POSTED → PAID |
 | ISSUED/PARTIAL | EXACT | ≠ due | SUSPENSE `UNDERPAYMENT_EXACT` / `OVERPAYMENT` (should have been blocked at validation) |
@@ -425,7 +430,7 @@ At **validation** time the same function runs in dry-run mode, so channels that 
 | Threat | Example | Controls |
 |---|---|---|
 | **Spoofing** | Forged bank callback credits an invoice | Per-channel crypto auth + CIDR + status-query confirmation; alert on auth failures |
-| **Spoofing** | Stolen merchant API key | HMAC + nonce + timestamp, key IP allow-list, scopes, rotation, anomaly alerts |
+| **Spoofing** | Stolen integration API key | HMAC + nonce + timestamp, key IP allow-list, scopes, rotation, anomaly alerts |
 | **Tampering** | Amount altered in transit | TLS + signature/encryption; amount cross-check with validation and status query |
 | **Tampering** | Insider edits payment rows | No UPDATE/DELETE on financial rows by the app role; hash-chained audit; maker-checker |
 | **Repudiation** | "We never received that payment" | Raw `channel_messages` retained and encrypted; audit trail; signed webhooks with delivery logs |
@@ -433,14 +438,18 @@ At **validation** time the same function runs in dry-run mode, so channels that 
 | **Info disclosure** | Personal data in logs/backups (legacy issue) | Masking, encryption at rest, backups outside the webroot, encrypted |
 | **DoS** | Callback flood or fee-deadline spike | Isolated channel ingress, rate limits, queue buffering, autoscaling workers |
 | **Elevation** | Cashier approving own refund | RBAC + maker-checker (different user), 2FA |
-| **Elevation** | Cross-tenant access via ID guessing | ULIDs, tenant scoping + RLS, 404 for foreign resources |
+| **Elevation** | Vendor support account abused | No standing access; time-boxed grant by the organisation; restricted role; full audit; alerts on grant |
+| **Elevation** | Known vulnerability left unpatched on some installations | Fleet version reporting; patch SLA (PRD G8); scripted upgrades; on-prem offline bundles |
+| **Info disclosure** | Leaking data via fleet telemetry | Allow-listed health metrics only; no personal or transaction data; opt-out |
 
 ## 10. Portal UI design
 
 ### 10.1 Information architecture
-**Merchant portal** (left nav): Dashboard · Invoices (list, create, bulk upload) · Payments · Payers · Suspense · Refunds · Reconciliation · Reports · Developers (API keys, webhooks, event log, sandbox) · Settings (profile, channels, policies, SMS templates, users & roles) · Audit log.
+**Organisation portal** (left nav): Dashboard · Invoices (list, create, bulk upload) · Payments · Payers · Suspense · Refunds · Reconciliation · Reports · Developers (API keys, webhooks, event log, sandbox) · Settings (profile, channels, policies, SMS templates, users & roles) · Audit log.
 
-**Operator portal**: Tenants (onboarding wizard) · Channels (health, allow-lists, keys) · Recon (all runs, exceptions queue) · Suspense (unassigned) · Webhooks (DLQ) · System health · Audit.
+**System admin area** (`system.admin` / `vendor.support`): Organisation profile · Channel accounts (health, allow-lists, keys) · Webhooks (DLQ) · Failed-processing replay · System health (version, queues, last backup, recon status) · Vendor support access (grant/revoke) · Audit.
+
+**Vendor fleet dashboard** (separate vendor tool, not part of the installation): list of installations with org code, version, health, last backup, open recon exceptions count. Health data only.
 
 ### 10.2 Key screens
 - **Dashboard:** today's collections (total, count), by channel, success rate, open suspense (count/amount), recon status badge per channel, webhook health.
@@ -457,6 +466,6 @@ At **validation** time the same function runs in dry-run mode, so channels that 
 - Accessibility: WCAG 2.1 AA; keyboard-navigable tables; no colour-only status (always label + colour).
 - Works on a 1366×768 office monitor and on a tablet at the cashier window.
 
-### 10.4 SMS templates (defaults, tenant-overridable)
-- Invoice: `{tenant}: Ankara {external_ref} ya TZS {amount}. Namba ya malipo: {control_number}. Lipa kupitia benki au simu kabla ya {expiry}.`
-- Receipt: `{tenant}: Tumepokea TZS {amount} kwa namba {control_number}. Salio: TZS {balance}. Risiti: {receipt}.`
+### 10.4 SMS templates (defaults, overridable in `org.yaml`)
+- Invoice: `{org}: Ankara {external_ref} ya TZS {amount}. Namba ya malipo: {control_number}. Lipa kupitia benki au simu kabla ya {expiry}.`
+- Receipt: `{org}: Tumepokea TZS {amount} kwa namba {control_number}. Salio: TZS {balance}. Risiti: {receipt}.`

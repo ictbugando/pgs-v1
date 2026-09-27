@@ -11,7 +11,7 @@
 
 ## 1. Summary
 
-PGS v2 is a multi-tenant payment collection gateway for any organisation that bills people: schools, hospitals, SACCOs, utilities, churches, event organisers, and SaaS platforms. A merchant (tenant) creates an **invoice** through the API or portal. The gateway issues a **control number**. The payer pays through any supported bank or mobile-money channel. PGS v2 then verifies the payment, records it in a double-entry ledger, notifies the merchant's system by signed webhook, and reconciles every transaction against the channel's statement daily.
+PGS v2 is a payment collection gateway for any organisation that bills people: schools, hospitals, SACCOs, utilities, churches, event organisers, and SaaS platforms. It is **one product codebase deployed as a separate, single-organisation installation for each customer** (D-009). Each organisation has its own database, domain, secrets and channel setup, and there is no tenant layer. Inside an installation, the organisation creates an **invoice** through the API or portal. The gateway issues a **control number**. The payer pays through any supported bank or mobile-money channel. PGS v2 then verifies the payment, records it in a double-entry ledger, notifies the organisation's systems (HMS, SIS, ERP) by signed webhook, and reconciles every transaction against the channel's statement daily.
 
 It generalises the Bugando PGS (hospital-only, eHMS-coupled) and fixes that system's security and reliability problems.
 
@@ -28,17 +28,18 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 
 | # | Goal | Metric (target) |
 |---|---|---|
-| G1 | One integration serves any sector | New tenant live in **≤ 1 day** without code changes |
+| G1 | One codebase serves any sector | New organisation installed and configured in **≤ 2 days** without code changes (bank/MNO onboarding lead time excluded) |
 | G2 | Payments are never lost or double-counted | **0** unexplained ledger/statement differences after daily recon |
-| G3 | Merchants learn of payments in near real time | p95 callback → merchant webhook **≤ 5 s** |
+| G3 | The organisation's systems learn of payments in near real time | p95 callback → webhook **≤ 5 s** |
 | G4 | Secure by default | 0 critical/high findings in pre-go-live pentest; all callbacks authenticated |
 | G5 | High availability for payment ingestion | Channel callback endpoints **≥ 99.9 %** monthly |
 | G6 | Automated reconciliation | ≥ **99 %** of transactions auto-matched per day |
 | G7 | Migrate Bugando Medical Centre | BMC running on v2 with the legacy system decommissioned |
+| G8 | Every installation stays current | 100 % of installations on a supported release; security patches rolled out to all within **7 days** |
 
 ### Non-goals (v1)
 - Card acquiring or storing card numbers (avoids PCI-DSS scope).
-- **Holding funds, settlement, or payouts.** PGS v2 **routes only**: payers pay directly into each merchant's own collection account at the bank/MNO. PGS v2 never receives, holds, or disburses money. **Confirmed decision** — see `MEMORY.md` D-002.
+- **Holding funds, settlement, or payouts.** PGS v2 **routes only**: payers pay directly into each organisation's own collection account at the bank/MNO. PGS v2 never receives, holds, or disburses money. **Confirmed decision** — see `MEMORY.md` D-002.
 - Lending, wallets or stored value for payers (the legacy "wallet" concept becomes a prepaid invoice; see §6.3).
 - Replacing GePG for government-mandated collections (see Q-003).
 
@@ -46,11 +47,11 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 
 | Persona | Description | Main needs |
 |---|---|---|
-| **Platform Operator** (us) | Runs the gateway | Onboard tenants, manage channels, monitor health, resolve suspense, run recon |
-| **Merchant Admin** | Finance lead at a school/hospital | Configure tenant, users, webhooks, invoice policies; view reports |
-| **Merchant Cashier / Clerk** | Front-desk staff | Create invoices and look up payments; reprint receipts |
-| **Merchant Accountant** | Back office | Reconciliation reports, exports, refunds approval |
-| **Merchant System** (machine) | SIS / HMS / ERP | Create invoices via API; receive webhooks; query status |
+| **Vendor** (us) | Builds, installs, upgrades and supports the product | Provision new installations, roll out releases, monitor fleet health, time-boxed audited support access |
+| **System Admin** | Organisation's IT/finance lead | Configure the installation, users, channels, webhooks, invoice policies; view reports |
+| **Cashier / Clerk** | Front-desk staff | Create invoices and look up payments; reprint receipts |
+| **Accountant** | Back office | Reconciliation reports, exports, refunds approval |
+| **Integrating System** (machine) | SIS / HMS / ERP | Create invoices via API; receive webhooks; query status |
 | **Payer** | Parent, patient, customer | Get a control number, pay by any channel, receive an SMS receipt, verify a receipt |
 | **Channel** (machine) | Bank / MNO | Validate a control number; post a payment notification; provide statements |
 | **Auditor** | Internal/external | Read-only access to the audit trail, ledger, and recon results |
@@ -61,22 +62,22 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 2. **Hospital bill (single, exact).** The HMS creates an invoice at discharge. The patient pays by M-Pesa at the window. The HMS receives `invoice.paid` within seconds and releases the patient. (This is today's BMC eHMS flow.)
 3. **Open-amount top-up.** A patient deposit or canteen top-up uses an invoice with an open amount (`amount_policy = OPEN`). Any amount is accepted and credited.
 4. **Bank-counter payment with validation.** A CRDB teller enters the control number. The gateway returns the payer name and amount due. The teller posts the payment and the gateway acknowledges it.
-5. **Wrong or unmatched payment.** A payer pays against an expired or cancelled invoice, or overpays. The payment is **not rejected silently**: it goes to Suspense, the operator or merchant resolves it, and everything is audited.
+5. **Wrong or unmatched payment.** A payer pays against an expired or cancelled invoice, or overpays. The payment is **not rejected silently**: it goes to Suspense, the organisation's accountant resolves it with approval, and everything is audited.
 6. **Daily reconciliation.** At 02:00 the gateway pulls each channel's statement, matches it against the ledger, and emails an exceptions report. Exceptions stay open until someone resolves them.
-7. **Refund.** An accountant requests a refund and a second user approves it (maker-checker). Because PGS v2 never holds funds, the refund is **executed by the merchant's own bank/MNO account** (via the channel's refund API where available, otherwise an exported instruction file). PGS v2 records it and confirms it.
+7. **Refund.** An accountant requests a refund and a second user approves it (maker-checker). Because PGS v2 never holds funds, the refund is **executed by the organisation's own bank/MNO account** (via the channel's refund API where available, otherwise an exported instruction file). PGS v2 records it and confirms it.
 
 ## 6. Functional requirements
 
 Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 
-### 6.1 Tenancy & onboarding
-- **FR-1 (P0)** Operator can create a tenant with legal name, sector, TIN, contact details, settlement bank account(s), and enabled channels.
-- **FR-2 (P0)** Each tenant has isolated data. No API key, user, or query can see another tenant's data.
-- **FR-3 (P0)** Per-tenant configuration: invoice expiry default, amount policy default, overpayment policy, SMS templates and sender ID, webhook endpoints, allowed currencies.
-- **FR-4 (P1)** Sub-accounts or branches within a tenant (e.g., a school group with several campuses) for reporting and access scoping.
+### 6.1 Organisation setup
+- **FR-1 (P0)** Each installation serves exactly **one organisation**. Its profile (legal name, sector, TIN, contact, logo) is set at install time and editable by the System Admin.
+- **FR-2 (P0)** Isolation between organisations is **physical**: separate installation, database, secrets, domain, and backups. No shared runtime or data between organisations.
+- **FR-3 (P0)** Organisation configuration without code changes: invoice expiry default, amount policy default, overpayment policy, SMS templates and sender ID, enabled channels and collection accounts, allowed currencies, feature flags.
+- **FR-4 (P1)** Branches/departments within the organisation (e.g., campuses, hospital departments) for reporting and access scoping.
 
 ### 6.2 Payers
-- **FR-5 (P0)** Payer records (name, phone, email, external reference such as student no. or MRN, metadata) scoped to the tenant. Upsert by `external_ref`.
+- **FR-5 (P0)** Payer records (name, phone, email, external reference such as student no. or MRN, metadata) Upsert by `external_ref`.
 - **FR-6 (P1)** Payer statement: all invoices and payments for a payer.
 
 ### 6.3 Invoices & control numbers
@@ -96,12 +97,12 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 - **FR-18 (P0)** Allocation rules applied per invoice policy: exact, partial, open, overpayment, and payment after expiry or cancellation. Anything that cannot be allocated goes to **Suspense**.
 - **FR-19 (P0)** Every posted payment creates balanced ledger entries.
 - **FR-20 (P1)** Channel-initiated reversals are supported and reflected in the ledger and the invoice.
-- **FR-21 (P2)** Push-to-pay (USSD push / STK push) initiated by the merchant for MNO channels.
+- **FR-21 (P2)** Push-to-pay (USSD push / STK push) initiated by the organisation for MNO channels.
 
-### 6.5 Merchant notifications
+### 6.5 Notifications to integrating systems
 - **FR-22 (P0)** Signed webhooks for invoice, payment, refund, and suspense events, delivered with at-least-once semantics, exponential backoff retries, and a dead-letter queue.
-- **FR-23 (P0)** Merchant can list events and redeliver any event (API and portal).
-- **FR-24 (P0)** SMS receipt to the payer on payment (configurable per tenant); SMS with the control number on invoice creation.
+- **FR-23 (P0)** The organisation can list events and redeliver any event (API and portal).
+- **FR-24 (P0)** SMS receipt to the payer on payment (configurable); SMS with the control number on invoice creation.
 - **FR-25 (P1)** Email notifications and a daily summary email.
 
 ### 6.6 Reconciliation & suspense
@@ -110,36 +111,44 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 - **FR-28 (P0)** Suspense resolution: allocate to an invoice, create a credit, or mark for refund. Requires maker-checker.
 
 ### 6.7 Refunds
-- **FR-29 (P1)** Refund request → approval (a second user) → execution **from the merchant's own collection account** (channel refund API where available, otherwise an exported instruction file for the merchant's bank) → confirmation recorded in the ledger. PGS v2 never disburses funds itself.
+- **FR-29 (P1)** Refund request → approval (a second user) → execution **from the organisation's own collection account** (channel refund API where available, otherwise an exported instruction file for the organisation's bank) → confirmation recorded in the ledger. PGS v2 never disburses funds itself.
 
 ### 6.8 Reporting
-- **FR-30 (P0)** Collections by day, channel, tenant, and branch; invoice aging; suspense aging; recon status. Export to CSV and XLSX.
-- **FR-31 (P1)** Operator dashboard: volume, success rate, and latency per channel, webhook failure rate.
+- **FR-30 (P0)** Collections by day, channel, and branch; invoice aging; suspense aging; recon status. Export to CSV and XLSX.
+- **FR-31 (P1)** System health dashboard: volume, success rate, and latency per channel, webhook failure rate, queue and recon status.
 
 ### 6.9 Portal & access
-- **FR-32 (P0)** Web portal for operator and merchant users with RBAC (roles in DESIGN §7).
-- **FR-33 (P0)** TOTP 2FA required for operator users and for merchant roles that can refund, resolve suspense, or change configuration.
+- **FR-32 (P0)** Web portal for the organisation's staff with RBAC (roles in DESIGN §7).
+- **FR-33 (P0)** TOTP 2FA required for admins, vendor support accounts, and roles that can refund, resolve suspense, or change configuration.
 - **FR-34 (P0)** Immutable audit log of every state-changing action (who, what, when, before/after, IP).
 - **FR-35 (P1)** Public payer page: look up an invoice by control number plus a verification factor, and view or download the receipt.
 
 ### 6.10 Developer experience
-- **FR-36 (P0)** Versioned REST API (`/v1`) with an OpenAPI 3.1 spec, a sandbox environment, and test credentials per tenant.
+- **FR-36 (P0)** Versioned REST API (`/v1`) with an OpenAPI 3.1 spec, a sandbox installation, and test credentials for the organisation's integrating systems.
 - **FR-37 (P1)** Sandbox channel simulator for triggering test payments.
 - **FR-38 (P2)** Client SDKs (PHP, JS) and a WooCommerce/Moodle plugin.
+
+### 6.11 Installation & fleet management (vendor)
+- **FR-39 (P0)** Scripted, repeatable installation of a new organisation from one released image plus a per-organisation configuration file. No code changes and no per-organisation branches.
+- **FR-40 (P0)** Versioned releases with safe, scripted upgrades (backup → migrate → health check → rollback path). Every installation reports its running version.
+- **FR-41 (P1)** Optional fleet health telemetry sent to the vendor: version, uptime, queue lag, error rates, recon status. **No personal or payment-detail data** leaves the installation.
+- **FR-42 (P0)** Vendor support access is disabled by default. The System Admin can grant it time-boxed, and every action is audited.
+- **FR-43 (P1)** Supports both hosting options: vendor-hosted, or on the organisation's own premises (Q-004). Offline upgrade bundle for on-prem sites without registry access.
 
 ## 7. Non-functional requirements
 
 | Area | Requirement |
 |---|---|
 | **Security** | OWASP ASVS L2. TLS 1.2+ everywhere. Secrets never in git. Personal data encrypted at rest (column-level for phone/email/name). Full rules in [RULES.md](RULES.md). |
-| **Availability** | Channel ingress ≥ 99.9 %. Merchant API ≥ 99.5 %. Planned maintenance must never block channel ingress. |
-| **Performance** | Channel callback p95 ≤ 500 ms (server-side). Merchant API p95 ≤ 300 ms. Sustain **50 TPS**, burst **200 TPS** (school-fee deadline peaks) — assumption A-004. |
+| **Availability** | Channel ingress ≥ 99.9 %. Integration API ≥ 99.5 %. Planned maintenance must never block channel ingress. |
+| **Performance** | Channel callback p95 ≤ 500 ms (server-side). Integration API p95 ≤ 300 ms. Sustain **50 TPS**, burst **200 TPS** (school-fee deadline peaks) — assumption A-004. |
 | **Durability** | RPO ≤ 5 min, RTO ≤ 1 h. Encrypted off-site backups; quarterly restore drill. |
 | **Correctness** | Money stored as integer minor units. Ledger always balances (checked continuously). Idempotency on every write path. |
 | **Auditability** | Financial records and audit log retained ≥ 7 years (confirm with compliance, Q-005). Audit log append-only. |
 | **Observability** | Structured JSON logs with `trace_id`. Metrics and alerts per channel. Error tracking. |
 | **Compliance** | Tanzania Personal Data Protection Act 2022 (PDPC registration as processor). National Payment Systems Act 2015 (confirm licence need, Q-001). TRA/EFD receipt requirements where applicable (Q-006). |
 | **Localisation** | English and Kiswahili UI and SMS templates. Currency TZS (plus USD P1). Timezone Africa/Dar_es_Salaam in UI; UTC in storage. |
+| **Upgradability** | Any installation upgrades from the previous two minor releases in ≤ 30 min of downtime-free operation (channel ingress kept up); rollback tested for every release |
 | **Maintainability** | ≥ 80 % test coverage on the Payments, Ledger, Channels, and Recon modules. No module > 500-line classes. |
 
 ## 8. Release plan
@@ -148,7 +157,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 |---|---|---|
 | **R0 — Foundations** | Repo, CI/CD, environments, auth, tenancy, audit | CI green; staging deployed; security baseline checks pass |
 | **R1 — MVP (pilot)** | Invoices, control numbers, CRDB/NMB/MKCB, ledger, webhooks, SMS, basic portal, daily recon | BMC pilot running in parallel with legacy for 2 weeks with 0 unexplained differences |
-| **R2 — GA** | MNO channels, suspense workflow, refunds, reports, bulk, payer page | Pentest passed; 3 tenants live incl. ≥ 1 school |
+| **R2 — GA** | MNO channels, suspense workflow, refunds, reports, bulk, payer page | Pentest passed; 3 organisations installed incl. ≥ 1 school; upgrade tooling proven across all three |
 | **R3 — Scale** | Push-to-pay, recurring invoices, SDKs, branch accounts | Per roadmap |
 
 ## 9. Risks
@@ -159,6 +168,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 | Bank/MNO integration lead time (contracts, UAT, IP whitelisting) | High | Start channel onboarding in parallel with R0; build the simulator early |
 | A channel does not support signing or mTLS | High | Compensating controls: strict CIDR, VPN/IPsec tunnel, payload encryption, anomaly alerts (DESIGN §5.3) |
 | Duplicate or lost callbacks | High | Idempotency keys, recon, status-query fallback |
+| Installations drift (unpatched, customised, or on old versions) | High | One codebase with no per-org forks (RULES C9); config-only differences; fleet version reporting; patch SLA (G8) |
 | Migrating BMC data and history | Medium | Dedicated migration task with dry runs and reconciliation of totals (TASKS phase 8) |
 | Peak load at fee deadlines | Medium | Queue-based processing, load test at 4× expected peak |
 

@@ -11,4 +11,4 @@ Planning docs for **PGS v2**, a multi-sector payment routing gateway that succee
 | [TASKS.md](TASKS.md) | Phased backlog with acceptance criteria | Picking up work |
 | [MEMORY.md](MEMORY.md) | Decisions, assumptions, open questions, legacy lessons, session log | Start and end of every session |
 
-Key decision: **we route payments and never hold funds** (MEMORY D-002).
+Key decisions: **we route payments and never hold funds** (MEMORY D-002), and **each organisation gets its own installation of one shared codebase; there are no tenants** (MEMORY D-009).

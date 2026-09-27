@@ -31,7 +31,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Global exception handler → RFC 9457 with `code` + `trace_id`; no stack traces when `APP_DEBUG=false`; boot guard that refuses production with debug on.
   *AC:* Tests for each error class in DESIGN §6.3; boot guard test.
 - [ ] **T-0.7 Observability baseline** · M · R0 · deps T-0.1
-  JSON logging with `trace_id`/`tenant_id` processor, OpenTelemetry tracing, `/health/live` and `/health/ready`, Prometheus metrics endpoint (internal only), Sentry with personal-data scrubbing.
+  JSON logging with `trace_id`/`org_code`/`app_version` processor, OpenTelemetry tracing, `/health/live` and `/health/ready`, Prometheus metrics endpoint (internal only), Sentry with personal-data scrubbing.
   *AC:* A request produces correlated log + trace; the metrics endpoint is not reachable publicly.
 - [ ] **T-0.8 Secrets management** · M · R0 · deps T-0.2
   Vault integration (KV v2) for channel keys, webhook secrets, personal-data encryption keys; key-rotation helper.
@@ -42,20 +42,32 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-0.10 Environments & deploy** · L · R0 · deps T-0.3
   Container image build, Trivy scan, deploy to `sandbox` and `staging` (Compose/k3s via Ansible/Terraform), zero-downtime deploy, migrations step.
   *AC:* A merge to `main` deploys to staging automatically; production deploy is manual with approval.
+- [ ] **T-0.11 `org.yaml` config schema & boot validation** · M · R0 · deps T-0.1
+  JSON-Schema for per-organisation config (profile, sector, org code(s), channels, policies, feature flags, SMS templates); typed `OrgConfig`; app refuses to boot on invalid config; every setting has a default.
+  *AC:* Invalid config fails boot with a clear message; schema documented; example configs for a school and a hospital.
+- [ ] **T-0.12 Installer & `pgs` CLI** · L · R1 · deps T-0.10, T-0.11
+  `pgs install` (new organisation from image + `org.yaml` + secrets), `pgs upgrade vX.Y.Z` (pre-flight → backup → migrate → rolling restart with channel ingress last → smoke test), `pgs rollback`, `pgs backup`/`restore`, `pgs doctor`. Works for vendor-hosted and on-prem, including an offline bundle.
+  *AC:* Fresh install on a clean Ubuntu LTS VM in ≤ 30 min; upgrade and rollback proven in CI.
+- [ ] **T-0.13 Release & upgrade pipeline** · M · R1 · deps T-0.12
+  Signed images per tag, changelog + upgrade notes, automated upgrade test from the previous two minor releases with seeded data (RULES G5).
+  *AC:* A release cannot be published if the upgrade test fails.
+- [ ] **T-0.14 Deployments repo & fleet telemetry** · M · R2 · deps T-0.7
+  Private repo holding each installation's `org.yaml` + inventory (no secrets); org-code registry; opt-in health telemetry (allow-listed fields, RULES O5) to a vendor fleet dashboard showing version, health, last backup, recon status.
+  *AC:* Telemetry payload test proves no personal or transaction data; dashboard lists all installations and their versions.
 
 ## Phase 1 — Tenancy, identity & audit (R0/R1)
 
-- [ ] **T-1.1 Tenants & branches** · M · R0 · deps T-0.5
-  Migrations, models, `TenantSettings` DTO with validation, tenant context resolver (from API key or user session).
-  *AC:* Settings are validated on save; unknown keys rejected.
-- [ ] **T-1.2 Row-Level Security** · M · R0 · deps T-1.1
-  RLS policies on all tenant tables using `app.tenant_id`; middleware sets it per request/job; an operator bypass role used only by explicit operator services.
-  *AC:* A test proves tenant A cannot read tenant B's rows even through raw queries.
+- [ ] **T-1.1 Organisation profile & branches** · S · R0 · deps T-0.5, T-0.11
+  Single-row `organization` table (seeded from `org.yaml` on install), `branches`, runtime-editable `settings` with audit.
+  *AC:* A second organisation row cannot be inserted; runtime settings are validated and audited.
+- [ ] **T-1.2 Vendor support access** · M · R1 · deps T-1.5
+  `vendor.support` role; time-boxed grant/revoke by `system.admin` (2FA, reason, ≤ 72 h, auto-expire); alerts and audit on grant and use.
+  *AC:* A support account cannot log in after expiry; it cannot refund, approve, or export personal data.
 - [ ] **T-1.3 Audit log** · M · R0 · deps T-0.5
   Append-only `audit_logs` (partitioned, hash-chained), `Audit::record()`, DB role with INSERT/SELECT only, chain-verification command.
   *AC:* An UPDATE on audit_logs fails with a permission error; tampering is detected by the verify command.
 - [ ] **T-1.4 Portal authentication** · M · R1 · deps T-1.1
-  Login, password policy (≥ 12 characters, breached-password check), lockout, TOTP 2FA (required for operator and sensitive roles), session hardening, CSRF.
+  Login, password policy (≥ 12 characters, breached-password check), lockout, TOTP 2FA (required for admins, vendor support, and sensitive roles), session hardening, CSRF.
   *AC:* Brute-force test locked out; 2FA enforced per role.
 - [ ] **T-1.5 RBAC** · M · R1 · deps T-1.4
   Roles and permissions per DESIGN §7.1; policies; branch scoping.
@@ -75,15 +87,15 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-2.1 Payers** · S · R1 · deps T-1.2
   Encrypted personal-data columns + blind indexes; upsert by `external_ref`; API `PUT /payers/{external_ref}`, `GET /payers/{id}`.
   *AC:* Personal data is unreadable in the DB dump; search by phone works via the blind index.
-- [ ] **T-2.2 Control number generator** · S · R1 · deps T-0.5
-  Per DESIGN §4: prefix + 10 CSPRNG digits + Luhn; uniqueness retry; format validator.
+- [ ] **T-2.2 Control number generator** · S · R1 · deps T-0.5, T-0.11
+  Per DESIGN §4: env digit + org code + 7 CSPRNG digits + Luhn; uniqueness retry; format validator; usage metric and alert at 50 % of the org code's space.
   *AC:* 1M generated numbers are unique with valid Luhn; the validator rejects single-digit typos and transpositions.
 - [ ] **T-2.3 Invoice aggregate & state machine** · M · R1 · deps T-2.1, T-2.2
   Invoices + items, item-total CHECK, amount/overpayment policies, `InvoiceStateMachine` (DESIGN §8.1), expiry scheduler job.
   *AC:* Illegal transitions throw; expiry job moves overdue invoices and emits events.
 - [ ] **T-2.4 Invoice API** · M · R1 · deps T-2.3, T-1.8
   `POST/GET/PATCH /invoices`, `POST /invoices/{id}/cancel`, `GET /control-numbers/{cn}`, cursor pagination, filters.
-  *AC:* OpenAPI spec updated; contract tests pass; foreign-tenant IDs return 404.
+  *AC:* OpenAPI spec updated; contract tests pass; out-of-scope IDs return 404.
 - [ ] **T-2.5 Bulk invoices** · M · R2 · deps T-2.4
   `POST /invoices/bulk` + CSV upload; async job with per-row results; ≤ 5,000 rows; partial success.
   *AC:* A 5,000-row file processes in < 2 min on staging; row errors are reported without failing the whole job.
@@ -105,7 +117,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   States per DESIGN §8.2; channel-initiated reversal creates reversing journal entries and updates the invoice.
   *AC:* Reversing a payment on a PAID invoice returns it to PARTIALLY_PAID/ISSUED with correct balances.
 - [ ] **T-3.5 Failed-processing replay** · S · R1 · deps T-3.3
-  `FAILED_PROCESSING` channel messages can be replayed via an operator command/UI; alert when count > 0.
+  `FAILED_PROCESSING` channel messages can be replayed via an admin command/UI; alert when count > 0.
   *AC:* A simulated DB failure mid-ingest can be replayed to a correct final state.
 
 ## Phase 4 — Channels (R1 banks, R2 MNOs)
@@ -117,7 +129,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   *AC:* A dummy adapter passes a shared adapter conformance test suite.
 - [ ] **T-4.2 Channel simulator** · M · R1 · deps T-4.1
   Sandbox tool (CLI + portal page) that sends signed validation/notification requests for any adapter, including duplicate, bad-signature, and wrong-amount scenarios.
-  *AC:* Used by merchant sandbox and by the E2E tests.
+  *AC:* Used by the integrator sandbox and by the E2E tests.
 - [ ] **T-4.3 CRDB adapter** · M · R1 · deps T-4.0, T-4.1
 - [ ] **T-4.4 NMB adapter (incl. recon API)** · M · R1 · deps T-4.0, T-4.1
 - [ ] **T-4.5 MKCB adapter (AES-GCM, rotated key)** · M · R1 · deps T-4.0, T-4.1
@@ -137,7 +149,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Endpoint management API, secret rotation, signing per DESIGN §6.4, retry schedule, DEAD state, auto-disable after 50 failures, redelivery API.
   *AC:* Signature verifiable with the documented algorithm; retry timings covered by tests with a fake clock.
 - [ ] **T-5.3 SMS** · M · R1 · deps T-5.1
-  SMS provider adapter (Q-007), templates per tenant (sw/en), sender ID, delivery status, rate limiting.
+  SMS provider adapter (Q-007), templates from `org.yaml` (sw/en), sender ID, delivery status, rate limiting.
   *AC:* Invoice-created and payment-received SMS sent from outbox events; personal data masked in logs.
 - [ ] **T-5.4 Email notifications & daily summary** · S · R2 · deps T-5.1
 
@@ -153,7 +165,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-6.4 Suspense workflow** · M · R1 · deps T-1.6, T-3.3
   Queue, allocate to invoice / credit / refund via maker-checker; ledger postings per DESIGN §3.2.
 - [ ] **T-6.5 Refunds** · M · R2 · deps T-1.6, T-3.1
-  Request → approve → execute from the **merchant's** collection account (channel API or exported instruction file) → confirm; ledger + events.
+  Request → approve → execute from the **organisation's** collection account (channel API or exported instruction file) → confirm; ledger + events.
   *AC:* PGS never initiates a disbursement from any account of its own (D-002).
 
 ## Phase 7 — Portal & reporting (R1/R2)
@@ -168,10 +180,10 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Collections, aging, suspense aging, recon status; CSV/XLSX export via background job to object storage with signed URLs.
 - [ ] **T-7.6 Public payer page** · S · R2 · deps T-2.6
   Look up an invoice by control number + second factor (e.g., last 4 digits of phone); receipt verification; strict rate limit.
-- [ ] **T-7.7 Operator console** · M · R1 · deps T-7.1
-  Tenant onboarding wizard, channel health, DLQ, failed-processing replay, system health.
+- [ ] **T-7.7 System admin area** · M · R1 · deps T-7.1
+  Organisation profile, channel accounts, channel health, webhook DLQ, failed-processing replay, system health (version, queues, last backup), vendor support access grant/revoke.
 
-## Phase 8 — Bugando (BMC) migration (R1 pilot → R2 cut-over)
+## Phase 8 — Bugando (BMC) migration: first installation (R1 pilot → R2 cut-over)
 
 - [ ] **T-8.1 Legacy data audit** · M · R1
   Map legacy `bmc_*` tables to the v2 model; identify data quality issues; decide on history depth (Q-009).
@@ -194,13 +206,13 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-9.2 Backup/restore drill** · S
   PITR restore into a scratch env; RTO/RPO measured and recorded.
 - [ ] **T-9.3 External penetration test** · M
-  Scope: channel ingress, merchant API, portal. 0 critical/high open at go-live.
+  Scope: channel ingress, integration API, portal. 0 critical/high open at go-live.
 - [ ] **T-9.4 Runbooks** · M
   Incident response, channel outage, key rotation, failed-processing replay, recon exception handling, DR failover.
 - [ ] **T-9.5 Compliance pack** · M · owner: business
-  PDPC registration, data processing agreements with tenants, retention policy, legal opinion on BoT position (Q-001).
-- [ ] **T-9.6 Merchant documentation site** · M
+  PDPC registration, data processing agreements with each organisation (for vendor-hosted installs and support access), retention policy, legal opinion on BoT position (Q-001).
+- [ ] **T-9.6 Integrator documentation site** · M
   Rendered OpenAPI, webhook guide with verification code samples (PHP, JS, Python, Java), sandbox onboarding guide.
 
 ## Later (R3)
-- [ ] T-10.1 Push-to-pay (MNO STK/USSD push) · [ ] T-10.2 Recurring invoices · [ ] T-10.3 PHP/JS SDKs · [ ] T-10.4 Moodle / WooCommerce plugins · [ ] T-10.5 Branch-level reporting & access · [ ] T-10.6 USD and multi-currency tenants · [ ] T-10.7 HaloPesa & additional banks · [ ] T-10.8 GePG integration (if Q-003 says yes)
+- [ ] T-10.1 Push-to-pay (MNO STK/USSD push) · [ ] T-10.2 Recurring invoices · [ ] T-10.3 PHP/JS SDKs · [ ] T-10.4 Moodle / WooCommerce plugins · [ ] T-10.5 Branch-level reporting & access · [ ] T-10.6 USD and multi-currency installations · [ ] T-10.7 HaloPesa & additional banks · [ ] T-10.8 GePG integration (if Q-003 says yes)
