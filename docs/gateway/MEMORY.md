@@ -62,6 +62,9 @@ Format: **ID — decision** (date, status) — why · consequences
 - **D-014 — Vendor-hosted installations each run on their own VPS** (2026-09-27, **owner decision**)
   Why: a dedicated VPS per installation removes shared-data-centre concerns and keeps isolation physical (D-009). The provider and region can be chosen per organisation (e.g., in-country when required). Consequences: VPS provisioning baseline (T-0.16); sizing per DESIGN §11.1; closes Q-004.
 
+- **D-015 — Emergency security patch fallback** (2026-09-27, **owner decision**)
+  Why: an actively exploited `CRITICAL` vulnerability can't wait indefinitely for an unreachable coordinator. Rule: if the Update Coordinator and deputy don't respond within 24 h, the organisation's System Admin may approve instead (2FA, reason recorded, coordinator notified). Never silent, never without an approval from the organisation. Closes Q-013. See DESIGN §11.2 step 7, RULES G6.
+
 ## 3. Assumptions (verify, then convert to decisions)
 
 - **A-001** Launch channels are the legacy ones: CRDB, NMB, MKCB (banks) first; M-Pesa, Mixx by Yas, Airtel next.
@@ -83,13 +86,13 @@ Format: **ID — decision** (date, status) — why · consequences
 | Q-004 | ~~Hosting mode / data centre~~ **Answered → D-011, D-014** (identical environment; a dedicated VPS per vendor-hosted installation, region chosen per organisation). | — | — |
 | Q-005 | Legal retention period for financial and audit records (assumed ≥ 7 years)? | Compliance | Partition/archival policy |
 | Q-006 | Do receipts need TRA EFD/VFD integration, and if so is that the organisation's or our responsibility? | Compliance | T-2.6 |
-| Q-007 | Which SMS provider? | Business | T-5.3 |
-| Q-008 | Product name and domain (currently "PGS v2"; legacy brand "LipaSwitch")? | Business | Portal, docs site |
+| Q-007 | Which SMS provider? **To be provided** by the owner (2026-09-27). T-5.3 builds a provider-agnostic interface so it can plug in without design changes. | Business | T-5.3 (concrete adapter only) |
+| Q-008 | Product name and domain (currently "PGS v2"; legacy brand "LipaSwitch")? **To be decided** (owner, 2026-09-27). | Business | Portal branding, docs site (before R2) |
 | Q-009 | How much BMC history to migrate (all vs last N years + archive)? | BMC + us | T-8.1 |
 | Q-010 | Pricing model (licence, subscription, per transaction)? Affects reporting, not the payment path. | Business | Billing reports |
 | Q-011 | ~~Who approves upgrades~~ **answered → D-012** (the organisation's Update Coordinator). Still open: may on-prem installations send health telemetry to the vendor? | Business | T-0.14 |
 | Q-012 | ~~Separate integration per installation?~~ **answered → D-010** (adapters built once; organisation supplies credentials). Per-channel detail of which credentials and bank-side registrations are needed is captured in T-4.0. | Business → channels | — |
-| Q-013 | Emergency security patches: if a `CRITICAL` fix is actively exploited and the Update Coordinator (and deputy) cannot be reached, may the vendor apply it? Proposal: only with the System Admin's approval as fallback, never silently. | Business | T-7.8 |
+| Q-013 | ~~Emergency security patches when the coordinator is unreachable?~~ **Answered → D-015** (yes, with System Admin approval as fallback, never silently). | — | — |
 
 ## 5. Lessons from the legacy system
 
@@ -136,6 +139,7 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 
 Newest first. One line per session: date — who — what changed — next.
 
+- 2026-09-27 — Claude (with owner) — Owner decided D-015 (emergency patch fallback to System Admin); SMS provider to be provided (Q-007); product name to be decided (Q-008). — Next: Q-002, Q-007, Q-008 when available; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner decided D-013 (no BoT licence) and D-014 (dedicated VPS per vendor-hosted install); Q-002 control-number format not yet decided. Added T-0.16. — Next: Q-002, Q-013, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-010 (credentials-only channel onboarding), D-011 (identical environment either hosting mode), D-012 (updates via the organisation's designated personnel). Added DESIGN §5.5 and §11, RULES S22/C11/G6, tasks T-0.15, T-4.10, T-7.8. — Next: Q-001, Q-002, Q-013; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-009 (single-tenant, one installation per organisation). Removed tenancy from all docs; added installer/upgrade/fleet/vendor-support design and tasks. — Next: owner answers Q-004, Q-011, Q-012.

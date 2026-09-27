@@ -169,7 +169,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 |---|---|---|
 | Regulatory: being classed as a payment service provider | Low | Routing-only model (D-002): funds never touch our accounts; owner has determined no BoT licence is needed (D-013). Keep the model routing-only; revisit D-013 if that ever changes |
 | Bank/MNO integration lead time (contracts, UAT, IP whitelisting) | High (first build) / Low (each new organisation) | Adapters are built and certified **once** for all installations (T-4.0 early, simulator early). A new organisation only supplies credentials (D-010) |
-| Update Coordinator slow to approve a critical security patch | Medium | Severity flag, reminders escalating to the System Admin, 72 h approval target; emergency policy (Q-013) |
+| Update Coordinator slow to approve a critical security patch | Medium | Severity flag, reminders escalating to the System Admin, 72 h approval target; emergency fallback to System Admin approval (D-015) |
 | A channel does not support signing or mTLS | High | Compensating controls: strict CIDR, VPN/IPsec tunnel, payload encryption, anomaly alerts (DESIGN §5.3) |
 | Duplicate or lost callbacks | High | Idempotency keys, recon, status-query fallback |
 | Installations drift (unpatched, customised, or on old versions) | High | One codebase with no per-org forks (RULES C9); config-only differences; fleet version reporting; patch SLA (G8) |

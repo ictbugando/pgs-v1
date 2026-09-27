@@ -160,7 +160,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Endpoint management API, secret rotation, signing per DESIGN §6.4, retry schedule, DEAD state, auto-disable after 50 failures, redelivery API.
   *AC:* Signature verifiable with the documented algorithm; retry timings covered by tests with a fake clock.
 - [ ] **T-5.3 SMS** · M · R1 · deps T-5.1
-  SMS provider adapter (Q-007), templates from `org.yaml` (sw/en), sender ID, delivery status, rate limiting.
+  Provider-agnostic `SmsProvider` interface with the concrete provider and credentials set per installation (provider to be supplied, Q-007), templates from `org.yaml` (sw/en), sender ID, delivery status, rate limiting.
   *AC:* Invoice-created and payment-received SMS sent from outbox events; personal data masked in logs.
 - [ ] **T-5.4 Email notifications & daily summary** · S · R2 · deps T-5.1
 
@@ -196,7 +196,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 
 - [ ] **T-7.8 Updates page & coordinator approval** · M · R1 · deps T-1.5, T-0.13
   *System → Updates*: current and available versions, release/upgrade notes, severity; `update.coordinator` approves version + window (2FA); email notifications and reminders (escalating for `CRITICAL`); `upgrade_approvals` read by `pgs upgrade`; post-upgrade result shown.
-  *AC:* Upgrade blocked without approval; approval tied to one version and one window; full audit trail.
+  *AC:* Upgrade blocked without approval; approval tied to one version and one window; emergency System Admin fallback only for `CRITICAL` releases after 24 h without coordinator response (D-015); full audit trail.
 
 ## Phase 8 — Bugando (BMC) migration: first installation (R1 pilot → R2 cut-over)
 

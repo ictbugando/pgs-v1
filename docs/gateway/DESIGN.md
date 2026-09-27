@@ -517,7 +517,8 @@ Vendor-hosted or on the organisation's server, an installation is the **same thi
 3. The coordinator **approves** the version and picks a maintenance window (2FA, audited). They inform the organisation's own staff.
 4. `pgs upgrade` **refuses to run without a valid approval** for that exact version and window (`--dry-run` excepted). The vendor runs it for vendor-hosted installs; the organisation's IT or vendor support runs it on-prem.
 5. After upgrading, automated smoke tests run and the result goes to the Updates page and the coordinator by email. Failure triggers automatic rollback and notification.
-6. `CRITICAL` security releases: approval requested within 72 h, with daily reminders escalating to the `system.admin`. There is no silent or forced upgrade (emergency policy: Q-013).
+6. `CRITICAL` security releases: approval requested within 72 h, with daily reminders escalating to the `system.admin`. There is no silent or forced upgrade.
+7. **Emergency fallback (D-015):** if a `CRITICAL` fix addresses an actively exploited vulnerability and neither the Update Coordinator nor the deputy responds within 24 h, the `system.admin` may approve it instead (2FA, reason recorded). The approval record notes it was an emergency fallback, and the coordinator is notified. Without one of these two approvals, nothing is applied.
 
 Approval records (`upgrade_approvals`: version, window_start, window_end, approved_by, approved_at, status, result) are audited and read by the `pgs` CLI through an authenticated local endpoint.
 

@@ -130,7 +130,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **G3** CI must be green: lint, PHPStan, Deptrac, tests, `composer audit`, gitleaks, route-protection test, OpenAPI contract tests.
 - **G4** No force-push to `main`. Releases are tagged (`vX.Y.Z`) with a changelog and upgrade notes.
 - **G5** Every release MUST pass the upgrade test (install previous release with seeded data → upgrade → smoke tests → rollback) before it is published to installations.
-- **G6** No installation is upgraded without a recorded approval from its Update Coordinator for that exact version and window (D-012). Tooling MUST enforce this, and there is no bypass flag.
+- **G6** No installation is upgraded without a recorded approval for that exact version and window: from its Update Coordinator (D-012), or, only for an actively exploited `CRITICAL` fix when the coordinator and deputy are unreachable for 24 h, from its System Admin (D-015). Tooling MUST enforce this, and there is no bypass flag.
 
 ## 11. Definition of Done
 
