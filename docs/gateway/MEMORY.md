@@ -1,4 +1,4 @@
-# Project Memory — PGS v2
+# Project Memory — PayManix
 
 The project's long-term memory: what has been decided, what is assumed, what is still open, and what we learned. **Humans and AI agents read this before starting work and update it when finishing** (RULES §0). Keep entries short, dated, and never delete them. Supersede entries instead.
 
@@ -20,7 +20,7 @@ The project's long-term memory: what has been decided, what is assumed, what is 
 
 Format: **ID — decision** (date, status) — why · consequences
 
-- **D-001 — Build a new system (PGS v2) instead of refactoring Bugando PGS** (2026-09-27, accepted)
+- **D-001 — Build a new system (PayManix) instead of refactoring Bugando PGS** (2026-09-27, accepted)
   Why: the legacy code is hospital-specific (eHMS, patient tables), built on CI 4.2.1 + Joomla auth, has god-classes (`Engine.php`, 3k lines), and has pervasive security issues. Consequence: the legacy system needs emergency hardening meanwhile (T-8.6), and BMC becomes the first installation through a migration (Phase 8).
 
 - **D-002 — Routing only; we never hold, settle, or disburse funds** (2026-09-27, **confirmed by owner**)
@@ -57,7 +57,7 @@ Format: **ID — decision** (date, status) — why · consequences
   Why: owner's decision. The organisation controls when its system changes. Consequences: `update.coordinator` role, Updates page with approval of version + window, `pgs upgrade` blocked without approval, and no forced upgrades (DESIGN §11.2, RULES G6, T-7.8). Answers Q-011 (upgrade approval).
 
 - **D-013 — No Bank of Tanzania licence or registration required** (2026-09-27, **owner decision**)
-  Why: owner's position for the routing-only model (D-002): PGS v2 never receives, holds, or disburses funds. Consequences: no licensing workstream; closes Q-001. If the model ever moves towards holding funds, this decision must be revisited first.
+  Why: owner's position for the routing-only model (D-002): PayManix never receives, holds, or disburses funds. Consequences: no licensing workstream; closes Q-001. If the model ever moves towards holding funds, this decision must be revisited first.
 
 - **D-014 — Vendor-hosted installations each run on their own VPS** (2026-09-27, **owner decision**)
   Why: a dedicated VPS per installation removes shared-data-centre concerns and keeps isolation physical (D-009). The provider and region can be chosen per organisation (e.g., in-country when required). Consequences: VPS provisioning baseline (T-0.16); sizing per DESIGN §11.1; closes Q-004.
@@ -70,6 +70,9 @@ Format: **ID — decision** (date, status) — why · consequences
 
 - **D-017 — No Redis; built-in encrypted secret store by default** (2026-09-27, accepted, follows D-016 and D-014)
   Why: every installation is one VPS, so every extra service is extra work to run, secure, and back up hundreds of times. Background jobs, schedules, outbox relay, locks, and the nonce cache all run on PostgreSQL (River, advisory locks, TTL tables), and jobs are enqueued in the same transaction as the business change. Secrets live in an AES-256-GCM encrypted store whose master key is a root-only file/systemd credential outside the DB; Vault stays an optional backend for organisations that already run it.
+
+- **D-018 — Product name: PayManix** (2026-09-27, **owner decision**)
+  Why: owner's choice. Consequences: PayManix is the name in the portal, SMS defaults, documentation, and repository (`paymanix`). The binary, Go packages, and internal code name stay `pgs`, so a future rebrand never touches code. To do before R2: register the domains (e.g. `paymanix.co.tz`, `paymanix.com`) and check or register the trademark with BRELA. `PayManix` is 8 characters, so it fits the 11-character SMS sender-ID limit if the vendor ever sends SMS under its own name (payer SMS normally use each organisation's sender ID).
 
 ## 3. Assumptions (verify, then convert to decisions)
 
@@ -93,7 +96,7 @@ Format: **ID — decision** (date, status) — why · consequences
 | Q-005 | Legal retention period for financial and audit records (assumed ≥ 7 years)? | Compliance | Partition/archival policy |
 | Q-006 | Do receipts need TRA EFD/VFD integration, and if so is that the organisation's or our responsibility? | Compliance | T-2.6 |
 | Q-007 | Which SMS provider? **To be provided** by the owner (2026-09-27). T-5.3 builds a provider-agnostic interface so it can plug in without design changes. | Business | T-5.3 (concrete adapter only) |
-| Q-008 | Product name and domain (currently "PGS v2"; legacy brand "LipaSwitch")? **To be decided** (owner, 2026-09-27). | Business | Portal branding, docs site (before R2) |
+| Q-008 | ~~Product name~~ **Answered → D-018** (PayManix). Still open: domain registration and BRELA trademark check. | Business | Portal branding, docs site (before R2) |
 | Q-009 | How much BMC history to migrate (all vs last N years + archive)? | BMC + us | T-8.1 |
 | Q-010 | Pricing model (licence, subscription, per transaction)? Affects reporting, not the payment path. | Business | Billing reports |
 | Q-011 | ~~Who approves upgrades~~ **answered → D-012** (the organisation's Update Coordinator). Still open: may on-prem installations send health telemetry to the vendor? | Business | T-0.14 |
@@ -122,7 +125,7 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 | Term | Meaning |
 |---|---|
 | **Organisation** | The school, hospital, or other biller that owns an installation (formerly "tenant/merchant"; there are no tenants since D-009) |
-| **Installation** | One running deployment of PGS v2 for one organisation: own DB, secrets, domain |
+| **Installation** | One running deployment of PayManix for one organisation: own DB, secrets, domain |
 | **Org code** | 3-digit issuer code the vendor allocates to each installation; part of every control number |
 | **Vendor** | Us: we build, install, upgrade, and support installations |
 | **Update Coordinator** | The organisation's designated person (plus deputy) who receives release notices and approves each upgrade and its maintenance window |
@@ -139,12 +142,13 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 | **Outbox** | DB table of events written in the same transaction as the change, delivered asynchronously |
 | **Maker-checker** | One user proposes and a different user approves |
 | **Malipo** | Swahili "payments" (legacy controller name) |
-| **eHMS** | Bugando's hospital management system (first system integrated with PGS v2) |
+| **eHMS** | Bugando's hospital management system (first system integrated with PayManix) |
 
 ## 7. Session log
 
 Newest first. One line per session: date — who — what changed — next.
 
+- 2026-09-27 — Claude (with owner) — Owner named the product PayManix (D-018); renamed across all docs; code name stays `pgs`. — Next: domain + BRELA check; create the `paymanix` repo under the new GitHub account and start T-0.1.
 - 2026-09-27 — Claude (with owner) — Owner chose Go (D-016); dropped Redis and made the built-in secret store the default (D-017). Rewrote the stack, module layout, adapter interface, rules, and tasks for Go. — Next: create the `pgs-v2` repo and start T-0.1; T-8.6; T-4.0.
 - 2026-09-27 — Claude (with owner) — Owner decided D-015 (emergency patch fallback to System Admin); SMS provider to be provided (Q-007); product name to be decided (Q-008). — Next: Q-002, Q-007, Q-008 when available; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner decided D-013 (no BoT licence) and D-014 (dedicated VPS per vendor-hosted install); Q-002 control-number format not yet decided. Added T-0.16. — Next: Q-002, Q-013, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.

@@ -1,10 +1,10 @@
-# Technical Design — PGS v2
+# Technical Design — PayManix
 
 Status: Draft v0.1 · Implements [PRD](PRD.md) within [ARCHITECTURE](ARCHITECTURE.md), under [RULES](RULES.md).
 
 > **Deployment model (D-009):** everything below describes **one installation serving one organisation**. There are no tenants and no `tenant_id`. Each organisation runs its own installation of the same codebase.
 >
-> **Business model reminder (D-002):** PGS v2 **routes** payments. Money moves from the payer directly into the organisation's own collection account at the bank/MNO. We never hold or disburse funds. Everything below, especially the ledger and refunds, follows from that.
+> **Business model reminder (D-002):** PayManix **routes** payments. Money moves from the payer directly into the organisation's own collection account at the bank/MNO. We never hold or disburse funds. Everything below, especially the ledger and refunds, follows from that.
 
 ---
 

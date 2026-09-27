@@ -1,4 +1,4 @@
-# Architecture — PGS v2
+# Architecture — PayManix
 
 Status: Draft v0.1 · Companion to [PRD](PRD.md). Detailed schemas and contracts are in [DESIGN](DESIGN.md).
 
@@ -15,14 +15,14 @@ Status: Draft v0.1 · Companion to [PRD](PRD.md). Detailed schemas and contracts
 
 ## 2. Architectural style: modular monolith
 
-PGS v2 is **one Go program (`pgs`) split into strictly bounded packages** (D-016). It compiles to a single static binary that runs as several **process roles** from the same image: `pgs serve api`, `pgs serve ingress`, `pgs serve portal`, `pgs worker` (background jobs and schedules), and the `pgs` admin CLI (install, upgrade, migrate, doctor, channel). On small installations every role can run in one process (`pgs serve all`).
+PayManix is **one Go program (`pgs`) split into strictly bounded packages** (D-016). It compiles to a single static binary that runs as several **process roles** from the same image: `pgs serve api`, `pgs serve ingress`, `pgs serve portal`, `pgs worker` (background jobs and schedules), and the `pgs` admin CLI (install, upgrade, migrate, doctor, channel). On small installations every role can run in one process (`pgs serve all`).
 
 Why not microservices? The team is small, and the transactional guarantees we need (payment + ledger + outbox in one DB transaction) are much easier inside one database. Module boundaries are enforced in code (Go `internal/` packages plus `depguard` import rules; see RULES §6), so any module can be extracted later if needed.
 
 ## 3. System context
 
 ```
-                ┌──────────────────────────── PGS v2 ────────────────────────────┐
+                ┌──────────────────────────── PayManix ────────────────────────────┐
  Org apps  ───► │ api.<domain>        Integration REST API (HMAC-signed)         │
  systems   ◄─── │                     Webhooks out (signed)                      │
                 │                                                                │

@@ -1,4 +1,4 @@
-# Tasks — PGS v2
+# Tasks — PayManix
 
 Backlog derived from [PRD](PRD.md) and [DESIGN](DESIGN.md). Every task follows [RULES](RULES.md) and its Definition of Done (RULES §11).
 
@@ -13,7 +13,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 ## Phase 0 — Foundations (R0)
 
 - [ ] **T-0.1 Repository & skeleton** · S · R0
-  New repo `pgs-v2` (separate from the legacy repo). Go module (current stable Go), layout per ARCHITECTURE §4 (`cmd/pgs`, `internal/…`, `db/`, `web/`), Makefile, sqlc and goose configured.
+  New repo `paymanix` (separate from the legacy repo, under the new working GitHub account). Go module (current stable Go), layout per ARCHITECTURE §4 (`cmd/pgs`, `internal/…`, `db/`, `web/`), Makefile, sqlc and goose configured.
   *AC:* `make test` (`go test -race ./...`) passes; `make build` produces a single static `pgs` binary; README with local setup; `.gitignore` covers `.env`, `data/`, `bin/`, logs.
 - [ ] **T-0.2 Local dev environment** · S · R0 · deps T-0.1
   Docker Compose: `pgs` (all roles, live reload), Caddy, Postgres 16, Mailpit, SMS sink.

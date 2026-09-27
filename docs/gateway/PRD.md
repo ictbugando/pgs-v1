@@ -1,9 +1,9 @@
-# PRD — PGS v2: Multi-Sector Payment Gateway
+# PRD — PayManix: Multi-Sector Payment Gateway
 
 | | |
 |---|---|
 | **Status** | Draft v0.1 |
-| **Working name** | PGS v2 (placeholder — see `MEMORY.md` Q-008) |
+| **Product name** | **PayManix** (D-018). Code name in the codebase: `pgs` |
 | **Predecessor** | Bugando PGS (`/ci`, `/public` in this repo) |
 | **Related docs** | [ARCHITECTURE](ARCHITECTURE.md) · [DESIGN](DESIGN.md) · [RULES](RULES.md) · [TASKS](TASKS.md) · [MEMORY](MEMORY.md) |
 
@@ -11,7 +11,7 @@
 
 ## 1. Summary
 
-PGS v2 is a payment collection gateway for any organisation that bills people: schools, hospitals, SACCOs, utilities, churches, event organisers, and SaaS platforms. It is **one product codebase deployed as a separate, single-organisation installation for each customer** (D-009). Each organisation has its own database, domain, secrets and channel setup, and there is no tenant layer. Inside an installation, the organisation creates an **invoice** through the API or portal. The gateway issues a **control number**. The payer pays through any supported bank or mobile-money channel. PGS v2 then verifies the payment, records it in a double-entry ledger, notifies the organisation's systems (HMS, SIS, ERP) by signed webhook, and reconciles every transaction against the channel's statement daily.
+PayManix is a payment collection gateway for any organisation that bills people: schools, hospitals, SACCOs, utilities, churches, event organisers, and SaaS platforms. It is **one product codebase deployed as a separate, single-organisation installation for each customer** (D-009). Each organisation has its own database, domain, secrets and channel setup, and there is no tenant layer. Inside an installation, the organisation creates an **invoice** through the API or portal. The gateway issues a **control number**. The payer pays through any supported bank or mobile-money channel. PayManix then verifies the payment, records it in a double-entry ledger, notifies the organisation's systems (HMS, SIS, ERP) by signed webhook, and reconciles every transaction against the channel's statement daily.
 
 It generalises the Bugando PGS (hospital-only, eHMS-coupled) and fixes that system's security and reliability problems.
 
@@ -39,7 +39,7 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 
 ### Non-goals (v1)
 - Card acquiring or storing card numbers (avoids PCI-DSS scope).
-- **Holding funds, settlement, or payouts.** PGS v2 **routes only**: payers pay directly into each organisation's own collection account at the bank/MNO. PGS v2 never receives, holds, or disburses money. **Confirmed decision** — see `MEMORY.md` D-002.
+- **Holding funds, settlement, or payouts.** PayManix **routes only**: payers pay directly into each organisation's own collection account at the bank/MNO. PayManix never receives, holds, or disburses money. **Confirmed decision** — see `MEMORY.md` D-002.
 - Lending, wallets or stored value for payers (the legacy "wallet" concept becomes a prepaid invoice; see §6.3).
 - Replacing GePG for government-mandated collections (see Q-003).
 
@@ -65,7 +65,7 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 4. **Bank-counter payment with validation.** A CRDB teller enters the control number. The gateway returns the payer name and amount due. The teller posts the payment and the gateway acknowledges it.
 5. **Wrong or unmatched payment.** A payer pays against an expired or cancelled invoice, or overpays. The payment is **not rejected silently**: it goes to Suspense, the organisation's accountant resolves it with approval, and everything is audited.
 6. **Daily reconciliation.** At 02:00 the gateway pulls each channel's statement, matches it against the ledger, and emails an exceptions report. Exceptions stay open until someone resolves them.
-7. **Refund.** An accountant requests a refund and a second user approves it (maker-checker). Because PGS v2 never holds funds, the refund is **executed by the organisation's own bank/MNO account** (via the channel's refund API where available, otherwise an exported instruction file). PGS v2 records it and confirms it.
+7. **Refund.** An accountant requests a refund and a second user approves it (maker-checker). Because PayManix never holds funds, the refund is **executed by the organisation's own bank/MNO account** (via the channel's refund API where available, otherwise an exported instruction file). PayManix records it and confirms it.
 
 ## 6. Functional requirements
 
@@ -112,7 +112,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 - **FR-28 (P0)** Suspense resolution: allocate to an invoice, create a credit, or mark for refund. Requires maker-checker.
 
 ### 6.7 Refunds
-- **FR-29 (P1)** Refund request → approval (a second user) → execution **from the organisation's own collection account** (channel refund API where available, otherwise an exported instruction file for the organisation's bank) → confirmation recorded in the ledger. PGS v2 never disburses funds itself.
+- **FR-29 (P1)** Refund request → approval (a second user) → execution **from the organisation's own collection account** (channel refund API where available, otherwise an exported instruction file for the organisation's bank) → confirmation recorded in the ledger. PayManix never disburses funds itself.
 
 ### 6.8 Reporting
 - **FR-30 (P0)** Collections by day, channel, and branch; invoice aging; suspense aging; recon status. Export to CSV and XLSX.

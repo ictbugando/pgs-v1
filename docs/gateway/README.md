@@ -1,6 +1,6 @@
-# PGS v2 — Documentation
+# PayManix — Documentation
 
-Planning docs for **PGS v2**, a multi-sector payment routing gateway that succeeds the Bugando PGS in this repository.
+Planning docs for **PayManix**, a multi-sector payment routing gateway that succeeds the Bugando PGS in this repository.
 
 | Doc | Purpose | Read when |
 |---|---|---|

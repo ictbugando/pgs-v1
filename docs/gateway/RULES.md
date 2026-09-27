@@ -1,4 +1,4 @@
-# Engineering Rules — PGS v2
+# Engineering Rules — PayManix
 
 These rules are **mandatory** for every contributor, human or AI agent. "MUST" / "MUST NOT" are hard rules: a PR that breaks one is rejected. "SHOULD" rules need a written justification in the PR to deviate.
 
