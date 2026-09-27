@@ -28,14 +28,14 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 
 | # | Goal | Metric (target) |
 |---|---|---|
-| G1 | One codebase serves any sector | New organisation installed and configured in **≤ 2 days** without code changes (bank/MNO onboarding lead time excluded) |
+| G1 | One codebase serves any sector | New organisation **live the same day** it provides its channel credentials: no code changes, no development (D-010) |
 | G2 | Payments are never lost or double-counted | **0** unexplained ledger/statement differences after daily recon |
 | G3 | The organisation's systems learn of payments in near real time | p95 callback → webhook **≤ 5 s** |
 | G4 | Secure by default | 0 critical/high findings in pre-go-live pentest; all callbacks authenticated |
 | G5 | High availability for payment ingestion | Channel callback endpoints **≥ 99.9 %** monthly |
 | G6 | Automated reconciliation | ≥ **99 %** of transactions auto-matched per day |
 | G7 | Migrate Bugando Medical Centre | BMC running on v2 with the legacy system decommissioned |
-| G8 | Every installation stays current | 100 % of installations on a supported release; security patches rolled out to all within **7 days** |
+| G8 | Every installation stays current | 100 % of installations on a supported release; critical security patches offered to every Update Coordinator within 24 h of release and applied within **7 days** of approval (D-012) |
 
 ### Non-goals (v1)
 - Card acquiring or storing card numbers (avoids PCI-DSS scope).
@@ -49,6 +49,7 @@ Institutions in Tanzania collect money through many channels: several banks, M-P
 |---|---|---|
 | **Vendor** (us) | Builds, installs, upgrades and supports the product | Provision new installations, roll out releases, monitor fleet health, time-boxed audited support access |
 | **System Admin** | Organisation's IT/finance lead | Configure the installation, users, channels, webhooks, invoice policies; view reports |
+| **Update Coordinator** | Designated person at the organisation (D-012) | Receive release notices, approve updates and choose the maintenance window, tell the organisation's staff |
 | **Cashier / Clerk** | Front-desk staff | Create invoices and look up payments; reprint receipts |
 | **Accountant** | Back office | Reconciliation reports, exports, refunds approval |
 | **Integrating System** (machine) | SIS / HMS / ERP | Create invoices via API; receive webhooks; query status |
@@ -90,7 +91,7 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 - **FR-13 (P1)** PDF invoice and receipt with a QR code linking to a public verification page (replaces the legacy `verify/qrcode`).
 
 ### 6.4 Channels & payments
-- **FR-14 (P0)** Channel adapters for the channels the legacy system already uses: **CRDB, NMB, MKCB**. **(P1)** M-Pesa, Mixx by Yas, Airtel Money. **(P2)** HaloPesa, other banks, GePG (if applicable).
+- **FR-14 (P0)** Channel adapters for the channels the legacy system already uses: **CRDB, NMB, MKCB**. **(P1)** M-Pesa, Mixx by Yas, Airtel Money. **(P2)** HaloPesa, other banks, GePG (if applicable). Every supported channel is built into every installation, so enabling one for an organisation needs only that organisation's credentials (FR-44).
 - **FR-15 (P0)** Every channel request is authenticated (signature or mTLS, plus a CIDR allow-list). Unauthenticated requests are rejected and logged.
 - **FR-16 (P0)** Validation (inquiry) endpoint returning the payer name, amount due, and whether payment is allowed, where the channel supports it.
 - **FR-17 (P0)** Payment notification is **idempotent**. A repeated channel transaction ID returns the original result and never creates a second payment.
@@ -130,10 +131,12 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 
 ### 6.11 Installation & fleet management (vendor)
 - **FR-39 (P0)** Scripted, repeatable installation of a new organisation from one released image plus a per-organisation configuration file. No code changes and no per-organisation branches.
-- **FR-40 (P0)** Versioned releases with safe, scripted upgrades (backup → migrate → health check → rollback path). Every installation reports its running version.
+- **FR-40 (P0)** Versioned releases with safe, scripted upgrades (backup → migrate → health check → rollback path). Every installation reports its running version. An upgrade is applied **only after the organisation's Update Coordinator approves** the version and window (FR-45).
 - **FR-41 (P1)** Optional fleet health telemetry sent to the vendor: version, uptime, queue lag, error rates, recon status. **No personal or payment-detail data** leaves the installation.
 - **FR-42 (P0)** Vendor support access is disabled by default. The System Admin can grant it time-boxed, and every action is audited.
-- **FR-43 (P1)** Supports both hosting options: vendor-hosted, or on the organisation's own premises (Q-004). Offline upgrade bundle for on-prem sites without registry access.
+- **FR-43 (P0)** Hosting-agnostic (D-011): vendor-hosted or on the organisation's own server, the **environment is identical** (same image, stack, and minimum requirements), and so are the requirements for connecting to the organisation's management system (same integration API and webhooks). Offline upgrade bundle for on-prem sites without registry access.
+- **FR-44 (P0)** Channel activation by credentials only (D-010): the organisation supplies its credentials for each bank/MNO; they are entered through a secure intake (portal form or `pgs channel add`) straight into the installation's secret store; **Test connection** verifies them and shows the callback URL and outbound IP to give the bank; maker-checker activation; payments accepted immediately.
+- **FR-45 (P0)** Updates page and approval (D-012): the installation shows available releases with release notes and severity, the Update Coordinator approves a version and maintenance window (2FA, audited), and the upgrade result is reported back to them.
 
 ## 7. Non-functional requirements
 
@@ -165,7 +168,8 @@ Priority: **P0** = MVP/go-live, **P1** = soon after, **P2** = later.
 | Risk | Impact | Mitigation |
 |---|---|---|
 | Regulatory: being classed as a payment service provider | High | Routing-only model (confirmed, D-002): funds never touch our accounts. Still obtain a legal opinion on BoT registration/approval needs before R2 (Q-001) |
-| Bank/MNO integration lead time (contracts, UAT, IP whitelisting) | High | Start channel onboarding in parallel with R0; build the simulator early |
+| Bank/MNO integration lead time (contracts, UAT, IP whitelisting) | High (first build) / Low (each new organisation) | Adapters are built and certified **once** for all installations (T-4.0 early, simulator early). A new organisation only supplies credentials (D-010) |
+| Update Coordinator slow to approve a critical security patch | Medium | Severity flag, reminders escalating to the System Admin, 72 h approval target; emergency policy (Q-013) |
 | A channel does not support signing or mTLS | High | Compensating controls: strict CIDR, VPN/IPsec tunnel, payload encryption, anomaly alerts (DESIGN §5.3) |
 | Duplicate or lost callbacks | High | Idempotency keys, recon, status-query fallback |
 | Installations drift (unpatched, customised, or on old versions) | High | One codebase with no per-org forks (RULES C9); config-only differences; fleet version reporting; patch SLA (G8) |

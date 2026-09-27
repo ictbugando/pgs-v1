@@ -261,6 +261,24 @@ Serialization failures or deadlocks → retry the transaction up to 3 times. Oth
 | MKCB | `mkcbfetchcontrol`, `mkcbprocesscontrol`, `mkcbrecon` | **none (always allowed)** | AES-GCM payload encryption with a **new rotated key** + CIDR + status confirmation |
 | M-Pesa / Mixx / Airtel | `aipros*` (XML) | IP prefix (Airtel `41.7`, `13.2`) | P1 — per the MNO's current API (C2B/B2C) |
 
+### 5.5 Enabling a channel for a new organisation (D-010)
+Every supported channel ships as a built-in adapter in every installation, built and certified once. For a new organisation, enabling a channel is **configuration only**:
+
+1. **Organisation gets its credentials** from its bank/MNO through its normal banking relationship: biller/merchant ID, API keys or client certificate, collection account/paybill.
+2. **Secure intake.** The credentials are entered either by the organisation's `system.admin` in *Channel accounts → Add*, or by vendor staff with `pgs channel add <code>` during an approved support session. They go **straight into the installation's secret store**. `channel_accounts` holds only the reference. Credentials are never sent by email, WhatsApp, or documents (RULES S22).
+3. **Test connection.** The adapter's `healthCheck()` runs an auth handshake, status query, or sandbox ping where the channel supports one. The screen shows the values the bank must have on file: **callback URL(s)** and the installation's **outbound IP**.
+4. **Activate.** Maker-checker (`system.admin` → `finance.manager`), then status `ACTIVE`, and the channel accepts payments immediately.
+
+Some banks still register the callback URL and whitelist the IP on their side. The organisation passes the values from step 3 to its bank together with its credential request. This is an administrative step, never a development task.
+
+A channel that is **not yet supported** becomes a new adapter in the shared codebase, available to every installation in the next release. It is never a per-organisation customisation (RULES C9).
+
+Adapter contract addition:
+```php
+    /** Verify credentials without moving money. */
+    public function healthCheck(ChannelAccount $account): HealthCheckResult;
+```
+
 ## 6. Integration API
 
 Base: `https://api.<domain>/v1` · JSON · UTF-8 · OpenAPI 3.1 at `/v1/openapi.json`.
@@ -369,6 +387,7 @@ Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoi
 | `accountant` | Installation/branch | Reports, recon exceptions, request refunds, suspense allocation (maker) |
 | `cashier` | Branch | Create/cancel invoices, view payments, reprint receipts |
 | `auditor` | Installation | Read-only incl. audit log |
+| `update.coordinator` | Installation | Designated by the organisation (D-012): view available releases and notes, approve a version + maintenance window, view upgrade results. Can be combined with another role |
 | `vendor.support` | Installation, **time-boxed** | Granted by `system.admin` for N hours: diagnostics, failed-processing replay, logs. No refunds, approvals, or personal-data export. 2FA; every action audited |
 
 ### 7.2 Sensitive actions
@@ -380,6 +399,8 @@ Retry schedule: 10 s, 1 m, 5 m, 30 m, 2 h, 6 h, 12 h, 24 h → `DEAD`. An endpoi
 | Create / rotate API key, webhook secret | 2FA re-confirmation; secret shown once |
 | Role changes | 2FA; audit |
 | Grant vendor support access | `system.admin` + 2FA; max 72 h; reason required; auto-expires; audited |
+| Add/replace channel credentials | Secure intake only (§5.5); maker-checker activation; secrets never displayed again after entry |
+| Approve an upgrade | `update.coordinator` + 2FA; tied to one version and one window; audited |
 
 ## 8. State machines & allocation
 
@@ -469,3 +490,33 @@ At **validation** time the same function runs in dry-run mode, so channels that 
 ### 10.4 SMS templates (defaults, overridable in `org.yaml`)
 - Invoice: `{org}: Ankara {external_ref} ya TZS {amount}. Namba ya malipo: {control_number}. Lipa kupitia benki au simu kabla ya {expiry}.`
 - Receipt: `{org}: Tumepokea TZS {amount} kwa namba {control_number}. Salio: TZS {balance}. Risiti: {receipt}.`
+
+## 11. Installation, hosting & updates
+
+### 11.1 One environment, wherever it runs (D-011)
+Vendor-hosted or on the organisation's server, an installation is the **same thing**: the same signed image, the same Compose/stack definition, the same OS baseline and minimum requirements, and the same integration contract with the organisation's management system (integration API §6 + webhooks §6.4). Only `org.yaml`, secrets, and hostnames differ. The code never branches on hosting mode (RULES C11).
+
+**Reference requirements** (assumption A-008, confirm by load test T-9.1):
+| Size | Typical organisation | Servers |
+|---|---|---|
+| Standard | Most schools, clinics, SACCOs | 1 host: 4 vCPU, 8 GB RAM, 100 GB SSD + separate backup target |
+| Large | Referral hospital, large school group (≥ 20 TPS peaks) | 2 app hosts (4 vCPU / 8 GB) + 1 DB host (8 vCPU / 32 GB, 250 GB SSD) + backup target |
+
+- **OS/runtime:** Ubuntu Server LTS, Docker Engine + Compose plugin, NTP time sync.
+- **Inbound:** HTTPS 443 from the channels' IP ranges (channel ingress) and from the organisation's systems/staff (API, portal). Nothing else.
+- **Outbound:** HTTPS to channel APIs, SMS provider, and email relay. Optional: the vendor image registry (otherwise use the offline bundle) and fleet telemetry.
+- **DNS/TLS:** a public hostname per entry point with a valid certificate (Let's Encrypt or the organisation's own).
+- **Backups:** encrypted, to a target outside the host (object storage or NAS). A restore test runs at install time.
+
+**Integration with the organisation's management system** (HMS, SIS, ERP) is identical in both modes: it calls the integration API and receives webhooks. On-prem installs may use the LAN path, but the contract, signing, and certificates are the same.
+
+### 11.2 Update process (D-012)
+1. Each organisation designates an **Update Coordinator** (named person + deputy), recorded in `org.yaml` and given the `update.coordinator` role.
+2. The vendor publishes a release. The installation's **System → Updates** page shows the new version with release notes, upgrade notes, expected impact, and severity (`CRITICAL`, `RECOMMENDED`, `OPTIONAL`). The coordinator gets an email.
+3. The coordinator **approves** the version and picks a maintenance window (2FA, audited). They inform the organisation's own staff.
+4. `pgs upgrade` **refuses to run without a valid approval** for that exact version and window (`--dry-run` excepted). The vendor runs it for vendor-hosted installs; the organisation's IT or vendor support runs it on-prem.
+5. After upgrading, automated smoke tests run and the result goes to the Updates page and the coordinator by email. Failure triggers automatic rollback and notification.
+6. `CRITICAL` security releases: approval requested within 72 h, with daily reminders escalating to the `system.admin`. There is no silent or forced upgrade (emergency policy: Q-013).
+
+Approval records (`upgrade_approvals`: version, window_start, window_end, approved_by, approved_at, status, result) are audited and read by the `pgs` CLI through an authenticated local endpoint.
+

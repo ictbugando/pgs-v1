@@ -47,15 +47,25 @@ Format: **ID — decision** (date, status) — why · consequences
 - **D-009 — Single-tenant: one codebase, one installation per organisation** (2026-09-27, **confirmed by owner**)
   Why: owner's decision. It gives each organisation physical data isolation and its own domain, bank setup, and hosting choice, matching how BMC runs today. Consequences: no `tenant_id`, tenant scoping, or RLS; an `organization` single-row table plus `org.yaml` config (ARCHITECTURE §3.1); new vendor concerns: installer/upgrade tooling, release discipline, fleet version tracking, patch rollout, time-boxed vendor support access (RULES C9, C10, G5, S12; TASKS T-0.11–T-0.14, T-1.2); control numbers carry an org code (D-006). Main risk: installations drift apart. Mitigated by the no-forks rule and config-only differences.
 
+- **D-010 — Channels are built once; a new organisation only supplies credentials** (2026-09-27, **confirmed by owner**)
+  Why: most organisations will use the already-supported banks and mobile-money operators. Consequences: every adapter ships in every installation; onboarding a channel = secure credential intake + Test connection + activation (DESIGN §5.5, T-4.10), so a new organisation goes live the same day (PRD G1); a new, unsupported channel is a shared adapter for everyone, never a customisation. Answers Q-012.
+
+- **D-011 — Identical environment whether vendor-hosted or on the organisation's server** (2026-09-27, **confirmed by owner**)
+  Why: owner's decision. One environment to build, test, and support. Consequences: same image, stack, requirements, and integration contract for the organisation's management system (DESIGN §11.1, RULES C11, T-0.15). Answers Q-004 (hosting mode).
+
+- **D-012 — Updates go through each organisation's designated personnel (Update Coordinator)** (2026-09-27, **confirmed by owner**)
+  Why: owner's decision. The organisation controls when its system changes. Consequences: `update.coordinator` role, Updates page with approval of version + window, `pgs upgrade` blocked without approval, and no forced upgrades (DESIGN §11.2, RULES G6, T-7.8). Answers Q-011 (upgrade approval).
+
 ## 3. Assumptions (verify, then convert to decisions)
 
 - **A-001** Launch channels are the legacy ones: CRDB, NMB, MKCB (banks) first; M-Pesa, Mixx by Yas, Airtel next.
-- **A-002** ~~Central hosted deployment~~ (superseded by D-009). Now: installations are vendor-hosted by default (we control patching), with on-prem supported for organisations that require it (Q-004).
+- **A-002** ~~Central hosted deployment~~ (superseded by D-009, then D-011). Now: vendor-hosted and on-prem are equal options with an identical environment.
 - **A-003** Currency TZS at launch; USD later.
 - **A-004** Peak load for the largest single installation: 50 TPS sustained / 200 TPS burst on channel callbacks (school-fee deadlines). Load test at 4×. Small installations can run on a single host.
 - **A-005** Larger organisations integrate their systems (HMS, SIS, ERP) by API + webhooks; small organisations use the portal only.
 - **A-006** Each installation sends SMS through the configured provider, using the organisation's own sender ID where registered.
 - **A-007** Revenue is billed to each organisation separately (licence/subscription or per-transaction invoice), not deducted from payments (consistent with D-002).
+- **A-008** Reference server sizes in DESIGN §11.1 (standard: 1 host with 4 vCPU / 8 GB; large: 2 app + 1 DB host). To be confirmed by load test T-9.1.
 
 ## 4. Open questions
 
@@ -64,15 +74,16 @@ Format: **ID — decision** (date, status) — why · consequences
 | Q-001 | Does a routing-only gateway need BoT registration/approval under the NPS Act 2015 (e.g., as a payment system provider or technical service provider)? Get a legal opinion. | Business | R2 go-live |
 | Q-002 | Control-number format constraints for each channel (length, prefix, numeric only)? | Business → channel specs | D-006, T-2.2 |
 | Q-003 | Will we serve government institutions that are mandated to use GePG? If so, integrate GePG as a channel or exclude them? | Business | T-10.8 |
-| Q-004 | Hosting: which organisations will be vendor-hosted vs on-prem, which provider/data centre, and data-residency requirements (PDPA 2022)? | Business/Ops | T-0.10, T-0.12 |
+| Q-004 | ~~Hosting mode~~ **answered → D-011** (identical either way). Still open: which data centre/provider for vendor-hosted installs, and PDPA data-residency confirmation. | Business/Ops | T-0.10 |
 | Q-005 | Legal retention period for financial and audit records (assumed ≥ 7 years)? | Compliance | Partition/archival policy |
 | Q-006 | Do receipts need TRA EFD/VFD integration, and if so is that the organisation's or our responsibility? | Compliance | T-2.6 |
 | Q-007 | Which SMS provider? | Business | T-5.3 |
 | Q-008 | Product name and domain (currently "PGS v2"; legacy brand "LipaSwitch")? | Business | Portal, docs site |
 | Q-009 | How much BMC history to migrate (all vs last N years + archive)? | BMC + us | T-8.1 |
 | Q-010 | Pricing model (licence, subscription, per transaction)? Affects reporting, not the payment path. | Business | Billing reports |
-| Q-011 | Support and upgrade policy per organisation: who may approve upgrades, maintenance windows, patch SLA, and whether on-prem sites allow outbound telemetry? | Business | T-0.12, T-0.14 |
-| Q-012 | Will banks/MNOs require a separate integration (endpoint, IP whitelisting, UAT) per installation, or can one vendor integration route to many organisations' collection accounts? This affects onboarding time per organisation. | Business → channels | T-4.0, PRD G1 |
+| Q-011 | ~~Who approves upgrades~~ **answered → D-012** (the organisation's Update Coordinator). Still open: may on-prem installations send health telemetry to the vendor? | Business | T-0.14 |
+| Q-012 | ~~Separate integration per installation?~~ **answered → D-010** (adapters built once; organisation supplies credentials). Per-channel detail of which credentials and bank-side registrations are needed is captured in T-4.0. | Business → channels | — |
+| Q-013 | Emergency security patches: if a `CRITICAL` fix is actively exploited and the Update Coordinator (and deputy) cannot be reached, may the vendor apply it? Proposal: only with the System Admin's approval as fallback, never silently. | Business | T-7.8 |
 
 ## 5. Lessons from the legacy system
 
@@ -99,6 +110,8 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 | **Installation** | One running deployment of PGS v2 for one organisation: own DB, secrets, domain |
 | **Org code** | 3-digit issuer code the vendor allocates to each installation; part of every control number |
 | **Vendor** | Us: we build, install, upgrade, and support installations |
+| **Update Coordinator** | The organisation's designated person (plus deputy) who receives release notices and approves each upgrade and its maintenance window |
+| **Secure intake** | The only allowed way to enter channel credentials: portal form or `pgs channel add`, straight into the secret store |
 | **Payer** | Person paying an invoice (parent, patient, customer) |
 | **Invoice** | A request for payment with line items; the legacy "bill" |
 | **Control number** | Unique numeric reference issued per invoice that the payer quotes at any channel |
@@ -117,5 +130,6 @@ From the analysis of Bugando PGS on 2026-09-27. RULES references these as **[Lx]
 
 Newest first. One line per session: date — who — what changed — next.
 
+- 2026-09-27 — Claude (with owner) — Owner confirmed D-010 (credentials-only channel onboarding), D-011 (identical environment either hosting mode), D-012 (updates via the organisation's designated personnel). Added DESIGN §5.5 and §11, RULES S22/C11/G6, tasks T-0.15, T-4.10, T-7.8. — Next: Q-001, Q-002, Q-013; start T-0.1, T-4.0, T-8.6.
 - 2026-09-27 — Claude (with owner) — Owner confirmed D-009 (single-tenant, one installation per organisation). Removed tenancy from all docs; added installer/upgrade/fleet/vendor-support design and tasks. — Next: owner answers Q-004, Q-011, Q-012.
 - 2026-09-27 — Claude (with owner) — Analysed the legacy Bugando PGS; drafted PRD, ARCHITECTURE, DESIGN, RULES, TASKS, MEMORY v0.1; owner confirmed D-002 (routing only). — Next: owner answers Q-001, Q-002, Q-004, Q-007, Q-008; start T-0.1, T-4.0, T-8.6.

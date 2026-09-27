@@ -47,13 +47,17 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   *AC:* Invalid config fails boot with a clear message; schema documented; example configs for a school and a hospital.
 - [ ] **T-0.12 Installer & `pgs` CLI** · L · R1 · deps T-0.10, T-0.11
   `pgs install` (new organisation from image + `org.yaml` + secrets), `pgs upgrade vX.Y.Z` (pre-flight → backup → migrate → rolling restart with channel ingress last → smoke test), `pgs rollback`, `pgs backup`/`restore`, `pgs doctor`. Works for vendor-hosted and on-prem, including an offline bundle.
-  *AC:* Fresh install on a clean Ubuntu LTS VM in ≤ 30 min; upgrade and rollback proven in CI.
+  *AC:* Fresh install on a clean Ubuntu LTS VM in ≤ 30 min; upgrade and rollback proven in CI; `pgs upgrade` refuses to run without an approval record (T-7.8); identical behaviour on vendor-hosted and on-prem hosts (D-011).
 - [ ] **T-0.13 Release & upgrade pipeline** · M · R1 · deps T-0.12
   Signed images per tag, changelog + upgrade notes, automated upgrade test from the previous two minor releases with seeded data (RULES G5).
   *AC:* A release cannot be published if the upgrade test fails.
 - [ ] **T-0.14 Deployments repo & fleet telemetry** · M · R2 · deps T-0.7
   Private repo holding each installation's `org.yaml` + inventory (no secrets); org-code registry; opt-in health telemetry (allow-listed fields, RULES O5) to a vendor fleet dashboard showing version, health, last backup, recon status.
   *AC:* Telemetry payload test proves no personal or transaction data; dashboard lists all installations and their versions.
+
+- [ ] **T-0.15 Reference environment & requirements** · S · R1 · deps T-0.12
+  Publish the hosting requirements (DESIGN §11.1): server sizes, OS, network in/out, DNS/TLS, backups; `pgs doctor` checks a server against them before install.
+  *AC:* `pgs doctor` passes on a reference VM and fails with clear messages on an undersized or misconfigured one.
 
 ## Phase 1 — Tenancy, identity & audit (R0/R1)
 
@@ -123,7 +127,7 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 ## Phase 4 — Channels (R1 banks, R2 MNOs)
 
 - [ ] **T-4.0 Collect channel specs** · S · R0 · **owner: business**
-  Obtain current official API specs, UAT credentials, IP ranges, and sample messages for CRDB, NMB, MKCB into `docs/channels/<code>.md`. **Blocks all adapter tasks.**
+  Obtain current official API specs, UAT credentials, IP ranges, and sample messages for CRDB, NMB, MKCB into `docs/channels/<code>.md`. Done **once for all installations** (D-010). Also record, per channel, exactly which credentials an organisation must request from its bank/MNO and whether the bank must register a callback URL or IP. **Blocks all adapter tasks.**
 - [ ] **T-4.1 Adapter framework** · M · R1 · deps T-3.3
   `ChannelAdapter` interface + DTOs (DESIGN §5.1), adapter registry, generated routes, `channel.auth:{code}` middleware, raw-message persistence before processing, trusted-proxy IP + CIDR check, per-channel metrics.
   *AC:* A dummy adapter passes a shared adapter conformance test suite.
@@ -139,6 +143,10 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
 - [ ] **T-4.8 Airtel Money adapter** · L · R2 · deps T-4.1
 - [ ] **T-4.9 Status-query confirmation & circuit breakers** · M · R1 · deps T-4.3
   Confirm via status query where available (DESIGN §5.3); per-channel circuit breaker and timeouts (RULES E4).
+
+- [ ] **T-4.10 Channel credential intake & Test connection** · M · R1 · deps T-4.1, T-0.8, T-1.6
+  Portal *Channel accounts → Add* form and `pgs channel add` writing straight to the secret store (RULES S22); adapter `healthCheck()`; display of callback URLs and outbound IP; maker-checker activation; per-channel "credentials checklist" for organisations (from T-4.0).
+  *AC:* A new organisation goes from credentials to an accepted test payment in the same day with no code change; secrets never appear in logs, DB dumps, or the UI after entry.
 
 ## Phase 5 — Notifications (R1)
 
@@ -182,6 +190,10 @@ Agents: pick the lowest-numbered unblocked `[ ]` task in the current release, ma
   Look up an invoice by control number + second factor (e.g., last 4 digits of phone); receipt verification; strict rate limit.
 - [ ] **T-7.7 System admin area** · M · R1 · deps T-7.1
   Organisation profile, channel accounts, channel health, webhook DLQ, failed-processing replay, system health (version, queues, last backup), vendor support access grant/revoke.
+
+- [ ] **T-7.8 Updates page & coordinator approval** · M · R1 · deps T-1.5, T-0.13
+  *System → Updates*: current and available versions, release/upgrade notes, severity; `update.coordinator` approves version + window (2FA); email notifications and reminders (escalating for `CRITICAL`); `upgrade_approvals` read by `pgs upgrade`; post-upgrade result shown.
+  *AC:* Upgrade blocked without approval; approval tied to one version and one window; full audit trail.
 
 ## Phase 8 — Bugando (BMC) migration: first installation (R1 pilot → R2 cut-over)
 

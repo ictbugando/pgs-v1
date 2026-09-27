@@ -66,6 +66,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **S19** No copies of files as backups (`FooOld.php`, `FooBk.php`, `FooApril.php`). Git is the history. **[L10]**
 - **S20** No committed vendor directories, logs, cache, debugbar dumps, or build output. **[L10]**
 - **S21** `CURLOPT_SSL_VERIFYPEER` / `verify => false` is forbidden.
+- **S22** Channel credentials MUST enter an installation only through the secure intake (portal *Channel accounts* form or `pgs channel add`) and go straight into the secret store. They MUST NOT be sent or stored in email, chat, tickets, documents, `org.yaml`, or the deployments repo, and MUST NOT be shown again after entry.
 
 ## 4. Errors & resilience
 
@@ -96,6 +97,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **C8** Config comes via typed config classes. `env()` is only allowed inside `config/*.php`.
 - **C9** **One codebase, no forks.** There MUST NOT be per-organisation branches, forks, or code paths (`if ($org === 'bmc')` is forbidden). A need specific to one organisation becomes a config option, a feature flag, or an adapter that any installation could enable.
 - **C10** Every new setting MUST be added to the `org.yaml` schema with a safe default, so existing installations keep working after upgrade without editing their config.
+- **C11** Code MUST NOT branch on hosting mode (vendor-hosted vs on-prem). The environment is identical (D-011); anything that genuinely differs is configuration.
 
 ## 7. Database
 
@@ -128,6 +130,7 @@ Many rules exist because the legacy Bugando PGS broke them. The reference in bra
 - **G3** CI must be green: lint, PHPStan, Deptrac, tests, `composer audit`, gitleaks, route-protection test, OpenAPI contract tests.
 - **G4** No force-push to `main`. Releases are tagged (`vX.Y.Z`) with a changelog and upgrade notes.
 - **G5** Every release MUST pass the upgrade test (install previous release with seeded data → upgrade → smoke tests → rollback) before it is published to installations.
+- **G6** No installation is upgraded without a recorded approval from its Update Coordinator for that exact version and window (D-012). Tooling MUST enforce this, and there is no bypass flag.
 
 ## 11. Definition of Done
 
